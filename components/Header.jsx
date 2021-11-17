@@ -26,16 +26,13 @@ function Header() {
           <div className="flex space-x-4">
             
             <Link href="/news">
-              <a href="/news">
-                <span className="text-md font-semibold text-scu_yellow 
+              <span className="text-md font-semibold text-scu_yellow 
                 hover:text-white hover:scale-105 cursor-pointer">News
-                </span>
-              </a>
+               </span>
+              
             </Link>
             <Link href="/forum">
-              <a href="/forum">
-                <span className="text-md font-semibold text-scu_yellow hover:text-white hover:scale-105 cursor-pointer">Forum</span>
-              </a>
+              <span className="text-md font-semibold text-scu_yellow hover:text-white hover:scale-105 cursor-pointer">Forum</span>
             </Link>
           </div>
             <button href="#" className="button text-black font-semibold animate-pulse pr-4">Donate</button>
