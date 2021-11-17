@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         scu_blue: {
-          light: "#1200FF",
+          light: "#0D0A44",
           DEFAULT: "#3B8DCC",
         },
         scu_yellow:{
@@ -18,5 +18,7 @@ module.exports = {
   variants: {
     extend: { },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
 }

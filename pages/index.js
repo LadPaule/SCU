@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function Home({}) {
 
@@ -16,13 +18,15 @@ export default function Home({}) {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* header */}
-      
+      <Header />
 
       <main className="max-w-screen-2xl mx-auto">
         {/* banner */}
           
-        {/* product feed */}
+        {/* feed */}
       </main>
+      {/* footer */}
+      <Footer />
     </div>
   );
 }
