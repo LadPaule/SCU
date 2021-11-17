@@ -49,8 +49,8 @@ function Header() {
       
       {/* Primary Menu */}
       <nav className="bg-scu_blue hidden lg:flex">
-        <div className="">
-        <ul className="flex whitespace-nowrap ml-4 items-center">
+        <div className="justify-evenly flex-grow">
+        <ul className="flex whitespace-nowrap ml-4 items-center justify-evenly flex-grow">
                 {
                   helperdata.map((item, index)=>{
                     return(
