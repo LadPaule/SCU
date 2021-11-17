@@ -9,9 +9,7 @@ function Header() {
       {/* secondary Menu */}
       <div className="flex bg-scu_blue-light items-center flex-col sm:flex-grow justify-between lg:flex-row">
           <Link href="/" passHref={true}>
-              <Image className="object-contain p-5 ml-4" src="/sculogo.svg" alt="logo" width={180} height={70} 
-                className="cursor-pointer hover:scale-105"
-              />
+              <Image className="object-contain cursor-pointer p-5 ml-4" src="/sculogo.svg" alt="logo" width={180} height={70}/>
           </Link>
         
         <div className="flex justify-evenly space-x-4 last:ml-10 max-w-2xllg">
