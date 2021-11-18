@@ -4,15 +4,14 @@ import Link from 'next/link';
 
 function Dumm() {
   return (
-    <header className="flex bg-scu_blue-light flex-col sm:flex-row justify-between items-center
-      h-auto last:ml-2">
+    <header className="flex bg-scu_blue-light flex-col sm:flex-row justify-between items-center h-auto">
       <div className="m-4">
         <Image className="object-contain" src="/sculogo.svg" alt="logo" width={180} height={70} />
       </div>
 
 
-      <div className="flex flex-grow justify-evenly max-w-md space-x-4 items-center">
-        <div className="lg:hidden items-center ">
+      <div className="flex flex-grow justify-evenly last:ml-2 max-w-md space-x-4 items-center">
+        <div className="lg:hidden items-center">
           <MenuIcon className="text-scu_yellow h-8 hover:scale-105 hover:animate-bounce hover:text-white"/>
         </div>
         <Link href="#" passHref>
