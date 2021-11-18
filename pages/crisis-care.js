@@ -1,4 +1,9 @@
+import Head from "next/head";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 function crisisCare() {
+  
   return (
     <div className="bg-gray-100">
       <Head>

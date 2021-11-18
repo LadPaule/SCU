@@ -1,3 +1,7 @@
+import Head from "next/head";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 function womenEmpowerment() {
   return (
     <div className="bg-gray-100">
