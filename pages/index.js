@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Dumm from "../components/dumm";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -23,7 +23,7 @@ export default function Home({}) {
                     
       </Head>
       {/* header */}
-      <Dumm />
+      <Header />
       <Navbar />
 
       <main className="">

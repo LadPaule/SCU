@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 function crisisCare() {
   
@@ -23,6 +24,7 @@ function crisisCare() {
       </Head>
       {/* header */}
       <Header />
+      <Navbar />
 
       <main className="max-w-screen-2xl mx-auto">
         {/* banner */}

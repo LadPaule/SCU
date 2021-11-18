@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Footer from "../../components/Footer"
 import Header from "../../components/Header";
+import Navbar from "../../components/Navbar";
 
 function forum() {
   return (
@@ -22,6 +23,7 @@ function forum() {
       </Head>
       {/* header */}
       <Header />
+      <Navbar />
 
       <main className="">
         {/* banner */}
