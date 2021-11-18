@@ -1,6 +1,7 @@
 import Head from "next/head";
+import Dumm from "../components/dumm";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 export default function Home({}) {
 
@@ -22,7 +23,8 @@ export default function Home({}) {
                     
       </Head>
       {/* header */}
-      <Header />
+      <Dumm />
+      <Navbar />
 
       <main className="">
         {/* banner */}

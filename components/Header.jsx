@@ -7,7 +7,8 @@ function Header() {
   return (
     <header className="bg-scu_blue-light">
       {/* secondary Menu */}
-      <div className="flex items-center flex-col sm:flex-grow justify-between lg:flex-row">
+      <div className="flex items-center flex-col flex-grow justify-between 
+        lg:flex-row">
         <div className="mb-4 mt-2">  
           <Link href="/" passHref>
             <Image className="object-contain sm:p-8 cursor-pointer p-5 ml-4" src="/sculogo.svg" alt="logo" width={180} height={70}/>
@@ -40,9 +41,9 @@ function Header() {
 
           </div>
 
-          <div className="pr-10 cursor-pointer">
+          <div className="cursor-pointer mb-4">
             <button href="#" className="button text-black 
-              font-semibold animate-pulse lg:m10 p4-4">Donate
+              font-semibold animate-pulse">Donate
             </button>
           </div>
         </div>          
