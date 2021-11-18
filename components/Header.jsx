@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import { MenuIcon, PhoneIcon } from '@heroicons/react/solid'
+import { MenuIcon } from '@heroicons/react/solid'
 import { helperdata } from "../helperdata";
 import Link from 'next/link';
 
 function Header() {
   return (
-    <header className="w-screen bg-scu_blue-light">
+    <header className="bg-scu_blue-light">
       {/* secondary Menu */}
-      <div className="flex max-w-auto items-center flex-col sm:flex-grow justify-between lg:flex-row">
+      <div className="flex items-center flex-col sm:flex-grow justify-between lg:flex-row">
         <div className="mb-4 mt-2">  
           <Link href="/" passHref>
             <Image className="object-contain sm:p-8 cursor-pointer p-5 ml-4" src="/sculogo.svg" alt="logo" width={180} height={70}/>

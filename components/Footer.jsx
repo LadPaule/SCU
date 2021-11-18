@@ -1,6 +1,6 @@
 import { EmojiHappyIcon, EyeOffIcon, HomeIcon, MailOpenIcon, PhoneIncomingIcon, 
   DocumentTextIcon, DocumentAddIcon  } from '@heroicons/react/outline';
-import { PaperAirplaneIcon, LocationMarkerIcon, DocumentReportIcon, LightBulbIcon, CogIcon } from '@heroicons/react/solid';
+import { HandIcon, AdjustmentsIcon, UserGroupIcon, AcademicCapIcon } from '@heroicons/react/solid';
 import  Link  from "next/link";
 import { useState } from 'react';
  
@@ -13,7 +13,7 @@ function Footer() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("sending");
-
+    LocationMarkerIcon
     let data = {
       email: email
     }
@@ -42,27 +42,27 @@ function Footer() {
               <div className="text-gray-400">
                 P.O.Box 5895 ,<br />
                 Kampala, Uganda <br /><br />
-                <p className="flex"><strong><PhoneIncomingIcon className="text-yellow-500 h-5 hover:scale-x-110"/> </strong> +256 752 101 007</p> <br />
-                <p className="flex"><strong><MailOpenIcon className="text-yellow-500 h-5"/> </strong> info@smilecharityuganda.org</p> <br />
+                <p className="flex"><strong><PhoneIncomingIcon className="text-scu_yellow h-5 mr-2 hover:scale-x-110"/> </strong> +256 752 101 007</p> <br />
+                <p className="flex"><strong><MailOpenIcon className="text-scu_yellow h-5 mr-2 hover:scale-x-110"/> </strong> info@smilecharityuganda.org</p> <br />
               </div> 
             </div>
             <div className="mb-5">
               <h1 className="pb-4 text-xl">Useful Links</h1>
               <ul className="text-gray-400">
-                <li className="pb-4 flex hover:text-yellow-500 group">< HomeIcon className="text-gray-300 h-5 mr-2"/><Link href="/"><a className="hover:text-yellow-500 mr-2">Home </a></Link></li>
-                <li className="pb-4 flex hover:text-yellow-500 group">< EmojiHappyIcon className="text-gray-300 h-5 mr-2"/><Link href="/about"><a className="hover:text-yellow-500">About us </a></Link></li>
-                <li className="pb-4 flex hover:text-yellow-500 group">< EyeOffIcon className="text-gray-300 h-5 mr-2"/><Link href="/privacy-policy"><a className="hover:text-yellow-500">Privacy Policy </a></Link></li>
-                <li className="pb-4 flex hover:text-yellow-500 group">< DocumentTextIcon className="text-gray-300 h-5 mr-2"/><Link href="/terms"><a className="hover:text-yellow-500">Terms of Service </a></Link></li>
-                <li className="pb-4 flex hover:text-yellow-500 group"><DocumentAddIcon className="text-gray-300 h-5 mr-2"/><Link href="/returns"><a className="hover:text-yellow-500">Returns Policy</a></Link></li>
+                <li className="pb-4 flex hover:font-bold hover:text-scu_yellow"><HomeIcon className="h-5 mr-2"/><Link href="/"><a className="hover:text-scu_yellow mr-2">Home </a></Link></li>
+                <li className="pb-4 flex hover:font-bold hover:text-scu_yellow"><EmojiHappyIcon className=" h-5 mr-2"/><Link href="/about"><a className="hover:text-scu_yellow">About us </a></Link></li>
+                <li className="pb-4 flex hover:font-bold hover:text-scu_yellow"><EyeOffIcon className=" h-5 mr-2"/><Link href="/privacy-policy"><a className="hover:text-scu_yellow">Privacy Policy </a></Link></li>
+                <li className="pb-4 flex hover:font-bold hover:text-scu_yellow"><DocumentTextIcon className="h-5 mr-2"/><Link href="/terms"><a className="hover:text-scu_yellow">Terms of Service </a></Link></li>
+                <li className="pb-4 flex hover:font-bold hover:text-scu_yellow"><DocumentAddIcon className="h-5 mr-2"/><Link href="/returns"><a className="hover:text-scu_yellow">Returns Policy</a></Link></li>
               </ul>
             </div>
             <div className="mb-5">
             <h1 className="pb-4 text-xl">Our Domains</h1>
             <ul className="text-gray-400">
-                <li className="pb-4 flex hover:text-scu_yellow"><CogIcon className="h-5 mr-2" /><Link href="/education"><a>Education Support</a></Link></li>
-                <li className="pb-4 flex hover:text-scu_yellow"><LightBulbIcon className="h-5 mr-2"/><Link href="/discipleship"><a>Discipleship</a></Link></li>
-                <li className="pb-4 flex hover:text-scu_yellow"><LocationMarkerIcon className="h-5 mr-2"/><Link href="/skilling"><a>Skilling</a></Link></li>
-                <li className="pb-4 flex hover:text-scu_yellow"><PaperAirplaneIcon className="h-5 mr-2" /><Link href="/crisis-care"><a>Crisis Care</a></Link></li>
+                <li className="pb-4 flex hover:font-bold hover:text-scu_yellow"><AcademicCapIcon className="h-5 mr-2" /><Link href="/education"><a>Education Support</a></Link></li>
+                <li className="pb-4 flex hover:font-bold hover:text-scu_yellow"><UserGroupIcon className="h-5 mr-2"/><Link href="/discipleship"><a>Discipleship</a></Link></li>
+                <li className="pb-4 flex hover:font-bold hover:text-scu_yellow"><AdjustmentsIcon className="h-5 mr-2"/><Link href="/skilling"><a>Skilling</a></Link></li>
+                <li className="pb-4 flex hover:font-bold hover:text-scu_yellow"><HandIcon className="h-5 mr-2" /><Link href="/crisis-care"><a>Crisis Care</a></Link></li>
               </ul>
             </div>
             <div className="mb-5">
