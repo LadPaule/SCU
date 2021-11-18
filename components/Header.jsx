@@ -33,7 +33,7 @@ function Header() {
                </span>
             </Link>
 
-            <Link href="/forum" passHref>
+            <Link href="/chat/forum" passHref>
               <span className="text-md font-semibold text-scu_yellow 
               hover:text-white hover:scale-105 cursor-pointer">Forum</span>
             </Link>

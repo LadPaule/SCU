@@ -16,6 +16,10 @@ export default function Home({}) {
           are a Hand up, not a hand out. SCU operates on a defined Working Mechanism, DESC that is, Discipleship and Evangelism,
           Education Support, Skilling and Crisis care and Management" />
           <link rel="icon" href="/favicon.ico" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta author="Smile Charity Uganda Media department" />
+          <meta name="keywords" content="Smile Charity, Smile Charity Uganda, SCU, Charity, NGO, Uganda, Christian Charity, Kampala charity, Sponsor a child"/>
+                    
       </Head>
       {/* header */}
       <Header />
