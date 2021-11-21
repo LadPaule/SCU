@@ -1,7 +1,7 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class', // or 'media' or 'false'
+  mode: "jit",
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class", // or 'media' or 'false'
   theme: {
     extend: {
       colors: {
@@ -9,16 +9,14 @@ module.exports = {
           light: "#0D0A44",
           DEFAULT: "#3B8DCC",
         },
-        scu_yellow:{
-          DEFAULT: "#F6EB14"
-        }
+        scu_yellow: {
+          DEFAULT: "#F6EB14",
+        },
       },
     },
   },
   variants: {
-    extend: { },
+    extend: {},
   },
-  plugins: [
-    require('tailwind-scrollbar-hide'),
-  ],
-}
+  plugins: [require("tailwind-scrollbar-hide")],
+};

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 function Header() {
   return (
-    <header className="flex bg-scu_blue-light flex-col sm:flex-row justify-between items-center  h-auto">
+    <header className="sticky top-0 z-50 flex bg-scu_blue-light flex-col sm:flex-row justify-between items-center  h-auto">
       <div className="m-4">
         <Image className="object-contain" src="/sculogo.svg" alt="logo" width={180} height={70} />
       </div>

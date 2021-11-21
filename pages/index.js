@@ -2,11 +2,13 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Banners from "../components/Banners";
+import LandingPage from "../utils/LandingPage";
 
 export default function Home({}) {
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-200">
       <Head>
         <title>Smile Charity Uganda (SCU) - A helping Hand to Those in Need</title>
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
@@ -25,9 +27,12 @@ export default function Home({}) {
       {/* header */}
       <Header />
       <Navbar />
+      {/* end of header */}
 
       <main className="">
         {/* banner */}
+        <Banners />
+        <LandingPage />
           
         {/* feed */}
       </main>
