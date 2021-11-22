@@ -3,33 +3,33 @@
 @tailwind utilities;
 
 @layer components {
-  .link{
+  .link {
     @apply cursor-pointer transition duration-100 transform hover:scale-110
-     hover:font-bold hover:text-white active:text-red-500 active:animate-bounce
+     hover:font-bold hover:text-white active:text-red-500 active:animate-bounce;
   }
-  .button{
+  .button {
     @apply p-2 text-xs md:text-sm bg-gradient-to-b from-yellow-200 to-yellow-400 border-yellow-300 
       rounded-sm focus:outline-none focus:ring-2 focus:ring-scu_blue active:from-scu_blue
-      hover:text-gray-900 hover:font-black hover:font-serif
+      hover:text-gray-900 hover:font-black hover:font-serif;
   }
-  .donate_button{
-      @apply p-1 text-md md:text-sm bg-red-500 border-none text-white
+  .donate_button {
+    @apply p-1 text-md md:text-sm bg-red-500 border-none text-white
         rounded-sm focus:outline-none focus:ring-1 focus:ring-white active:from-red-500
-        hover:text-white hover:font-black hover:font-serif 
+        hover:text-white hover:font-black hover:font-serif;
   }
-  .inactive{
-    @apply hidden
+  .inactive {
+    @apply hidden;
   }
-  .icon{
-    @apply text-yellow-400 h-5 mr-2
+  .icon {
+    @apply text-yellow-400 h-5 mr-2;
   }
 }
 @layer utilities {
-  @variants responsive{
-    .noscrollbar::-webkit-scrollbar{
+  @variants responsive {
+    .noscrollbar::-webkit-scrollbar {
       display: none;
     }
-    .noscrollbar{
+    .noscrollbar {
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
