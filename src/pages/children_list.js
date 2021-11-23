@@ -1,16 +1,16 @@
 import Head from "next/head";
-import Header from "../components/Header";
+import { GraphQLClient, gql } from "graphql-request"
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Banners from "../components/Banners";
-import LandingPage from "../utils/LandingPage";
+import Childrenfeed from "../components/Childrenfeed";
 
-export default function Home({}) {
-
+function ChildrenList({ waitingLists }) {
+  console.log(waitingLists);
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-100">
       <Head>
-        <title>Smile Charity Uganda (SCU) - A helping Hand to Those in Need</title>
+        <title>Education Support</title>
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
           <link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp" />
           <link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp" />
@@ -27,17 +27,47 @@ export default function Home({}) {
       {/* header */}
       <Header />
       <Navbar />
-      {/* end of header */}
 
-      <main className="">
+      <main className="max-w-screen-2xl mx-auto">
         {/* banner */}
-        <Banners />
-        <LandingPage />
-          
+          <Childrenfeed waitingLists={waitingLists}/>
         {/* feed */}
       </main>
       {/* footer */}
       <Footer />
     </div>
+  )
+}
+
+export default ChildrenList;
+
+export async function getStaticProps() {
+  const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
+  const {waitingLists} = await graphcms.request(
+   `
+   query WaitingLists()
+  {
+    waitingLists{
+      id
+      name
+      photograph{
+        url
+        height
+        width
+       }
+      sponsorshipslug
+      areaOfResidence
+      childStory{
+        html
+      }
+    }
+  }
+  `
   );
+  return {
+    props: {
+      waitingLists,
+    },
+  };
+
 }

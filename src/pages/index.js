@@ -1,13 +1,16 @@
 import Head from "next/head";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Banners from "../components/Banners";
+import LandingPage from "../utils/LandingPage";
 
-function education() {
+export default function Home({}) {
+
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-200">
       <Head>
-        <title>Education Support</title>
+        <title>Smile Charity Uganda (SCU) - A helping Hand to Those in Need</title>
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
           <link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp" />
           <link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp" />
@@ -24,16 +27,19 @@ function education() {
       {/* header */}
       <Header />
       <Navbar />
+      
+      
+      {/* end of header */}
 
-      <main className="max-w-screen-2xl mx-auto">
+      <main className="">
         {/* banner */}
+        <Banners />
+        <LandingPage />
           
         {/* feed */}
       </main>
       {/* footer */}
       <Footer />
     </div>
-  )
+  );
 }
-
-export default education
