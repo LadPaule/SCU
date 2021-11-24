@@ -1,11 +1,11 @@
-import ChildInfo from "../utils/ChildInfo"
+import ChildInfo from "../utils/ChildInfo";
 
-function Childrenfeed({waitingLists}) {
+function Childrenfeed({ waitingLists }) {
   return (
     <div>
-      <ChildInfo waitingLists={waitingLists}/>
+      <ChildInfo waitingLists={waitingLists} />
     </div>
-  )
+  );
 }
 
-export default Childrenfeed
+export default Childrenfeed;
