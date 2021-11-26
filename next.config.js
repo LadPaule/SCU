@@ -6,4 +6,5 @@ module.exports = {
     GRAPHCMS_ENDPOINT: process.env.GRAPHCMS_ENDPOINT,
     STREAM_API_KEY: process.env.STREAM_API_KEY,
   },
+  
 };

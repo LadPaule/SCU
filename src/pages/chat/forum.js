@@ -5,7 +5,7 @@ import { StreamChat } from "stream-chat";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
-import { ChannelListContainer, ChannelContainer } from "./components";
+import { ChannelListContainer, ChannelContainer } from "../../components/chat";
 
 const apiKey = process.env.STREAM_API_KEY;
 const client = StreamChat.getInstance(apiKey);
