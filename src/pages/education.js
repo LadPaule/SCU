@@ -1,12 +1,10 @@
 import Head from "next/head";
-import { GraphQLClient, gql } from "graphql-request"
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Childrenfeed from "../components/Childrenfeed";
 
-function education({ waitingLists }) {
-  console.log(waitingLists);
+
+function education() {
   return (
     <div className="bg-gray-100">
       <Head>
@@ -30,7 +28,7 @@ function education({ waitingLists }) {
 
       <main className="max-w-screen-2xl mx-auto">
         {/* banner */}
-          <Childrenfeed waitingLists={waitingLists}/>
+          
         {/* feed */}
       </main>
       {/* footer */}
@@ -40,34 +38,3 @@ function education({ waitingLists }) {
 }
 
 export default education;
-
-export async function getStaticProps() {
-  const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
-  const {waitingLists} = await graphcms.request(
-   `
-   query WaitingLists()
-  {
-    waitingLists{
-      id
-      name
-      photograph{
-        url
-        height
-        width
-       }
-      sponsorshipslug
-      areaOfResidence
-      childStory{
-        html
-      }
-    }
-  }
-  `
-  );
-  return {
-    props: {
-      waitingLists,
-    },
-  };
-
-}
