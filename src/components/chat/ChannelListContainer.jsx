@@ -30,11 +30,25 @@ function ChannelListContainer() {
       <div className="channel-list__list__wrapper">
         <OrganizationHeader />
         <ChannelSearch />
-        <ChannelList filters={{}} 
-          channelRenderFilterFn={()=>{}} 
-          List={(listProps)=>(
-          <TeamChannelList {...listProps} type="team"/>
-        )}/>
+        <ChannelList
+          filters={{}}
+          channelRenderFilterFn={() => {}}
+          List={(listProps) => <TeamChannelList {...listProps} type="team" />}
+          Preview={(PreviewProps) => (
+            <TeamChannelPreview {...PreviewProps} type="team" />
+          )}
+        />
+
+        <ChannelList
+          filters={{}}
+          channelRenderFilterFn={() => {}}
+          List={(listProps) => (
+            <TeamChannelList {...listProps} type="messaging" />
+          )}
+          Preview={(PreviewProps) => (
+            <TeamChannelPreview {...PreviewProps} type="messaging" />
+          )}
+        />
       </div>
     </>
   );

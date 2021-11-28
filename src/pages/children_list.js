@@ -6,11 +6,11 @@ import Navbar from "../components/Navbar";
 import Childrenfeed from "../components/Childrenfeed";
 
 function ChildrenList({ waitingLists }) {
-  console.log(waitingLists);
+  console.log(waitingLists.childStory.markdown);
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>Education Support</title>
+        <title>Sponsor a Child</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -77,7 +77,7 @@ export async function getStaticProps() {
       sponsorshipslug
       areaOfResidence
       childStory{
-        text
+        markdown
       }
     }
   }

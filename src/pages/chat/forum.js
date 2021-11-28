@@ -1,16 +1,23 @@
 import Head from "next/head";
-import { ChannelList, Chat } from "stream-chat-react";
+import { Chat } from "stream-chat-react";
 import Cookies from "universal-cookie";
 import { StreamChat } from "stream-chat";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
-import { ChannelListContainer, ChannelContainer } from "../../components/chat";
+
+import {
+  ChannelListContainer,
+  ChannelContainer,
+  Auth,
+} from "../../components/chat";
 
 const apiKey = process.env.STREAM_API_KEY;
 const client = StreamChat.getInstance(apiKey);
+const authToken = false;
 
 function forum() {
+  if (!authToken) return <Auth />
   return (
     <div className="bg-gray-100">
       <Head>
