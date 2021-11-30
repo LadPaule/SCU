@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import Childrenfeed from "../components/Childrenfeed";
 
 function ChildrenList({ waitingLists }) {
-  console.log(waitingLists.childStory.markdown);
+  
   return (
     <div className="bg-gray-100">
       <Head>
@@ -77,7 +77,7 @@ export async function getStaticProps() {
       sponsorshipslug
       areaOfResidence
       childStory{
-        markdown
+        text
       }
     }
   }

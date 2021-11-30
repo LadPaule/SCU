@@ -12,6 +12,8 @@ const initialState = {
   confrimPassword: "",
 };
 
+const cookies = new Cookies();
+
 function Auth() {
   const [form, setForm] = useState(initialState);
   const [isSignUp, setIsSignUp] = useState(true);
@@ -23,9 +25,34 @@ function Auth() {
     e.preventDefault();
     setIsSignUp((prevIsSignUp) => !prevIsSignUp);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(form);
+    const { fullname, username, phoneNumber, avatarURL, password, email } =
+      form;
+    const URL = "http://0.0.0.0:5000/auth";
+    const {
+      data: { token, userId, hashedPassword },
+    } = await axios.post(`${URL}/${isSignUp ? "signup" : "login"}`, {
+      username,
+      password,
+      fullname,
+      phoneNumber,
+      avatarURL,
+      email,
+    });
+    cookies.set("token", token);
+    cookies.set("userId", userId);
+    cookies.set("username", username);
+    cookies.set("fullname", fullname);
+    if (isSignUp) {
+      cookies.set("hashedPassword", hashedPassword);
+      cookies.set("username", username);
+      cookies.set("phoneNumber", phoneNumber);
+      cookies.set("avatarURL", avatarURL);
+      cookies.set("email", email);
+
+    }
+    window.location.reload();
   };
 
   return (
@@ -66,6 +93,19 @@ function Auth() {
                   name="phoneNumber"
                   id="phoneNumber"
                   placeholder="phone number"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            )}
+            {isSignUp && (
+              <div className="auth__form-container_fields_content_input">
+                <label htmlFor="EmailAddress">Email Address</label>
+                <input
+                  type="text"
+                  name="EmailAddress"
+                  id="EmailAddress"
+                  placeholder="Email Address"
                   onChange={handleChange}
                   required
                 />

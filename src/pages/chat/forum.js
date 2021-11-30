@@ -1,5 +1,7 @@
 import Head from "next/head";
+import { useState } from "react";
 import { Chat } from "stream-chat-react";
+import "stream-chat-react/dist/css/index.css";
 import Cookies from "universal-cookie";
 import { StreamChat } from "stream-chat";
 import Footer from "../../components/Footer";
@@ -11,13 +13,33 @@ import {
   ChannelContainer,
   Auth,
 } from "../../components/chat";
-
+const cookies = new Cookies();
 const apiKey = process.env.STREAM_API_KEY;
 const client = StreamChat.getInstance(apiKey);
-const authToken = false;
+const authToken = cookies.get("token");
+
+if (authToken) {
+  client.connectUser(
+    {
+      id: cookies.get("userId"),
+      name: cookies.get("username"),
+      fullName: cookies.get("fullname"),
+      hashedPassword: cookies.get("hashedPassword"),
+      phoneNumber: cookies.get("phoneNumber"),
+      image: cookies.get("avatarURL"),
+      email: cookies.get("email"),
+    },
+    authToken
+  );
+}
 
 function forum() {
-  if (!authToken) return <Auth />
+  const [createType, setCreateType] = useState("");
+  const [isCreating, setIsCreating] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+
+  if (!authToken) return <Auth />;
+
   return (
     <div className="bg-gray-100">
       <Head>
@@ -62,8 +84,19 @@ function forum() {
         {/* banner */}
         <div className="">
           <Chat client={client} theme="team light">
-            <ChannelListContainer />
-            <ChannelContainer />
+            <ChannelListContainer
+              isCreating={isCreating}
+              setCreate={setCreate}
+              isEditing={isEditing}
+              setIsEditing={setIsEditing}
+            />
+            <ChannelContainer
+              isCreating={isCreating}
+              setIsCreating={setIsCreating}
+              isEditing={isEditing}
+              setIsEditing={setIsEditing}
+              createType={createType}
+            />
           </Chat>
         </div>
         {/* feed */}
