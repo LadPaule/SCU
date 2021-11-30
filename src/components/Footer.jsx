@@ -5,7 +5,6 @@ import {
   MailOpenIcon,
   PhoneIncomingIcon,
   DocumentTextIcon,
-  DocumentAddIcon,
 } from "@heroicons/react/outline";
 import {
   HandIcon,

@@ -50,20 +50,26 @@ function Auth() {
       cookies.set("phoneNumber", phoneNumber);
       cookies.set("avatarURL", avatarURL);
       cookies.set("email", email);
-
     }
     window.location.reload();
   };
 
   return (
-    <div className="auth__form-container">
-      <div className="auth__form-container_fields">
-        <div className="auth__form-container_fields_content">
-          <p>{isSignUp ? "Sign Up" : "Sign in"}</p>
+    <div className="min-h-screen flex flex-row">
+      <div className="flex flex-col justify-center">
+        <div className="auth__form-container_fields_content flex flex-col justify-start p-8 shadow-xl bg-white rounded-sm transition ease-in">
+          <p className="font-medium text-scu_blue-light text-xl">
+            {isSignUp ? "Sign Up" : "Sign in"}
+          </p>
           <form onSubmit={handleSubmit} action="">
             {isSignUp && (
-              <div className="auth__form-container_fields_content_input">
-                <label htmlFor="fullname">Full Name</label>
+              <div className="flex flex-col relative my-4 mx-0">
+                <label
+                  className="mb-2 text-purple-600 text-md font-medium tracking-normal leading-3"
+                  htmlFor="fullname"
+                >
+                  Full Name
+                </label>
                 <input
                   type="text"
                   name="fullname"
@@ -74,7 +80,7 @@ function Auth() {
                 />
               </div>
             )}
-            <div className="auth__form-container_fields_content_input">
+            <div className="flex flex-col relative my-4 mx-0">
               <label htmlFor="username">User name</label>
               <input
                 type="text"
@@ -86,7 +92,7 @@ function Auth() {
               />
             </div>
             {isSignUp && (
-              <div className="auth__form-container_fields_content_input">
+              <div className="flex flex-col relative my-4 mx-0">
                 <label htmlFor="phoneNumber">Phone Number</label>
                 <input
                   type="text"
@@ -99,7 +105,7 @@ function Auth() {
               </div>
             )}
             {isSignUp && (
-              <div className="auth__form-container_fields_content_input">
+              <div className="flex flex-col relative my-4 mx-0">
                 <label htmlFor="EmailAddress">Email Address</label>
                 <input
                   type="text"
@@ -112,7 +118,7 @@ function Auth() {
               </div>
             )}
             {isSignUp && (
-              <div className="auth__form-container_fields_content_input">
+              <div className="flex flex-col relative my-4 mx-0">
                 <label htmlFor="avatarURL">Avatar url</label>
                 <input
                   type="text"
@@ -124,7 +130,7 @@ function Auth() {
                 />
               </div>
             )}
-            <div className="auth__form-container_fields_content_input">
+            <div className="flex flex-col relative my-4 mx-0">
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -136,7 +142,7 @@ function Auth() {
               />
             </div>
             {isSignUp && (
-              <div className="auth__form-container_fields_content_input">
+              <div className="flex flex-col relative my-4 mx-0">
                 <label htmlFor="confrimPassword">confrim Password</label>
                 <input
                   type="password"
@@ -153,7 +159,7 @@ function Auth() {
             </div>
           </form>
           <div className="auth__form-container_fields-account">
-            <p>
+            <p className="font-medium text-scu_blue-light text-xl">
               {isSignUp ? "Already have an account?" : "Don't have an account?"}
               <span onClick={switchMode}>
                 {isSignUp ? "Sign in" : "Sign up"}
@@ -162,7 +168,7 @@ function Auth() {
           </div>
         </div>
       </div>
-      <div className="ath__form-container_image">
+      <div className="flex shadow-xl flex-grow-3">
         {/* todo: I have to replace this with a sign up banner with Image tag */}
         <UserIcon className="h-8" />
       </div>

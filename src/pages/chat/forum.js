@@ -80,7 +80,7 @@ function forum() {
       <Header />
       <Navbar />
 
-      <main className="">
+      <main className="m-0 p-0 h-screen">
         {/* banner */}
         <div className="">
           <Chat client={client} theme="team light">
