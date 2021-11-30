@@ -36,20 +36,15 @@ function Header() {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute ring-0 w-80 mt-0 h-auto left-0 origin-top-right bg-scu_blue-light divide-y divide-scu_yellow shadow-lg ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute ring-0 w-80 sm:mt-0 md:mt-8 h-screen left-0 origin-top-right bg-scu_blue-light divide-y divide-scu_yellow shadow-lg ring-black ring-opacity-5 focus:outline-none">
               <div className="p-1 ">
                 <Menu.Item as="div">
                   {({ active }) =>
                     sidebarData.map((item) => (
                       <button
                         key={item.path}
-                        className={`${
-                          active
-                            ? "bg-scu_blue text-scu_yellow"
-                            : "text-gray-400"
-                        } group flex rounded-md items-center w-full p-2 text-md`}
+                        className="flex text-white rounded-md last:mb-2 items-center space-y-1 w-full p-4 hover:text-lg hover:font-bold hover:text-scu_yellow hover:bg-scu_blue"
                       >
-                        {" "}
                         {item.icon}
                         <Link href={item.path}>{item.title}</Link>
                       </button>
