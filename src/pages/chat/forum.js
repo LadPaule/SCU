@@ -7,12 +7,10 @@ import { StreamChat } from "stream-chat";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
+import ChannelConainer from "../../components/chat/ChannelContainer";
+import ChannelListContainer from "../../components/chat/ChannelListContainer";
+import Auth from "../../components/chat/Auth";
 
-import {
-  ChannelListContainer,
-  ChannelContainer,
-  Auth,
-} from "../../components/chat";
 const cookies = new Cookies();
 const apiKey = process.env.STREAM_API_KEY;
 const client = StreamChat.getInstance(apiKey);
@@ -81,7 +79,6 @@ function forum() {
       <Navbar />
 
       <main className="m-0 p-0 h-screen">
-        {/* banner */}
         <div className="">
           <Chat client={client} theme="team light">
             <ChannelListContainer
@@ -99,7 +96,6 @@ function forum() {
             />
           </Chat>
         </div>
-        {/* feed */}
       </main>
       {/* footer */}
       <Footer />

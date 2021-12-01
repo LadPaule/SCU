@@ -45,7 +45,7 @@ function participate() {
       <Header />
       <Navbar />
 
-      <main className="m-0 p-0 bg-gray-300">
+      <main className="m-0 p-0 bg-gray-600">
         {/* banner */}
         <div className="relative ">
           <Image
