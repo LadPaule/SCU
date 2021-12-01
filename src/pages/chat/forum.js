@@ -31,7 +31,7 @@ if (authToken) {
   );
 }
 
-function forum() {
+function Forum() {
   const [createType, setCreateType] = useState("");
   const [isCreating, setIsCreating] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
@@ -103,4 +103,4 @@ function forum() {
   );
 }
 
-export default forum;
+export default Forum;
