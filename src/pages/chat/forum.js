@@ -7,7 +7,7 @@ import { StreamChat } from "stream-chat";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
-import ChannelConainer from "../../components/chat/ChannelContainer";
+import ChannelContainer from "../../components/chat/ChannelContainer";
 import ChannelListContainer from "../../components/chat/ChannelListContainer";
 import Auth from "../../components/chat/Auth";
 
