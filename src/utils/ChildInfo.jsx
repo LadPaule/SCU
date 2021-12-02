@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState, Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import Link from "next/link";
 
 function ChildInfo({ child }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -104,7 +105,9 @@ function ChildInfo({ child }) {
                   )}
                   <div className="space-y-8">
                     <p className="text-black font-bold">child date of birth</p>
-                    <p className="text-black font-bold">Stays at: {child.areaOfResidence}</p>
+                    <p className="text-black font-bold">
+                      Stays at: {child.areaOfResidence}
+                    </p>
                   </div>
                 </div>
                 <div className="">
@@ -115,10 +118,18 @@ function ChildInfo({ child }) {
                   </p>
                 </div>
                 <div className="mt-4 flex justify-between">
-                  <button type="button" className="rounded-sm bg-scu_blue-light hover:opacity-90 text-scu_yellow p-4 " onClick={closeModal} >
+                  <button
+                    type="button"
+                    className="rounded-sm bg-scu_blue-light hover:opacity-90 text-scu_yellow p-4 "
+                    onClick={closeModal}
+                  >
                     Got it
                   </button>
-                  <button type="button" className="button animate-bounce ">support</button>
+                  <Link href="/sponsor">
+                    <button onClick="/sponsor" type="button" className="button animate-bounce ">
+                      support
+                    </button>
+                  </Link>
                 </div>
               </div>
             </Transition.Child>

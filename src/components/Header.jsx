@@ -41,7 +41,7 @@ function Header() {
                 <Menu.Item as="div">
                   {({ active }) =>
                     sidebarData.map((item) => (
-                      <button
+                      <button aria-label="menu"
                         key={item.path}
                         className="flex text-white rounded-md last:mb-2 items-center space-y-1 w-full p-4 hover:text-lg hover:font-bold hover:text-scu_yellow hover:bg-scu_blue"
                       >
