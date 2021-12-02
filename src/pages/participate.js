@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
@@ -56,17 +57,15 @@ function participate() {
             objectFit="contain"
             loading="eager"
           />
-          <div className="absolute -mt-44 ml-20">
-            <h1 className="font-black text-3xl md:text-6xl whitespace-nowrap text-scu_blue-light mb-2">
+          <div className="absolute -mt-44 ">
+            <h1 className="font-black px-10 text-3xl md:text-6xl whitespace-nowrap text-scu_blue-light mb-2">
               Get Involved
             </h1>
-            <p className="hidden lg:block text-scu_blue-light text-xl font-bold">
+            <p className="hidden lg:block text-scu_blue-light text-xl font-bold px-10 text-left">
               Participate and be a part of our ever growing team by supporting
               our programs through visiting us here on the ground, volunteering
-              with our programs of your choice.
-            </p>
-            <p className="hidden lg:block text-scu_blue-light text-xl mb-10 font-bold pb-4">
-              You can also stand with us in Prayers
+              with our programs of your choice. You can also stand with us in
+              Prayers
             </p>
           </div>
         </div>
@@ -83,7 +82,9 @@ function participate() {
             />
           </div>
           <div className="p-2">
-            <h1 className="md:text-4xl text-xl mb-2 whitespace-nowrap font-bold text-scu_blue-light">Gap Year Student Trip</h1>
+            <h1 className="top-2 right-2 text-blue-600 font-black text-2xl">
+              Gap Year Student Trip
+            </h1>
             <p className="text- font-bold whitespace-normal text-sm">
               With nine years’ experience in hosting Gap Year Students from the
               UK and the US, Smile Charity Uganda is your choice destination for
@@ -91,6 +92,88 @@ function participate() {
               programs. We ensure safety without compromising on the local
               experience.
             </p>
+          </div>
+        </div>
+        <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-4 mx-auto md:-mt-10">
+          <div
+            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
+        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          >
+            <h1 className=" top-2 right-2 text-blue-600 font-black text-2xl">
+              Who we are?
+            </h1>
+            <p>
+              Smile charity Uganda we are a helping hand to those in need. We
+              are a hand up not a hand hand out. We envision holistically
+              empowered and transformed lives through our working mechanism DESC
+              which stands for Discipleship and Evangelism, Education Support,
+              Skilling and Crisis management.
+            </p>
+            <Link href="/about">
+              <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
+                learn more
+              </button>
+            </Link>
+          </div>
+          <div
+            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
+        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          >
+            <h1 className=" top-2 right-2 text-blue-600 font-black text-2xl">
+              Who we are?
+            </h1>
+            <p>
+              Smile charity Uganda we are a helping hand to those in need. We
+              are a hand up not a hand hand out. We envision holistically
+              empowered and transformed lives through our working mechanism DESC
+              which stands for Discipleship and Evangelism, Education Support,
+              Skilling and Crisis management.
+            </p>
+            <Link href="/about">
+              <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
+                learn more
+              </button>
+            </Link>
+          </div>
+          <div
+            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
+        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          >
+            <h1 className=" top-2 right-2 text-blue-600 font-black text-2xl">
+              Who we are?
+            </h1>
+            <p>
+              Smile charity Uganda we are a helping hand to those in need. We
+              are a hand up not a hand hand out. We envision holistically
+              empowered and transformed lives through our working mechanism DESC
+              which stands for Discipleship and Evangelism, Education Support,
+              Skilling and Crisis management.
+            </p>
+            <Link href="/about">
+              <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
+                learn more
+              </button>
+            </Link>
+          </div>
+          <div
+            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
+        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          >
+            <h1 className=" top-2 right-2 text-blue-600 font-black text-2xl">
+              Who we are?
+            </h1>
+            <p>
+              Smile charity Uganda we are a helping hand to those in need. We
+              are a hand up not a hand hand out. We envision holistically
+              empowered and transformed lives through our working mechanism DESC
+              which stands for Discipleship and Evangelism, Education Support,
+              Skilling and Crisis management.
+            </p>
+            <Link href="/about">
+              <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
+                learn more
+              </button>
+            </Link>
           </div>
         </div>
       </main>
