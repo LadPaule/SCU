@@ -45,33 +45,54 @@ function participate() {
       <Header />
       <Navbar />
 
-      <main className="m-0 p-0 bg-gray-600">
+      <main className="m-0 p-0 bg-gray-300">
         {/* banner */}
         <div className="relative ">
           <Image
-            className="bg-blend-overlay"
+            className="mix-blend-overlay"
             src="/participate/participatebanner.webp"
             width={1440}
             height={560}
             objectFit="contain"
             loading="eager"
           />
-          <div className="absolute -mt-44 ml-40">
-            <h1 className="font-black text-6xl text-scu_blue-light mb-2">
+          <div className="absolute -mt-44 ml-20">
+            <h1 className="font-black text-6xl  text-scu_blue-light mb-2">
               Get Involved
             </h1>
-            <p className="text-scu_blue-light text-xl font-bold">
+            <p className="hidden lg:block text-scu_blue-light text-xl font-bold">
               Participate and be a part of our ever growing team by supporting
               our programs through visiting us here on the ground, volunteering
               with our programs of your choice.
             </p>
-            <p className="text-scu_blue-light text-xl mb-10 font-bold pb-4">
+            <p className="hidden lg:block text-scu_blue-light text-xl mb-10 font-bold pb-4">
               You can also stand with us in Prayers
             </p>
           </div>
         </div>
 
-        {/* feed */}
+        <div className="p-4 m-4 bg-white flex flex-col md:flex-row">
+          <div className="mr-4">
+            <Image
+              src="/participate/gapYearStudents.webp"
+              width={700}
+              height={500}
+              objectFit="contain"
+              loading="lazy"
+              className="rounded-md mr-4"
+            />
+          </div>
+          <div className="w-96">
+            <h1 className="text-4xl mb-2 whitespace-nowrap font-bold text-scu_blue-light">Gap Year Student Trip</h1>
+            <p className="text-md font-bold whitespace-normal text-xl">
+              With nine years’ experience in hosting Gap Year Students from the
+              UK and the US, Smile Charity Uganda is your choice destination for
+              a three to nine month’s active service in relation to our
+              programs. We ensure safety without compromising on the local
+              experience.
+            </p>
+          </div>
+        </div>
       </main>
       {/* footer */}
       <Footer />
