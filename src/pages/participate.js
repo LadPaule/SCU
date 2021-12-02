@@ -57,7 +57,7 @@ function participate() {
             loading="eager"
           />
           <div className="absolute -mt-44 ml-20">
-            <h1 className="font-black text-6xl  text-scu_blue-light mb-2">
+            <h1 className="font-black text-3xl md:text-6xl whitespace-nowrap text-scu_blue-light mb-2">
               Get Involved
             </h1>
             <p className="hidden lg:block text-scu_blue-light text-xl font-bold">
@@ -71,20 +71,20 @@ function participate() {
           </div>
         </div>
 
-        <div className="p-4 m-4 bg-white flex flex-col md:flex-row">
-          <div className="mr-4">
+        <div className="p-0 m-0 bg-white flex flex-col md:flex-row">
+          <div className="mx-4">
             <Image
               src="/participate/gapYearStudents.webp"
               width={700}
               height={500}
               objectFit="contain"
               loading="lazy"
-              className="rounded-md mr-4"
+              className="rounded-md mr-4 shadow-sm"
             />
           </div>
-          <div className="w-96">
-            <h1 className="text-4xl mb-2 whitespace-nowrap font-bold text-scu_blue-light">Gap Year Student Trip</h1>
-            <p className="text-md font-bold whitespace-normal text-xl">
+          <div className="p-2">
+            <h1 className="md:text-4xl text-xl mb-2 whitespace-nowrap font-bold text-scu_blue-light">Gap Year Student Trip</h1>
+            <p className="text- font-bold whitespace-normal text-sm">
               With nine years’ experience in hosting Gap Year Students from the
               UK and the US, Smile Charity Uganda is your choice destination for
               a three to nine month’s active service in relation to our
