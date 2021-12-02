@@ -55,6 +55,7 @@ function skills() {
             width={1440}
             height={560}
             objectFit="contain"
+            alt="skills training banner"
             loading="eager"
           />
           <div className="absolute -mt-44 px-10">

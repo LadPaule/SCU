@@ -2,6 +2,8 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import Link from "next/link";
+import Image from "next/image";
 
 function discipleship() {
   return (
@@ -56,6 +58,7 @@ function discipleship() {
               height={560}
               objectFit="contain"
               loading="eager"
+              alt="discipleship banner" 
             />
             <div className="absolute -mt-44 px-10">
               <h1 className="font-black text-3xl md:text-6xl whitespace-nowrap text-scu_blue-light mb-2">
