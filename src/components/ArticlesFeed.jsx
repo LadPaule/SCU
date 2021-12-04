@@ -17,10 +17,10 @@ export default function ArticlesFeed({ articles }) {
                 loading="lazy"
               />
 
-              <div className="font-bold text-xl text-blue-500 mb-2">
+              <div className="font-bold text-xl p-4 text-blue-500 mb-2">
                 {article.title}
               </div>
-              <p className="text-gray-700 text-base px-2 line-clamp-4 ">
+              <p className="text-gray-700 text-base px-4 line-clamp-4 ">
                 {article.articleBody.text}
               </p>
               <div className="content-center p-4 place-self-center">

@@ -41,7 +41,8 @@ function Header() {
                 <Menu.Item as="div">
                   {({ active }) =>
                     sidebarData.map((item) => (
-                      <button aria-label="menu"
+                      <button
+                        aria-label="menu"
                         key={item.path}
                         className="flex text-white rounded-md last:mb-2 items-center space-y-1 w-full p-4 hover:text-lg hover:font-bold hover:text-scu_yellow hover:bg-scu_blue"
                       >
@@ -56,8 +57,15 @@ function Header() {
           </Transition>
         </Menu>
 
-        <Link href="#" passHref>
-          <a href="#" target="_blank" rel="noreferrer">
+        <Link
+          href="https://www.instagram.com/p/CV4wzcEMgKV/?utm_medium=copy_link"
+          passHref={true}
+        >
+          <a
+            href="https://www.instagram.com/p/CV4wzcEMgKV/?utm_medium=copy_link"
+            target="_blank"
+            rel="noreferrer"
+          >
             <svg
               className="fill-current cursor-pointer text-scu_yellow  hover:scale-105 hover:animate-bounce"
               xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +78,15 @@ function Header() {
           </a>
         </Link>
 
-        <Link href="#" passHref>
-          <a href="#" target="_blank" rel="noreferrer">
+        <Link
+          href="https://www.facebook.com/smilecharityuganda"
+          passHref={true}
+        >
+          <a
+            href="https://www.facebook.com/smilecharityuganda"
+            target="_blank"
+            rel="noreferrer"
+          >
             <svg
               className="fill-current cursor-pointer text-scu_yellow  hover:scale-105 hover:animate-bounce"
               xmlns="http://www.w3.org/2000/svg"
@@ -101,14 +116,24 @@ function Header() {
             Forum
           </span>
         </Link>
-
-        <button
-          href="#"
-          className="button text-black 
-          font-semibold animate-pulse"
+        <Link
+          href="https://www.stewardship.org.uk/partners/20217424"
+          passHref={true}
         >
-          Donate
-        </button>
+          <a
+            href="https://www.stewardship.org.uk/partners/20217424"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button
+              href="https://www.stewardship.org.uk/partners/20217424"
+              className="button text-black 
+          font-semibold animate-pulse"
+            >
+              Donate
+            </button>
+          </a>
+        </Link>
       </div>
     </header>
   );
