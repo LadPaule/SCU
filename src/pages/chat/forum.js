@@ -1,47 +1,13 @@
 import Head from "next/head";
-import { useState } from "react";
-import { Chat } from "stream-chat-react";
-import "stream-chat-react/dist/css/index.css";
-import Cookies from "universal-cookie";
-import { StreamChat } from "stream-chat";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
-import ChannelContainer from "../../components/chat/ChannelContainer";
-import ChannelListContainer from "../../components/chat/ChannelListContainer";
-import Auth from "../../components/chat/Auth";
 
-const cookies = new Cookies();
-const apiKey = process.env.STREAM_API_KEY;
-const client = StreamChat.getInstance(apiKey);
-const authToken = cookies.get("token");
-
-if (authToken) {
-  client.connectUser(
-    {
-      id: cookies.get("userId"),
-      name: cookies.get("username"),
-      fullName: cookies.get("fullname"),
-      hashedPassword: cookies.get("hashedPassword"),
-      phoneNumber: cookies.get("phoneNumber"),
-      image: cookies.get("avatarURL"),
-      email: cookies.get("email"),
-    },
-    authToken
-  );
-}
-
-function Forum() {
-  const [createType, setCreateType] = useState("");
-  const [isCreating, setIsCreating] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-
-  if (!authToken) return <Auth />;
-
+function crisisCare() {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>SCU Forum</title>
+        <title>SCU | Forum </title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -79,23 +45,14 @@ function Forum() {
       <Navbar />
 
       <main className="m-0 p-0 h-screen">
+        {/* banner */}
         <div className="">
-          <Chat client={client} theme="team light">
-            <ChannelListContainer
-              isCreating={isCreating}
-              setCreate={setCreate}
-              isEditing={isEditing}
-              setIsEditing={setIsEditing}
-            />
-            <ChannelContainer
-              isCreating={isCreating}
-              setIsCreating={setIsCreating}
-              isEditing={isEditing}
-              setIsEditing={setIsEditing}
-              createType={createType}
-            />
-          </Chat>
+          <h1 className="text-center text-4xl items-center justify-center mt-40 text-blue-800 font-bold">
+            Page Under Construction
+          </h1>
         </div>
+
+        {/* feed */}
       </main>
       {/* footer */}
       <Footer />
@@ -103,4 +60,4 @@ function Forum() {
   );
 }
 
-export default Forum;
+export default crisisCare;
