@@ -1,12 +1,11 @@
 import Head from "next/head";
-import { GraphQLClient, gql } from "graphql-request";
+import { GraphQLClient } from "graphql-request";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Childrenfeed from "../components/Childrenfeed";
 
 function ChildrenList({ waitingLists }) {
-  
   return (
     <div className="bg-gray-100">
       <Head>
