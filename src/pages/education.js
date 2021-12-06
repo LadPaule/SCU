@@ -82,7 +82,7 @@ function education() {
               essential education.
             </p>
             <Link href="/education/child_sponsorship">
-              <button href="/education/child_sponsorship" className="mr-56 mt-4 button w-200 hover:animate-bounce">
+              <button href="/education/child_sponsorship" className="mr-5 mt-4 button hover:animate-bounce">
                 learn more
               </button>
             </Link>
@@ -101,7 +101,7 @@ function education() {
               the steps to the same.
             </p>
             <Link href="/participate">
-              <button className="mr-56 mt-4 button hover:animate-bounce">
+              <button className="mr-5 mt-4 button hover:animate-bounce">
                 learn how
               </button>
             </Link>
