@@ -139,7 +139,7 @@ function education() {
               children study in enriched learning environments.
             </p>
             <Link href="/children_list">
-              <a href="/children_list">
+              
                 <button
                   href="/children_list"
                   type="button"
@@ -147,7 +147,7 @@ function education() {
                 >
                   support a child
                 </button>
-              </a>
+              
             </Link>
           </div>
         </div>
@@ -157,8 +157,10 @@ function education() {
           </h1>
           <div className="">
             {faq.map((qtn, index) => (
-              <div className="" key={index}>
-                <h1>{qtn.question}</h1>
+              <div className="accordion accordion-flush" key={index}>
+                <h1 className="">
+                  <button>{qtn.question}</button>
+                </h1>
                 <p>{qtn.answer}</p>
               </div>
             ))}
