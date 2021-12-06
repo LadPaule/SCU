@@ -1,13 +1,23 @@
 import Head from "next/head";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import Navbar from "../../components/Navbar";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 function education() {
+  const [clicked, setClicked] = useState(false);
+  const toggle = (index) => {
+    if (clicked === index) {
+      // Todo: if clicked faq is clicked again, close it.
+      setClicked(null);
+    }
+    setClicked(index);
+  };
   const faq = [
     {
       question: "What sort of children are sponsored?",
@@ -139,29 +149,62 @@ function education() {
               children study in enriched learning environments.
             </p>
             <Link href="/children_list">
-              
-                <button
-                  href="/children_list"
-                  type="button"
-                  className="ml-4 mt-8 button animate-pulse"
-                >
-                  support a child
-                </button>
-              
+              <button
+                href="/children_list"
+                type="button"
+                className="ml-4 mt-8 button animate-pulse"
+              >
+                support a child
+              </button>
             </Link>
           </div>
         </div>
-        <div className="flex-col px-10 bg-white">
-          <h1 className="whitespace-nowrap text-blue-400 text-xl font-black ">
+        <div className="flex-col px-2 mt-2 bg-gray-200">
+          <h1 className="whitespace-nowrap text-blue-600 text-xl font-black ">
             Frequently Asked questions
           </h1>
-          <div className="">
+          <div className="accordion accordion-flush" id="accordionFlush">
             {faq.map((qtn, index) => (
-              <div className="accordion accordion-flush" key={index}>
-                <h1 className="">
-                  <button>{qtn.question}</button>
+              <div
+                className="accordion-item border-t-0 border-l-0 border-r-0 rounded-sm bg-blue-300 border border-blue-400"
+                key={index}
+              >
+                <h1
+                  onClick={() => toggle(index)}
+                  className="flex mb-0"
+                  id="flush-headingOne"
+                >
+                  <button
+                    className="accordion-button relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-blue-200 border-0 rounded-none 
+                    transition focus:outline-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    {qtn.question}
+                  </button>
+
+                  <span>
+                    {clicked === index ? (
+                      <ChevronDownIcon className="h-6 font-bold text-white" />
+                    ) : (
+                      <ChevronUpIcon className="h-6 font-bold text-scu_blue-light" />
+                    )}
+                  </span>
                 </h1>
-                <p>{qtn.answer}</p>
+                {clicked === index ? (
+                  <div
+                    className="accordion-collapse border-0"
+                    id="flush-collapseOne"
+                    aria-labelledby="flush-headingOne"
+                    aria-controls="flush-collpseOne"
+                    data-bs-parent="accordionFlush"
+                  >
+                    <p className="text-sm text-scu_blue-light font-bold py-4 px-5">{qtn.answer}</p>
+                  </div>
+                ) : null}
               </div>
             ))}
           </div>

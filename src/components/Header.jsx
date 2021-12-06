@@ -36,7 +36,7 @@ function Header() {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute ring-0 w-80 sm:mt-0 md:mt-8 h-screen left-0 origin-top-right bg-scu_blue-light divide-y divide-scu_yellow shadow-lg ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute overflow-y-scroll noscrollbar ring-0 w-80 sm:mt-0 md:mt-8 h-screen left-0 origin-top-right bg-scu_blue-light divide-y divide-scu_yellow shadow-lg ring-black ring-opacity-5 focus:outline-none">
               <div className="p-1 ">
                 <Menu.Item as="div">
                   {({ active }) =>
