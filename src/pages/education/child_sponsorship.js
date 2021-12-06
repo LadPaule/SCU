@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-function education() {
+function Education() {
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
     if (clicked === index) {
@@ -202,7 +202,9 @@ function education() {
                     aria-controls="flush-collpseOne"
                     data-bs-parent="accordionFlush"
                   >
-                    <p className="text-sm text-scu_blue-light font-bold py-4 px-5">{qtn.answer}</p>
+                    <p className="text-sm text-scu_blue-light font-bold py-4 px-5">
+                      {qtn.answer}
+                    </p>
                   </div>
                 ) : null}
               </div>
@@ -218,4 +220,4 @@ function education() {
   );
 }
 
-export default education;
+export default Education;
