@@ -81,8 +81,8 @@ function education() {
               on a child in need of a helping hand to start or keep up with
               essential education.
             </p>
-            <Link href="/about">
-              <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
+            <Link href="/education/child_sponsorship">
+              <button href="/education/child_sponsorship" className="mr-56 mt-4 button w-200 hover:animate-bounce">
                 learn more
               </button>
             </Link>
