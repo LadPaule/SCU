@@ -1,71 +1,162 @@
+import React, { useState } from "react";
 import { ChannelList, useChatContext } from "stream-chat-react";
 import Cookies from "universal-cookie";
-import { ChannelSearch, TeamChannelList, TeamChannelPreview } from "../chat";
-import { ChatIcon, LogoutIcon } from "@heroicons/react/solid";
-
+import Image from "next/image";
+import { ChannelSearch, TeamChannelList, TeamChannelPreview } from "./";
+import { LogoutIcon } from "@heroicons/react/solid"
 
 const cookies = new Cookies();
-const Sidebar = ({logout}) => (
+
+const SideBar = ({ logout }) => (
   <div className="channel-list__sidebar">
     <div className="channel-list__sidebar__icon1">
       <div className="icon1__inner">
-        <ChatIcon className="h-8" />
+        <Image src ="/apple-touch-icon.webp" width={512} height={512}/>
       </div>
     </div>
-
-    <div className="channel-list__sidebar__icon1">
+    <div className="channel-list__sidebar__icon2">
       <div className="icon1__inner" onClick={logout}>
         <LogoutIcon className="h-8" />
       </div>
     </div>
   </div>
 );
-const OrganizationHeader = () => (
-  
-  <div className="channerl-list__header">
-    <p className="channel.list__header__text">SCU Forum</p>
+
+const CompanyHeader = () => (
+  <div className="channel-list__header">
+    <p className="channel-list__header__text">Medical Pager</p>
   </div>
 );
-function ChannelListContainer() {
-  const logout =()=>{    
+
+const customChannelTeamFilter = (channels) => {
+  return channels.filter((channel) => channel.type === "team");
+};
+
+const customChannelMessagingFilter = (channels) => {
+  return channels.filter((channel) => channel.type === "messaging");
+};
+
+const ChannelListContent = ({
+  isCreating,
+  setIsCreating,
+  setCreateType,
+  setIsEditing,
+  setToggleContainer,
+}) => {
+  const { client } = useChatContext();
+
+  const logout = () => {
+    cookies.remove("token");
     cookies.remove("userId");
     cookies.remove("username");
-    cookies.remove("fullname");
+    cookies.remove("fullName");
+    cookies.remove("avatarURL");
     cookies.remove("hashedPassword");
     cookies.remove("phoneNumber");
-    cookies.remove("avatarURL");
-    cookies.remove("email");
 
-    window.location.reload()
-  }
+    window.location.reload();
+  };
+
+  const filters = { members: { $in: [client.userID] } };
+
   return (
     <>
-      <Sidebar logout ={logout} />
+      <SideBar logout={logout} />
       <div className="channel-list__list__wrapper">
-        <OrganizationHeader />
-        <ChannelSearch />
+        <CompanyHeader />
+        <ChannelSearch setToggleContainer={setToggleContainer} />
         <ChannelList
-          filters={{}}
-          channelRenderFilterFn={() => {}}
-          List={(listProps) => <TeamChannelList {...listProps} type="team" />}
-          Preview={(PreviewProps) => (
-            <TeamChannelPreview {...PreviewProps} type="team" />
+          filters={filters}
+          channelRenderFilterFn={customChannelTeamFilter}
+          List={(listProps) => (
+            <TeamChannelList
+              {...listProps}
+              type="team"
+              isCreating={isCreating}
+              setIsCreating={setIsCreating}
+              setCreateType={setCreateType}
+              setIsEditing={setIsEditing}
+              setToggleContainer={setToggleContainer}
+            />
+          )}
+          Preview={(previewProps) => (
+            <TeamChannelPreview
+              {...previewProps}
+              setIsCreating={setIsCreating}
+              setIsEditing={setIsEditing}
+              setToggleContainer={setToggleContainer}
+              type="team"
+            />
           )}
         />
-
         <ChannelList
-          filters={{}}
-          channelRenderFilterFn={() => {}}
+          filters={filters}
+          channelRenderFilterFn={customChannelMessagingFilter}
           List={(listProps) => (
-            <TeamChannelList {...listProps} type="messaging" />
+            <TeamChannelList
+              {...listProps}
+              type="messaging"
+              isCreating={isCreating}
+              setIsCreating={setIsCreating}
+              setCreateType={setCreateType}
+              setIsEditing={setIsEditing}
+              setToggleContainer={setToggleContainer}
+            />
           )}
-          Preview={(PreviewProps) => (
-            <TeamChannelPreview {...PreviewProps} type="messaging" />
+          Preview={(previewProps) => (
+            <TeamChannelPreview
+              {...previewProps}
+              setIsCreating={setIsCreating}
+              setIsEditing={setIsEditing}
+              setToggleContainer={setToggleContainer}
+              type="messaging"
+            />
           )}
         />
       </div>
     </>
   );
-}
+};
+
+const ChannelListContainer = ({
+  setCreateType,
+  setIsCreating,
+  setIsEditing,
+}) => {
+  const [toggleContainer, setToggleContainer] = useState(false);
+
+  return (
+    <>
+      <div className="channel-list__container">
+        <ChannelListContent
+          setIsCreating={setIsCreating}
+          setCreateType={setCreateType}
+          setIsEditing={setIsEditing}
+        />
+      </div>
+
+      <div
+        className="channel-list__container-responsive"
+        style={{
+          left: toggleContainer ? "0%" : "-89%",
+          backgroundColor: "#005fff",
+        }}
+      >
+        <div
+          className="channel-list__container-toggle"
+          onClick={() =>
+            setToggleContainer((prevToggleContainer) => !prevToggleContainer)
+          }
+        ></div>
+        <ChannelListContent
+          setIsCreating={setIsCreating}
+          setCreateType={setCreateType}
+          setIsEditing={setIsEditing}
+          setToggleContainer={setToggleContainer}
+        />
+      </div>
+    </>
+  );
+};
 
 export default ChannelListContainer;

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Avatar, useChatContext } from "stream-chat-react";
-
-import { InviteIcon } from "../assets";
+import { InviteIcon } from "../chat/utils/InviteIcon";
 
 const ListContainer = ({ children }) => {
   return (

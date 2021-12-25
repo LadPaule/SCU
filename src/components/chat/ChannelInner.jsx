@@ -10,7 +10,7 @@ import {
   useChatContext,
 } from "stream-chat-react";
 
-import { ChannelInfo } from "../../../src/helperdata";
+import { ChannelInfo } from "../chat/utils/ChannelInfo";
 
 export const GiphyContext = React.createContext({});
 

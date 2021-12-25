@@ -1,37 +1,56 @@
-import { DocumentAddIcon } from "@heroicons/react/outline";
+import React from "react";
 
-function TeamChannelList({childern, error =false, loading, type}) {
-  if(error) {
-    return type === 'team' ? (
+import { AddChannel } from "../chat/utils/AddChannel";
+
+const TeamChannelList = ({
+  setToggleContainer,
+  children,
+  error = false,
+  loading,
+  type,
+  isCreating,
+  setIsCreating,
+  setCreateType,
+  setIsEditing,
+}) => {
+  if (error) {
+    return type === "team" ? (
       <div className="team-channel-list">
-        <p className="team-chanenel-list__message">
-          There was an error loading the channels.
+        <p className="team-channel-list__message">
+          Connection error, please wait a moment and try again.
         </p>
       </div>
-    ): null;
+    ) : null;
   }
-  if(loading) {
+
+  if (loading) {
     return (
       <div className="team-channel-list">
-        <p className="team-chanenel-list__message loading">
-        {
-          type === 'team' ? 'Channels...' : 'Messages...'
-        } loading...
+        <p className="team-channel-list__message loading">
+          {type === "team" ? "Channels" : "Messages"} loading...
         </p>
       </div>
-    )
+    );
   }
-  return (
-    <div className="team-chanenel-list">
-       <div className="team-chanenel-list__header">
-         <p className="team-chanenel-list__header__title">
-           {type=== 'team'? 'Channels': 'Direct Messages'}
-         </p>
-         {/*Button to add channel */}
-       </div>
-       {childern}
-    </div>
-  )
-}
 
-export default TeamChannelList
+  return (
+    <div className="team-channel-list">
+      <div className="team-channel-list__header">
+        <p className="team-channel-list__header__title">
+          {type === "team" ? "Channels" : "Direct Messages"}
+        </p>
+        <AddChannel
+          isCreating={isCreating}
+          setIsCreating={setIsCreating}
+          setCreateType={setCreateType}
+          setIsEditing={setIsEditing}
+          type={type === "team" ? "team" : "messaging"}
+          setToggleContainer={setToggleContainer}
+        />
+      </div>
+      {children}
+    </div>
+  );
+};
+
+export default TeamChannelList;

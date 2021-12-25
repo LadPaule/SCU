@@ -2,8 +2,38 @@ import Head from "next/head";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
+import { StreamChat } from "stream-chat";
+import { Chat } from "stream-chat-react";
+import Cookies from "universal-cookie";
+import { ChannelListContainer, ChannelContainer, Auth } from "../../components/chat";
+import { useState } from "react";
 
-function crisisCare() {
+const cookies = new Cookies();
+const apiKey = "qgtk9ttyha7j";
+const authToken = cookies.get("token");
+
+const client = StreamChat.getInstance(apiKey);
+
+if (authToken) {
+  client.connectUser(
+    {
+      id: cookies.get("userId"),
+      name: cookies.get("username"),
+      fullName: cookies.get("fullName"),
+      image: cookies.get("avatarURL"),
+      hashedPassword: cookies.get("hashedPassword"),
+      phoneNumber: cookies.get("phoneNumber"),
+    },
+    authToken
+  );
+}
+
+function Forum() {
+  const [createType, setCreateType] = useState("");
+  const [isCreating, setIsCreating] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+
+  if (!authToken) return <Auth />;
   return (
     <div className="bg-gray-100">
       <Head>
@@ -45,14 +75,23 @@ function crisisCare() {
       <Navbar />
 
       <main className="m-0 p-0 h-screen">
-        {/* banner */}
-        <div className="">
-          <h1 className="text-center text-4xl items-center justify-center mt-40 text-blue-800 font-bold">
-            Page Under Construction
-          </h1>
+        <div className="app__wrapper">
+          <Chat client={client} theme="team light">
+            <ChannelListContainer
+              isCreating={isCreating}
+              setIsCreating={setIsCreating}
+              setCreateType={setCreateType}
+              setIsEditing={setIsEditing}
+            />
+            <ChannelContainer
+              isCreating={isCreating}
+              setIsCreating={setIsCreating}
+              isEditing={isEditing}
+              setIsEditing={setIsEditing}
+              createType={createType}
+            />
+          </Chat>
         </div>
-
-        {/* feed */}
       </main>
       {/* footer */}
       <Footer />
@@ -60,4 +99,4 @@ function crisisCare() {
   );
 }
 
-export default crisisCare;
+export default Forum;
