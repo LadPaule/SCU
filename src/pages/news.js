@@ -6,8 +6,7 @@ import ArticlesFeed from "../components/ArticlesFeed";
 import { GraphQLClient } from "graphql-request";
 
 function news({ articles }) {
-  console.log(articles);
-  return (
+    return (
     <div className="bg-gray-100">
       <Head>
         <title>The Latest News from SCU</title>

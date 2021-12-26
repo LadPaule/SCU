@@ -58,10 +58,10 @@ function about() {
             loading="eager"
           />
           <div className="absolute -mt-44 px-10">
-            <h1 className="font-black text-xl md:text-6xl whitespace-nowrap text-yellow-400 mb-2">
+            <h1 className="font-black text-xl md:text-2xl whitespace-nowrap text-yellow-400 mb-2">
               About Smile charity Uganda
             </h1>
-            <p className="hidden lg:block text-scu_blue-light text-xl text-left px-2 font-bold">
+            <p className="hidden lg:block text-scu_blue-light font-serif text-xl text-left px-2 font-bold">
               Smile Charity Uganda is based on plot 700 Munyonyo road, Naluvule,
               Wakiso District in Uganda and operates mainly in Kampala and
               Wakiso districts. Our great impact has so far been realised in the
@@ -70,33 +70,66 @@ function about() {
             </p>
           </div>
         </div>
-        <div className="grid grid-flow-row-dense md:grid-cols-2 mx-0 bg-white -mt-2">
-          <div className="flex flex-col">
-            <h1 className="text-xl px-4 font-semibold text-scu_blue-light text-nowrap">
+        <div className="flex-col lg:grid lg:grid-cols-2 h-auto bg-white -mt-2">
+          <div className="lg:grid lg:grid-cols-1 h-auto m-0">
+            <Image
+              src="/about/vision2.webp"
+              alt="main"
+              width={600}
+              height={460}
+              objectFit="contain"
+              loading="lazy"
+              className=""
+            />
+          </div>
+
+          <div className="bg-white shadow-md">
+            <h1 className="text-blue-500 text-xl font-black ml-4 lg:text-3xl">
               EXTENDING A HELPING HAND TO THOSE IN NEED
             </h1>
-            <p className="text-gray-700 text-base px-4">
+            <p className="mx-4 whitespace-normal font-serif text-xl">
               Smile Charity Uganda is 100% supported by both part time and
               full-time volunteers who freely give their time, skills and
-              talents to run the activities of the organization. The
-              organization provides a very small monthly stipend to meet their
-              travel needs and food while in the field and on base serving. We
-              are currently open to have new friends and partners whether
+              talents to run the activities of the organization. <br />
+              The organization provides a very small monthly stipend to meet
+              their travel needs and food while in the field and on base
+              serving. <br /> <br />
+              We are currently open to have new friends and partners whether
               individuals, groups, Churches or Organisations to expand our work
               and ministry of caring for children at risk, communities in need
               and the Church in Uganda especially in Kampala and Wakiso
               districts.
             </p>
           </div>
-          <div className="w-1/3 h-">
+        </div>
+        <div className="flex-col lg:grid lg:grid-cols-2 h-auto bg-white -mt-2">
+          <div className="bg-white shadow-md">
+            <h1 className="text-blue-500 text-xl font-black ml-4 lg:text-3xl">
+              EXTENDING A HELPING HAND TO THOSE IN NEED
+            </h1>
+            <p className="mx-4 whitespace-normal font-serif text-xl">
+              Smile Charity Uganda is 100% supported by both part time and
+              full-time volunteers who freely give their time, skills and
+              talents to run the activities of the organization. <br />
+              The organization provides a very small monthly stipend to meet
+              their travel needs and food while in the field and on base
+              serving. <br /> <br />
+              We are currently open to have new friends and partners whether
+              individuals, groups, Churches or Organisations to expand our work
+              and ministry of caring for children at risk, communities in need
+              and the Church in Uganda especially in Kampala and Wakiso
+              districts.
+            </p>
+          </div>
+          <div className="lg:grid lg:grid-cols-1 h-auto m-0">
             <Image
               src="/about/vision2.webp"
-              className="rounded-md w-full h-full items-center justify-center cursor-pointer"
-              alt= "vision"
-              width={540}
-              height={520}
+              alt="main"
+              width={600}
+              height={460}
               objectFit="contain"
               loading="lazy"
+              className=""
             />
           </div>
         </div>
