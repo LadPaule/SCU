@@ -34,7 +34,7 @@ function ChildInfo({ child }) {
         )}
         <h1 className="cursor-pointer ">{child.name}</h1>
         <p className="cursor-pointer">Child date of Birth</p>
-        <p className="line-clamp-2 my-2 text-sm">{child.childStory.text}</p>
+        <p className="line-clamp-2 my-2 text-sm">{child.childStory}</p>
 
         <button
           onClick={openModal}
@@ -111,7 +111,7 @@ function ChildInfo({ child }) {
                   </div>
                 </div>
                 <div className="">
-                  <p>{child.childStory.text}</p>
+                  <p>{child.childStory}</p>
                   <p className="mt-4 text-scu_blue-light font-bold text-lg">
                     You can support {child.name} with a monthly sponsorship of
                     £.30 equivalent to $. 40 or locally ugx.150000

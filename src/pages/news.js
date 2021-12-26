@@ -76,9 +76,7 @@ export async function getStaticProps() {
         height
         width
        }
-      articleBody{
-        text
-      }
+      articleBody
     }
       }
   `

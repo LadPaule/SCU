@@ -75,9 +75,8 @@ export async function getStaticProps() {
        }
       sponsorshipslug
       areaOfResidence
-      childStory{
-        text
-      }
+      childStory
+        
     }
   }
   `

@@ -21,7 +21,7 @@ export default function ArticlesFeed({ articles }) {
                 {article.title}
               </div>
               <p className="text-gray-700 text-base px-4 line-clamp-4 ">
-                {article.articleBody.text}
+                {article.articleBody}
               </p>
               <div className="content-center p-4 place-self-center">
                 <button className="button ">Read more</button>
