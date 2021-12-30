@@ -6,7 +6,7 @@ import ArticlesFeed from "../components/ArticlesFeed";
 import { GraphQLClient } from "graphql-request";
 
 function news({ articles }) {
-    return (
+  return (
     <div className="bg-gray-100">
       <Head>
         <title>The Latest News from SCU</title>
@@ -65,19 +65,19 @@ export async function getStaticProps() {
   const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
   const { articles } = await graphcms.request(
     `
-   query WaitingLists()
-  {
-    articles{
-      id
-      title
-      images{
-        url
-        height
-        width
-       }
-      articleBody
-    }
-      }
+    {
+      articles{
+        id
+        title
+        slug
+        images{
+          url
+          height
+          width
+         }
+        articleBody
+     }
+  }
   `
   );
   return {

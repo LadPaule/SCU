@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ArticlesFeed({ articles }) {
   return (
@@ -24,7 +25,9 @@ export default function ArticlesFeed({ articles }) {
                 {article.articleBody}
               </p>
               <div className="content-center p-4 place-self-center">
-                <button className="button ">Read more</button>
+                <Link key={article.id} href={`/news/${article.id}`}>
+                  <button className="button" type="button">Read more</button>
+                </Link>
               </div>
             </div>
           </div>

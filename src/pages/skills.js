@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function skills() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-400">
       <Head>
         <title>Skills Developement in SCU</title>
         <link
@@ -51,7 +51,7 @@ function skills() {
         <div className="relative">
           <Image
             className="w-full mix-blend-overlay h-full"
-            src="/education/education.webp"
+            src="/Skilling/skill.webp"
             width={1440}
             height={560}
             objectFit="contain"

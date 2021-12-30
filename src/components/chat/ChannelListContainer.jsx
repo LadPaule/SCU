@@ -52,7 +52,7 @@ const ChannelListContent = ({
     cookies.remove("fullName");
     cookies.remove("avatarURL");
     cookies.remove("hashedPassword");
-    cookies.remove("phoneNumber");
+    cookies.remove("emailAddress");
 
     window.location.reload();
   };

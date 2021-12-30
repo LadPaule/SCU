@@ -10,7 +10,7 @@ const initialState = {
   username: "",
   password: "",
   confirmPassword: "",
-  phoneNumber: "",
+  emailAddress: "",
   avatarURL: "",
 };
 
@@ -25,9 +25,9 @@ const Auth = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { username, password, phoneNumber, avatarURL } = form;
+    const { username, password, emailAddress, avatarURL } = form;
 
-    const URL = "https://localhost:5000/auth";
+    const URL = "http://localhost:5000/auth";
     // const URL = 'https://medical-pager.herokuapp.com/auth';
 
     const {
@@ -36,7 +36,7 @@ const Auth = () => {
       username,
       password,
       fullName: form.fullName,
-      phoneNumber,
+      emailAddress,
       avatarURL,
     });
 
@@ -46,7 +46,7 @@ const Auth = () => {
     cookies.set("userId", userId);
 
     if (isSignup) {
-      cookies.set("phoneNumber", phoneNumber);
+      cookies.set("emailAddress", emailAddress);
       cookies.set("avatarURL", avatarURL);
       cookies.set("hashedPassword", hashedPassword);
     }
@@ -88,11 +88,11 @@ const Auth = () => {
             </div>
             {isSignup && (
               <div className="auth__form-container_fields-content_input">
-                <label htmlFor="phoneNumber">Phone Number</label>
+                <label htmlFor="emailAddress">Email</label>
                 <input
-                  name="phoneNumber"
+                  name="emailAddress"
                   type="text"
-                  placeholder="Phone Number"
+                  placeholder="you@domain.com"
                   onChange={handleChange}
                   required
                 />

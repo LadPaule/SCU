@@ -5,11 +5,15 @@ import Navbar from "../../components/Navbar";
 import { StreamChat } from "stream-chat";
 import { Chat } from "stream-chat-react";
 import Cookies from "universal-cookie";
-import { ChannelListContainer, ChannelContainer, Auth } from "../../components/chat";
+import {
+  ChannelListContainer,
+  ChannelContainer,
+  Auth,
+} from "../../components/chat";
 import { useState } from "react";
 
 const cookies = new Cookies();
-const apiKey = "qgtk9ttyha7j";
+const apiKey = process.env.STREAM_API_KEY;
 const authToken = cookies.get("token");
 
 const client = StreamChat.getInstance(apiKey);
