@@ -1,12 +1,12 @@
-// import { GraphQLClient, gql } from "graphql-request";
+import { GraphQLClient, gql } from "graphql-request";
 
-// const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
+const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
 
-// export default function ArticleFeed() {
-//   return <div>Article</div>;
-// }
+export default function ArticleFeed() {
+  return <div>Article</div>;
+}
 
-// export async function getStaticProps({ params }) {
+// export async function getStaticProps({ }) {
 //   const id = params.id;
 //   const query = gql`
 //     query Article($id: String!) {
