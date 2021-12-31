@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Avatar, useChatContext } from "stream-chat-react";
 import { InviteIcon } from "../chat/utils/InviteIcon";
 
+
+
 const ListContainer = ({ children }) => {
   return (
     <div className="user-list__container">

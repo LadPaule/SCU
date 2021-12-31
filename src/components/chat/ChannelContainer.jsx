@@ -1,5 +1,6 @@
 import React from "react";
 import { Channel, MessageTeam } from "stream-chat-react";
+import { MessageList, MessageInput } from "stream-chat-react";
 
 import { ChannelInner, CreateChannel, EditChannel } from "./";
 

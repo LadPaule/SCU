@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
 import { StreamChat } from "stream-chat";
@@ -13,10 +12,9 @@ import {
 import { useState } from "react";
 
 const cookies = new Cookies();
-const apiKey = process.env.STREAM_API_KEY;
-const authToken = cookies.get("token");
 
-const client = StreamChat.getInstance(apiKey);
+const authToken = cookies.get("token");
+const client = StreamChat.getInstance("cbm38u2v9hn6");
 
 if (authToken) {
   client.connectUser(
@@ -26,7 +24,7 @@ if (authToken) {
       fullName: cookies.get("fullName"),
       image: cookies.get("avatarURL"),
       hashedPassword: cookies.get("hashedPassword"),
-      phoneNumber: cookies.get("phoneNumber"),
+      emailAddress: cookies.get("emailAddress"),
     },
     authToken
   );
@@ -97,8 +95,6 @@ function Forum() {
           </Chat>
         </div>
       </main>
-      {/* footer */}
-      <Footer />
     </div>
   );
 }

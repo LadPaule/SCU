@@ -5,15 +5,15 @@ const crypto = require("crypto");
 
 require("dotenv").config();
 
-const api_key = process.env.STREAM_API_KEY;
-const api_secret = process.env.STREAM_API_SECRET;
-const app_id = process.env.STREAM_APP_ID;
-
 const signup = async (req, res) => {
   try {
     const { fullName, username, password, emailAddress } = req.body;
     const userId = crypto.randomBytes(16).toString("hex");
-    const serverClient = connect(api_key, api_secret, app_id);
+    const serverClient = connect(
+      "cbm38u2v9hn6",
+      "kx38xg35z93ays3am9gxtw5cyjrxcxb2txecztjrnf6khgq7n5d8jvphgd96za7y",
+      "1154078"
+    );
     const hashedPassword = await bcrypt.hash(password, 10);
     const token = serverClient.createUserToken(userId);
 
@@ -35,14 +35,18 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { username, password } = req.body;
-    const serverClient = connect(api_key, api_secret, app_id);
-    const client = StreamChat.getInstance(api_key, api_secret);
+    const serverClient = connect(
+      "cbm38u2v9hn6",
+      "kx38xg35z93ays3am9gxtw5cyjrxcxb2txecztjrnf6khgq7n5d8jvphgd96za7y",
+      "1154078"
+    );
+    const client = StreamChat.getInstance("cbm38u2v9hn6");
     const { users } = await client.queryUsers({ name: username });
 
     if (!users.length)
       return res.status(400).json({ message: "User not found" });
 
-    const success = await bcrypt.compare(password, users[0].hashedPassword);
+    const success = bcrypt.compare(password, users[0].hashedPassword);
     const token = serverClient.createUserToken(users[0].id);
 
     if (success) {
