@@ -3,15 +3,15 @@ import { ChannelList, useChatContext } from "stream-chat-react";
 import Cookies from "universal-cookie";
 import Image from "next/image";
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from "./";
-import { LogoutIcon } from "@heroicons/react/solid"
+import { LogoutIcon } from "@heroicons/react/solid";
 
 const cookies = new Cookies();
 
 const SideBar = ({ logout }) => (
-  <div className="channel-list__sidebar hidden md:block w-72 shadow-sm ">
+  <div className="channel-list__sidebar">
     <div className="channel-list__sidebar__icon1">
       <div className="icon1__inner">
-        <Image src ="/apple-touch-icon.webp" width={300} height={300}/>
+        <Image src="/apple-touch-icon.webp" width={300} height={300} />
       </div>
     </div>
     <div className="channel-list__sidebar__icon2">
@@ -23,7 +23,7 @@ const SideBar = ({ logout }) => (
 );
 
 const CompanyHeader = () => (
-  <div className="channel-list__header pl-16 h-60">
+  <div className="channel-list__header">
     <p className="channel-list__header__text">SCU Forum</p>
   </div>
 );
@@ -136,14 +136,14 @@ const ChannelListContainer = ({
       </div>
 
       <div
-        className="flex"
+        className="channel-list__container-responsive"
         style={{
           left: toggleContainer ? "0%" : "-89%",
           backgroundColor: "#005fff",
         }}
       >
         <div
-          className="flex"
+          className="channel-list__container-toggle"
           onClick={() =>
             setToggleContainer((prevToggleContainer) => !prevToggleContainer)
           }
