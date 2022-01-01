@@ -11,6 +11,7 @@ import {
 } from "../../components/chat";
 import { useState } from "react";
 
+
 const cookies = new Cookies();
 
 const authToken = cookies.get("token");
@@ -73,10 +74,10 @@ function Forum() {
         />
       </Head>
       {/* header */}
-      <Header />
-      <Navbar />
+      {/* <Header /> */}
+      {/* <Navbar /> */}
 
-      <main className="m-0 p-0 h-screen">
+      <main className="m-0 p-0 max-h-screen">
         <div className="app__wrapper">
           <Chat client={client} theme="team light">
             <ChannelListContainer

@@ -8,10 +8,10 @@ import { LogoutIcon } from "@heroicons/react/solid"
 const cookies = new Cookies();
 
 const SideBar = ({ logout }) => (
-  <div className="channel-list__sidebar">
+  <div className="channel-list__sidebar hidden md:block w-72 shadow-sm ">
     <div className="channel-list__sidebar__icon1">
       <div className="icon1__inner">
-        <Image src ="/apple-touch-icon.webp" width={512} height={512}/>
+        <Image src ="/apple-touch-icon.webp" width={300} height={300}/>
       </div>
     </div>
     <div className="channel-list__sidebar__icon2">
@@ -23,8 +23,8 @@ const SideBar = ({ logout }) => (
 );
 
 const CompanyHeader = () => (
-  <div className="channel-list__header">
-    <p className="channel-list__header__text">Medical Pager</p>
+  <div className="channel-list__header pl-16 h-60">
+    <p className="channel-list__header__text">SCU Forum</p>
   </div>
 );
 
@@ -136,14 +136,14 @@ const ChannelListContainer = ({
       </div>
 
       <div
-        className="channel-list__container-responsive"
+        className="flex"
         style={{
           left: toggleContainer ? "0%" : "-89%",
           backgroundColor: "#005fff",
         }}
       >
         <div
-          className="channel-list__container-toggle"
+          className="flex"
           onClick={() =>
             setToggleContainer((prevToggleContainer) => !prevToggleContainer)
           }
