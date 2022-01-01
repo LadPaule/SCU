@@ -58,7 +58,7 @@ const ChannelSearch = ({ setToggleContainer }) => {
     <div className="channel-search__container">
       <div className="channel-search__input__wrapper">
         <div className="channel-serach__input__icon">
-          <SearchIcon className="h-8" />
+          <SearchIcon className="ml-2 h-5 text-yellow-300 text-bold" />
         </div>
         <input
           className="channel-search__input__text"

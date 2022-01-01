@@ -147,7 +147,7 @@ const Auth = () => {
         </div>
       </div>
       <div className="auth__form-container_image">
-        <Image src="/signup.webp" objectFit="contain" loading="lazy" width={1000} height={1000} />
+        <img src="/signup.webp" />
       </div>
     </div>
   );

@@ -121,8 +121,8 @@ const ResultsDropdown = ({
         </p>
       )}
       {!loading && !directChannels.length ? (
-        <p className="channel-search__res ults-header">
-          <i>No direct messages found</i>
+        <p className="channel-search__results-header">
+          <i className="ml-2 text-white font-sans text-2xl font-bold">No direct messages found</i>
         </p>
       ) : (
         directChannels?.map((channel, i) => (

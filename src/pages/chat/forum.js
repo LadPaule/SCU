@@ -75,10 +75,10 @@ function Forum() {
         />
       </Head>
       {/* header */}
-      {/* <Header /> */}
+  
       {/* <Navbar /> */}
 
-      <main className="m-0 p-0 max-h-screen">
+      <main className="">
         <div className="app__wrapper">
           <Chat client={client} theme="team light">
             <ChannelListContainer
