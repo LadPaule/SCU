@@ -27,8 +27,10 @@ const Auth = () => {
 
     const { username, password, emailAddress, avatarURL } = form;
 
-    const URL = "http://localhost:5000/auth";
-    // const URL = 'https://medical-pager.herokuapp.com/auth';
+    const URL =
+      "https://shielded-earth-43669.herokuapp.com/auth" ||
+      "http://localhost:5000/auth";
+    
 
     const {
       data: { token, userId, hashedPassword, fullName },
