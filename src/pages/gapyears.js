@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 
-function gapyears() {
+function Gapyears() {
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
     if (clicked === index) {
@@ -220,4 +220,4 @@ function gapyears() {
   );
 }
 
-export default gapyears;
+export default Gapyears;
