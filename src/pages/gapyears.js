@@ -6,8 +6,18 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
+
 function gapyears() {
+  const [clicked, setClicked] = useState(false);
+  const toggle = (index) => {
+    if (clicked === index) {
+      // Todo: if clicked faq is clicked again, close it.
+      setClicked(null);
+    }
+    setClicked(index);
+  };
   const faq = [
     {
       question: "What sort of children are sponsored?",
