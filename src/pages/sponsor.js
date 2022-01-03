@@ -6,11 +6,16 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function ChildForm() {
+  const getInitialState = () => {
+    const value = "select mode of support";
+    return value;
+  };
+
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
   const [country, setCountry] = useState("");
   const [postalAddress, setPostalAddress] = useState("");
-  const [modeOfSupport, setModeOfSupport] = useState("");
+  const [modeOfSupport, setModeOfSupport] = useState(getInitialState);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
@@ -27,8 +32,8 @@ export default function ChildForm() {
     fetch("/api/support", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
         Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     }).then((res) => {
@@ -149,10 +154,13 @@ export default function ChildForm() {
                 }}
                 name="modeOfSupport"
                 className="w-80"
+                value="mode of support"
               >
-                <option value="">Select Mode of Support</option>
-                <option value="">Monthly support</option>
-                <option value="">one time support</option>
+                <option value="select mode of support">
+                  Select Mode of Support
+                </option>
+                <option value="Monthly support">Monthly support</option>
+                <option value="one time support">one time support</option>
               </select>
             </div>
 

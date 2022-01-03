@@ -1,32 +1,37 @@
-export default function childSupport(res, req){
-  console.log(req.body)
-  require('dotenv').config()
-  let nodemailer = require('nodemailer');
+require("dotenv").config();
+const nodemailer = require("nodemailer");
+
+export default (req, res) => {
+  const { email, fullName, country, postalAddress, modeOfSupport } = req.body;
   const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
     port: 465,
-    host: 'smtp.gmail.com',
-    secure: true,
+    service: "gmail",
     auth: {
-      user: 'smilecharityuganda@gmail.com',
-      pass: process.env.EMAIL_PASSWORD
-    }
+      user: process.env.NEXT_EMAIL,
+      pass: process.env.NEXT_EMAIL_PASSWORD,
+    },
+    secure: true
   });
+
   const mailOptions = {
     from: "smilecharityuganda@gmail.com",
-    to: `${req.body.email}, ssozipaule@gmail.com`,
-    subject: 'Thank you for considering child Education Support through Smile Charity Uganda',
-    html: `<h1>Thank you for supporting child education with us</h1> \n
-    <p>We will keep you updated with our latest news and updates</p>`,
-    
+    to: `${email}, ssozipaule@gmail.com`,
+    subject: `Thank you ${fullName} for considering child Education Support through Smile Charity Uganda`,
+    html: `<h1>Dear ${fullName}, Thank you for supporting child education with us</h1> \n
+    <p>Brief Summary of Data</p>
+    <h2> your email address: ${email}</h2>
+    <h2> your email address: ${modeOfSupport}</h2>
+    <h2> your country: ${country}</h2>
+    <h2> your postal address: ${postalAddress}</h2>`,
   };
 
-  transporter.sendMail(mailOptions, function(error){
-    if(error){
-      res.status(500).send('Error');
+  transporter.sendMail(mailOptions, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("mail sent!");
     }
-    else{
-      res.status(200).send('Success');
-    }
-  }
-  );
-}
+  });
+  res.send("success");
+};
