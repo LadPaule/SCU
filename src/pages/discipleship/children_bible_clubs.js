@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { Carousel } from "react-responsive-carousel";
-import Footer from "../../../components/Footer";
-import Header from "../../../components/Header";
-import Navbar from "../../../components/Navbar";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import Navbar from "../../components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";

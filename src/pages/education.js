@@ -56,6 +56,7 @@ function Education() {
             height={560}
             objectFit="contain"
             loading="eager"
+            alt="education"
           />
           <div className="absolute -mt-44 px-10">
             <h1 className="font-black text-3xl md:text-6xl whitespace-nowrap text-scu_blue-light mb-2">
