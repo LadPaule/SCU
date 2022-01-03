@@ -9,7 +9,7 @@ import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-function professionalTwinning() {
+function ProfessionalTwinning() {
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
     if (clicked === index) {
@@ -220,4 +220,4 @@ function professionalTwinning() {
   );
 }
 
-export default professionalTwinning;
+export default ProfessionalTwinning;
