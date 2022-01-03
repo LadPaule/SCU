@@ -2,14 +2,14 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
-function skills() {
+function skilling() {
   return (
     <div className="bg-gray-400">
       <Head>
-        <title>Skills Developement in SCU</title>
+        <title>Skills Developement</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -51,16 +51,15 @@ function skills() {
         <div className="relative">
           <Image
             className="w-full mix-blend-overlay h-full"
-            src="/Skilling/skill.webp"
+            src="/skilling/skill.webp"
             width={1440}
             height={560}
             objectFit="contain"
-            alt="skills training banner"
             loading="eager"
           />
           <div className="absolute -mt-44 px-10">
             <h1 className="font-black text-3xl md:text-6xl whitespace-nowrap text-scu_blue-light mb-2">
-              Education Support
+              Skills Development
             </h1>
             <p className="hidden lg:block text-scu_blue-light text-xl text-left px-2 font-bold">
               Participate and be a part of our ever growing team by supporting
@@ -69,23 +68,24 @@ function skills() {
             </p>
           </div>
         </div>
-        <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-auto md:-mt-40">
+        <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-2 md:-mt-5">
           <div
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
             <h1 className=" top-2 right-2 text-blue-600 font-black text-2xl">
-              Who we are?
+              Women Empowerment
             </h1>
             <p>
-              Smile charity Uganda we are a helping hand to those in need. We
-              are a hand up not a hand hand out. We envision holistically
-              empowered and transformed lives through our working mechanism DESC
-              which stands for Discipleship and Evangelism, Education Support,
-              Skilling and Crisis management.
+              A holistic child developement approach where an able person picks
+              on a child in need of a helping hand to start or keep up with
+              essential education.
             </p>
-            <Link href="/about">
-              <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
+            <Link href="/skilling/womenEmpowerment">
+              <button
+                href="/education/child_sponsorship"
+                className="mr-5 mt-4 button hover:animate-bounce"
+              >
                 learn more
               </button>
             </Link>
@@ -95,52 +95,30 @@ function skills() {
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
-            <h1 className="font-black text-blue-600 text-2xl ">What we do.</h1>
+            <h1 className="font-black text-blue-600 text-2xl ">
+              Youth Entreprenuership Club
+            </h1>
             <p>
-              We reach out to those in need of a helping hand through our
-              different programs including;
+              An exciting and fulfilling career developement program where a
+              serving professional gives a hand to an upcoming young person up
+              the steps to the same.
             </p>
-            <ul className="m-4 mr-8">
-              <Link href="/discipleship">
-                <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
-                  Discipleship & Evangelism
-                </li>
-              </Link>
-              <Link href="/education">
-                <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
-                  Education Support
-                </li>
-              </Link>
-              <Link href="/skills">
-                <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
-                  Skilling
-                </li>
-              </Link>
-              <Link href="/crisis-care">
-                <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
-                  Crisis care & Management
-                </li>
-              </Link>
-            </ul>
+            <Link href="/skilling/yec">
+              <button className="mr-5 mt-4 button hover:animate-bounce">
+                learn how
+              </button>
+            </Link>
           </div>
 
           <div
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
-            <h1 className="font-black text-blue-600 text-2xl">
-              How to get involved?
-            </h1>
+            <h1 className="font-black text-blue-600 text-2xl">Testmonials</h1>
             <p>
-              You too can be part of this work through praying with us, Visiting
-              us, or donating to us.
+              Ever since our start up, we have collaborated with supporters and
+              friends to give support to Ugandan young people through education.
             </p>
-
-            <Link href="/participate">
-              <button className="mr-56 mt-4 button hover:animate-bounce">
-                learn how
-              </button>
-            </Link>
           </div>
         </div>
 
@@ -152,4 +130,4 @@ function skills() {
   );
 }
 
-export default skills;
+export default skilling;

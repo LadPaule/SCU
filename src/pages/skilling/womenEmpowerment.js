@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import Navbar from "../../components/Navbar";
 
-function professionalTwinning() {
+function womenEmpowerment() {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>Career & Profession Twinning</title>
+        <title>Women Empowering Program</title>
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
           <link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp" />
           <link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp" />
@@ -36,4 +36,4 @@ function professionalTwinning() {
   )
 }
 
-export default professionalTwinning
+export default womenEmpowerment

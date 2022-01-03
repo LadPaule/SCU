@@ -51,7 +51,7 @@ function discipleship() {
         <div className="relative">
           <Image
             className="w-full mix-blend-overlay h-full"
-            src="/discipleship/discpleship.webp"
+            src="/discipleship/1.webp"
             width={1440}
             height={560}
             objectFit="contain"
@@ -65,6 +65,63 @@ function discipleship() {
               Participate and be a part of our ever growing team by supporting
               our programs through visiting us here on the ground, volunteering
               with our programs of your choice.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-2 md:-mt-5">
+          <div
+            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
+        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          >
+            <h1 className=" top-2 right-2 text-blue-600 font-black text-2xl">
+              Pastors' Dicipleship Fellowship (PDF) & Pastors' Wives'
+              Discipleship Fellowship (PWDF)
+            </h1>
+            <p>
+              A holistic child developement approach where an able person picks
+              on a child in need of a helping hand to start or keep up with
+              essential education.
+            </p>
+            <Link href="/education/child_sponsorship">
+              <button
+                href="/education/child_sponsorship"
+                className="mr-5 mt-4 button hover:animate-bounce"
+              >
+                learn more
+              </button>
+            </Link>
+          </div>
+
+          <div
+            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
+        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          >
+            <h1 className="font-black text-blue-600 text-2xl ">
+              Children Bible Clubs (CBC)
+            </h1>
+            <p>
+              An exciting and fulfilling career developement program where a
+              serving professional gives a hand to an upcoming young person up
+              the steps to the same.
+            </p>
+            <Link href="/participate">
+              <button className="mr-5 mt-4 button hover:animate-bounce">
+                learn how
+              </button>
+            </Link>
+          </div>
+
+          <div
+            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
+        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          >
+            <h1 className="font-black text-blue-600 text-2xl">
+              Youth Discipleship Fellowship (YDF)
+            </h1>
+            <p>
+              Ever since our start up, we have collaborated with supporters and
+              friends to give support to Ugandan young people through education.
             </p>
           </div>
         </div>

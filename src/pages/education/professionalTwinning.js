@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import Navbar from "../../components/Navbar";
 
-function christianSafaris() {
+function professionalTwinning() {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>Christian Safaris</title>
+        <title>Career & Profession Twinning</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -161,4 +161,4 @@ function christianSafaris() {
   );
 }
 
-export default christianSafaris;
+export default professionalTwinning;

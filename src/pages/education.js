@@ -100,7 +100,7 @@ function education() {
               serving professional gives a hand to an upcoming young person up
               the steps to the same.
             </p>
-            <Link href="/participate">
+            <Link href="/education/professionalTwinning">
               <button className="mr-5 mt-4 button hover:animate-bounce">
                 learn how
               </button>

@@ -26,9 +26,115 @@ function gapyears() {
       <Header />
       <Navbar />
 
-      <main className="max-w-screen-2xl mx-auto">
+      <main className="m-0 p-0">
         {/* banner */}
-          
+        <div className="flex-col lg:grid lg:grid-cols-2 h-auto">
+          <Carousel
+            autoPlay
+            infiniteLoop
+            showStatus={false}
+            showIndicators={false}
+            showThumbs={false}
+            interval={5000}
+          >
+            {slideImages.map((slide) => (
+              <div key={slide.caption}>
+                <Image
+                  src={slide.url}
+                  alt={slide.caption}
+                  width={780}
+                  height={440}
+                  objectFit="contain"
+                  loading="lazy"
+                  className="object-fit"
+                />
+              </div>
+            ))}
+          </Carousel>
+
+          <div className="bg-white shadow-md">
+            <h1 className="text-blue-500 text-3xl font-black ml-4">
+              Child Sponsorship Program
+            </h1>
+            <p className="mx-4 whitespace-normal text-md">
+              SCU provides educational support to children through the generous
+              support from sponsors. A sponsored child is availed with fees,
+              basic health and feeding to ensure holistic growth and well-being
+              of child while at school. Children also exchange written letters
+              to their sponsors to express their gratitude and to know their
+              sponsors on personal level. <br />
+              <br />
+              Building Schools. Step out teams bless and get involved with
+              communities in SCU through building schools. Many of these schools
+              are poorly structured and very unconducive for learning but
+              through the kindness and selfless gratitude of the step out teams;
+              We get on ground and build better structures thereby ensuring that
+              children study in enriched learning environments.
+            </p>
+            <Link href="/children_list">
+              <button
+                href="/children_list"
+                type="button"
+                className="ml-4 mt-8 button animate-pulse"
+              >
+                support a child
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="flex-col px-2 mt-2 bg-gray-200">
+          <h1 className="whitespace-nowrap text-blue-600 text-xl font-black ">
+            Frequently Asked questions
+          </h1>
+          <div className="accordion accordion-flush" id="accordionFlush">
+            {faq.map((qtn, index) => (
+              <div
+                className="accordion-item border-t-0 border-l-0 border-r-0 rounded-sm bg-blue-300 border border-blue-400"
+                key={index}
+              >
+                <h1
+                  onClick={() => toggle(index)}
+                  className="flex mb-0"
+                  id="flush-headingOne"
+                >
+                  <button
+                    className="accordion-button relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-blue-200 border-0 rounded-none 
+                    transition focus:outline-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    {qtn.question}
+                  </button>
+
+                  <span>
+                    {clicked === index ? (
+                      <ChevronDownIcon className="h-6 font-bold text-white" />
+                    ) : (
+                      <ChevronUpIcon className="h-6 font-bold text-scu_blue-light" />
+                    )}
+                  </span>
+                </h1>
+                {clicked === index ? (
+                  <div
+                    className="accordion-collapse border-0"
+                    id="flush-collapseOne"
+                    aria-labelledby="flush-headingOne"
+                    aria-controls="flush-collpseOne"
+                    data-bs-parent="accordionFlush"
+                  >
+                    <p className="text-sm text-scu_blue-light font-bold py-4 px-5">
+                      {qtn.answer}
+                    </p>
+                  </div>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* feed */}
       </main>
       {/* footer */}

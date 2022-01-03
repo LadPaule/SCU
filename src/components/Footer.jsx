@@ -22,7 +22,7 @@ function Footer() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("sending");
-    LocationMarkerIcon;
+    setSubmitted(!submitted);
     let data = {
       email: email,
     };
