@@ -9,7 +9,7 @@ import Navbar from "../components/Navbar";
 import { useState } from "react";
 
 
-function christianSafaris() {
+function ChristianSafaris() {
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
     if (clicked === index) {
@@ -221,4 +221,4 @@ function christianSafaris() {
   );
 }
 
-export default christianSafaris;
+export default ChristianSafaris;

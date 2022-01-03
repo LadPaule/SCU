@@ -2,10 +2,55 @@ import Head from "next/head";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
+import Image from  "next/image";
+import Link from "next/link";
+import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/solid";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 function professionalTwinning() {
+  const [clicked, setClicked] = useState(false);
+  const toggle = (index) => {
+    if (clicked === index) {
+      // Todo: if clicked faq is clicked again, close it.
+      setClicked(null);
+    }
+    setClicked(index);
+  };
+  const faq = [
+    {
+      question: "What sort of children are sponsored?",
+      answer:
+        "Children who are impoverished coming from either orphaned or disadvantaged families, We also sponsor children that have been referred to us by our implementing partners like schools and churches.",
+    },
+    {
+      question: "How do we select the children for sponsorship?",
+      answer:
+        "Through door to door research in slum areas and recommendations from implementing partners",
+    },
+    {
+      question: "How much does it cost to sponsor a child?",
+      answer:
+        "It only costs 150000 Ugandan shillings which is equivalent to £30 or $40 per month.",
+    },
+    {
+      question: "What does the sponsorship provide to the beneficiary?",
+      answer:
+        "We provide stationery , school fees, uniforms, basic health and feeding while at school.",
+    },
+    {
+      question: "How long does the sponsorship last?",
+      answer:
+        "The sponsorship runs till the 18th birthday except for those who started school later due to different unavailable circumstances.",
+    },
+    {
+      question: "How does the sponsor link with his/ her sponsored child?",
+      answer:
+        "Smile charity Uganda has a set system through which a sponsor and a child are able to exchange letters and video chats.",
+    },
+  ];
+
   const slideImages = [
     {
       url: "/banners/gapers.webp",

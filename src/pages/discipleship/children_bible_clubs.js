@@ -124,7 +124,6 @@ function ChildrenBibleClubs() {
                   objectFit="contain"
                   loading="lazy"
                   className="object-fit"
-                  alt={slide.caption}
                 />
               </div>
             ))}

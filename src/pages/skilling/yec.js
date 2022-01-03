@@ -6,9 +6,18 @@ import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 
 function YouthEntreprenuershipClub() {
-    const faq = [
+  const [clicked, setClicked] = useState(false);
+  const toggle = (index) => {
+    if (clicked === index) {
+      // Todo: if clicked faq is clicked again, close it.
+      setClicked(null);
+    }
+    setClicked(index);
+  };
+  const faq = [
     {
       question: "What sort of children are sponsored?",
       answer:
