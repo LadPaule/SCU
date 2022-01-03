@@ -173,7 +173,7 @@ export default function ChildForm() {
                   Back
                 </button>
               </Link>
-              <Link href="">
+              <Link href="/" passHref>
                 <button
                   onClick={(e) => {
                     handleSubmit(e);

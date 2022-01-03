@@ -8,7 +8,6 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 
-
 function ChristianSafaris() {
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
@@ -149,7 +148,7 @@ function ChristianSafaris() {
               We get on ground and build better structures thereby ensuring that
               children study in enriched learning environments.
             </p>
-            <Link href="/children_list">
+            <Link href="/children_list" passHref>
               <button
                 href="/children_list"
                 type="button"

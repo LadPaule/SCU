@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 
-function education() {
+function Education() {
   return (
     <div className="bg-gray-400">
       <Head>
@@ -81,7 +81,7 @@ function education() {
               on a child in need of a helping hand to start or keep up with
               essential education.
             </p>
-            <Link href="/education/child_sponsorship">
+            <Link href="/education/child_sponsorship" passHref>
               <button href="/education/child_sponsorship" className="mr-5 mt-4 button hover:animate-bounce">
                 learn more
               </button>
@@ -100,7 +100,7 @@ function education() {
               serving professional gives a hand to an upcoming young person up
               the steps to the same.
             </p>
-            <Link href="/education/professionalTwinning">
+            <Link href="/education/professionalTwinning" passHref>
               <button className="mr-5 mt-4 button hover:animate-bounce">
                 learn how
               </button>
@@ -127,4 +127,4 @@ function education() {
   );
 }
 
-export default education;
+export default Education;

@@ -6,6 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Link from "next/link";
 import Image from "next/image";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 function gapyears() {
   const faq = [
     {
@@ -112,7 +113,6 @@ function gapyears() {
                   height={440}
                   objectFit="contain"
                   loading="lazy"
-                  alt={slide.mainCaption}
                   className="object-fit"
                 />
               </div>

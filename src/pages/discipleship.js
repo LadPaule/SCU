@@ -106,7 +106,7 @@ function discipleship() {
               serving professional gives a hand to an upcoming young person up
               the steps to the same.
             </p>
-            <Link href="/participate">
+            <Link href="/participate" passHref>
               <button className="mr-5 mt-4 button hover:animate-bounce">
                 learn how
               </button>
