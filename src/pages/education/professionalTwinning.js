@@ -2,8 +2,22 @@ import Head from "next/head";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 function professionalTwinning() {
+  const slideImages = [
+    {
+      url: "/banners/gapers.webp",
+      caption: "Gap year Students",
+      mainCaption: "With more than 10 years ",
+    },
+    {
+      url: "/banners/womenEmpowerment.webp",
+      caption: "Women Empowerment ",
+      mainCaption: "The program attempts handcrafts",
+    },
+  ];
   return (
     <div className="bg-gray-100">
       <Head>
@@ -65,6 +79,7 @@ function professionalTwinning() {
                   objectFit="contain"
                   loading="lazy"
                   className="object-fit"
+                  alt={slide.mainCaption}
                 />
               </div>
             ))}
@@ -89,7 +104,7 @@ function professionalTwinning() {
               We get on ground and build better structures thereby ensuring that
               children study in enriched learning environments.
             </p>
-            <Link href="/children_list">
+            <Link href="/children_list" passHref>
               <button
                 href="/children_list"
                 type="button"

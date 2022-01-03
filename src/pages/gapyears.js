@@ -2,25 +2,91 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-
-
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Link from "next/link";
+import Image from "next/image";
 function gapyears() {
+  const faq = [
+    {
+      question: "What sort of children are sponsored?",
+      answer:
+        "Children who are impoverished coming from either orphaned or disadvantaged families, We also sponsor children that have been referred to us by our implementing partners like schools and churches.",
+    },
+    {
+      question: "How do we select the children for sponsorship?",
+      answer:
+        "Through door to door research in slum areas and recommendations from implementing partners",
+    },
+    {
+      question: "How much does it cost to sponsor a child?",
+      answer:
+        "It only costs 150000 Ugandan shillings which is equivalent to £30 or $40 per month.",
+    },
+    {
+      question: "What does the sponsorship provide to the beneficiary?",
+      answer:
+        "We provide stationery , school fees, uniforms, basic health and feeding while at school.",
+    },
+    {
+      question: "How long does the sponsorship last?",
+      answer:
+        "The sponsorship runs till the 18th birthday except for those who started school later due to different unavailable circumstances.",
+    },
+    {
+      question: "How does the sponsor link with his/ her sponsored child?",
+      answer:
+        "Smile charity Uganda has a set system through which a sponsor and a child are able to exchange letters and video chats.",
+    },
+  ];
+
+  const slideImages = [
+    {
+      url: "/banners/gapers.webp",
+      caption: "Gap year Students",
+      mainCaption: "With more than 10 years ",
+    },
+    {
+      url: "/banners/womenEmpowerment.webp",
+      caption: "Women Empowerment ",
+      mainCaption: "The program attempts handcrafts",
+    },
+  ];
   return (
     <div className="bg-gray-100">
       <Head>
         <title>Gap Year / Stepout Trips</title>
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
-          <link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp" />
-          <link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp" />
-          <link rel="manifest" href="/site.webmanifest"></link>
-          <meta name="description" content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.webp"
+        />
+        <link
+          rel="icon"
+          type="image/webp"
+          sizes="32x32"
+          href="/favicon-32x32.webp"
+        />
+        <link
+          rel="icon"
+          type="image/webp"
+          sizes="16x16"
+          href="/favicon-16x16.webp"
+        />
+        <link rel="manifest" href="/site.webmanifest"></link>
+        <meta
+          name="description"
+          content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
           are a Hand up, not a hand out. SCU operates on a defined Working Mechanism, DESC that is, Discipleship and Evangelism,
-          Education Support, Skilling and Crisis care and Management" />
-          <link rel="icon" href="/favicon.ico" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta author="Smile Charity Uganda Media department" />
-          <meta name="keywords" content="Smile Charity, Smile Charity Uganda, SCU, Charity, NGO, Uganda, Christian Charity, Kampala charity, Sponsor a child"/>
-                    
+          Education Support, Skilling and Crisis care and Management"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta author="Smile Charity Uganda Media department" />
+        <meta
+          name="keywords"
+          content="Smile Charity, Smile Charity Uganda, SCU, Charity, NGO, Uganda, Christian Charity, Kampala charity, Sponsor a child"
+        />
       </Head>
       {/* header */}
       <Header />
@@ -46,6 +112,7 @@ function gapyears() {
                   height={440}
                   objectFit="contain"
                   loading="lazy"
+                  alt={slide.mainCaption}
                   className="object-fit"
                 />
               </div>
@@ -71,7 +138,7 @@ function gapyears() {
               We get on ground and build better structures thereby ensuring that
               children study in enriched learning environments.
             </p>
-            <Link href="/children_list">
+            <Link href="/children_list" passHref>
               <button
                 href="/children_list"
                 type="button"
@@ -140,7 +207,7 @@ function gapyears() {
       {/* footer */}
       <Footer />
     </div>
-  )
+  );
 }
 
-export default gapyears
+export default gapyears;

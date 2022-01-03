@@ -84,7 +84,7 @@ function crisisCare() {
               which stands for Discipleship and Evangelism, Education Support,
               Skilling and Crisis management.
             </p>
-            <Link href="/about">
+            <Link href="/about" passHref>
               <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
                 learn more
               </button>
@@ -101,22 +101,22 @@ function crisisCare() {
               different programs including;
             </p>
             <ul className="m-4 mr-8">
-              <Link href="/discipleship">
+              <Link href="/discipleship" passHref>
                 <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
                   Discipleship & Evangelism
                 </li>
               </Link>
-              <Link href="/education">
+              <Link href="/education" passHref>
                 <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
                   Education Support
                 </li>
               </Link>
-              <Link href="/skills">
+              <Link href="/skills" passHref>
                 <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
                   Skilling
                 </li>
               </Link>
-              <Link href="/crisis-care">
+              <Link href="/crisis-care" passHref>
                 <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
                   Crisis care & Management
                 </li>
@@ -136,7 +136,7 @@ function crisisCare() {
               us, or donating to us.
             </p>
 
-            <Link href="/participate">
+            <Link href="/participate" passHref>
               <button className="mr-56 mt-4 button hover:animate-bounce">
                 learn how
               </button>

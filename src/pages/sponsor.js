@@ -165,7 +165,7 @@ export default function ChildForm() {
             </div>
 
             <div className=" space-x-80 mt-4 flex">
-              <Link href="/children_list">
+              <Link href="/children_list" passHref>
                 <button
                   type="button"
                   className="rounded-md cursor-pointer w-18 bg-scu_blue text-white font-sans px-2 py-2 "

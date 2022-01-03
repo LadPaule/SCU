@@ -25,7 +25,7 @@ export default function ArticlesFeed({ articles }) {
                 {article.articleBody}
               </p>
               <div className="content-center p-4 place-self-center">
-                <Link key={article.id} href={`/news/${article.id}`}>
+                <Link key={article.id} href={`/news/${article.id}`} passHref>
                   <button className="button" type="button">Read more</button>
                 </Link>
               </div>

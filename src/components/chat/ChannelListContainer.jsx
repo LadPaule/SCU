@@ -11,7 +11,12 @@ const SideBar = ({ logout }) => (
   <div className="channel-list__sidebar">
     <div className="channel-list__sidebar__icon1">
       <div className="icon1__inner">
-        <Image src="/apple-touch-icon.webp" width={300} height={300} />
+        <Image
+          src="/apple-touch-icon.webp"
+          width={300}
+          height={300}
+          alt="scu logo"
+        />
       </div>
     </div>
     <div className="channel-list__sidebar__icon2">

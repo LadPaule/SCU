@@ -56,6 +56,7 @@ function participate() {
             height={560}
             objectFit="contain"
             loading="eager"
+            alt="Participate"
           />
           <div className="absolute -mt-44 ">
             <h1 className="font-black px-10 text-3xl md:text-6xl whitespace-nowrap text-scu_blue-light mb-2">
@@ -78,6 +79,7 @@ function participate() {
               height={500}
               objectFit="contain"
               loading="lazy"
+              alt="Gap Year Students"
               className="rounded-md mr-4 shadow-sm"
             />
           </div>
@@ -109,7 +111,7 @@ function participate() {
               which stands for Discipleship and Evangelism, Education Support,
               Skilling and Crisis management.
             </p>
-            <Link href="/about">
+            <Link href="/about" passHref>
               <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
                 learn more
               </button>
@@ -129,7 +131,7 @@ function participate() {
               which stands for Discipleship and Evangelism, Education Support,
               Skilling and Crisis management.
             </p>
-            <Link href="/about">
+            <Link href="/about" passHref>
               <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
                 learn more
               </button>
@@ -149,7 +151,7 @@ function participate() {
               which stands for Discipleship and Evangelism, Education Support,
               Skilling and Crisis management.
             </p>
-            <Link href="/about">
+            <Link href="/about" passHref>
               <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
                 learn more
               </button>
@@ -169,7 +171,7 @@ function participate() {
               which stands for Discipleship and Evangelism, Education Support,
               Skilling and Crisis management.
             </p>
-            <Link href="/about">
+            <Link href="/about" passHref>
               <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
                 learn more
               </button>

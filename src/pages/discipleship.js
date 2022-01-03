@@ -54,6 +54,7 @@ function discipleship() {
             src="/discipleship/1.webp"
             width={1440}
             height={560}
+            alt="Discipleship & Evangelism"
             objectFit="contain"
             loading="eager"
           />
@@ -75,7 +76,7 @@ function discipleship() {
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
             <h1 className=" top-2 right-2 text-blue-600 font-black text-2xl">
-              Pastors' Dicipleship Fellowship (PDF) & Pastors' Wives'
+              Pastors&apos Dicipleship Fellowship (PDF) & Pastors&apos Wives&apos
               Discipleship Fellowship (PWDF)
             </h1>
             <p>
@@ -83,7 +84,7 @@ function discipleship() {
               on a child in need of a helping hand to start or keep up with
               essential education.
             </p>
-            <Link href="/education/child_sponsorship">
+            <Link href="/education/child_sponsorship" passHref>
               <button
                 href="/education/child_sponsorship"
                 className="mr-5 mt-4 button hover:animate-bounce"

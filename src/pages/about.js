@@ -56,6 +56,7 @@ function about() {
             height={430}
             objectFit="contain"
             loading="eager"
+            alt="about"
           />
           <div className="absolute -mt-44 px-10">
             <h1 className="font-black text-xl md:text-2xl whitespace-nowrap text-yellow-400 mb-2">

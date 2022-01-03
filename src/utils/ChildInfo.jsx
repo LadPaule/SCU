@@ -30,6 +30,7 @@ function ChildInfo({ child }) {
             height={200}
             objectFit="contain"
             loading="lazy"
+            
           />
         )}
         <h1 className="cursor-pointer ">{child.name}</h1>
@@ -125,7 +126,7 @@ function ChildInfo({ child }) {
                   >
                     Got it
                   </button>
-                  <Link href="/sponsor">
+                  <Link href="/sponsor" passHref>
                     <button onClick="/sponsor" type="button" className="button animate-bounce ">
                       support
                     </button>
