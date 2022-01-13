@@ -67,8 +67,8 @@ function Banners() {
             <Image
               src={slide.url}
               alt={slide.caption}
-              width={1850}
-              height={920}
+              width={1900}
+              height={885}
               objectFit="contain"
               loading="eager"
               className="object-fit"
@@ -76,9 +76,9 @@ function Banners() {
             <span className="absolute hidden md:block sm:font-bold lg:bottom-20 lg:font-black text-white z-50 text-4xl font-sans w-screen h-40 text-center">
               {slide.caption}
             </span>
-            <p className="fixed z-40 font-bold w-screen h-500 text-center">
+            {/* <p className="fixed z-40 font-bold w-screen h-500 text-center">
               {slide.mainCaption}
-            </p>
+            </p> */}
           </div>
         ))}
       </Carousel>

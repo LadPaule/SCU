@@ -7,7 +7,7 @@ import LandingPage from "../utils/LandingPage";
 
 export default function Home({}) {
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-300">
       <Head>
         <title>
           Smile Charity Uganda (SCU) - A helping Hand to Those in Need
