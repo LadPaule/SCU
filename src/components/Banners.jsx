@@ -50,8 +50,10 @@ function Banners() {
   ];
 
   return (
-    <div className="relative h-2/3">
-      <div className="absolute w-full h-48 bg-gradient-to-t from-black to-transparent bottom-0 z-20 " />
+    <div className="relative">
+      <section className="absolute w-full h-48 bottom-0 z-20">
+        <div className="hero"></div>
+      </section>
       <Carousel
         autoPlay
         infiniteLoop
@@ -65,8 +67,8 @@ function Banners() {
             <Image
               src={slide.url}
               alt={slide.caption}
-              width={1700}
-              height={955}
+              width={1850}
+              height={920}
               objectFit="contain"
               loading="eager"
               className="object-fit"
