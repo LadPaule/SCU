@@ -83,7 +83,7 @@ function Education() {
               essential education.
             </p>
             <Link href="/education/child_sponsorship" passHref>
-              <button href="/education/child_sponsorship" className="mr-5 mt-4 button hover:animate-bounce">
+              <button href="/education/child_sponsorship" className="mr-56 w-200 mt-4 button hover:animate-bounce">
                 learn more
               </button>
             </Link>
@@ -102,7 +102,7 @@ function Education() {
               the steps to the same.
             </p>
             <Link href="/education/professionalTwinning" passHref>
-              <button className="mr-5 mt-4 button hover:animate-bounce">
+              <button className="mr-56 w-200 mt-4 button hover:animate-bounce">
                 learn how
               </button>
             </Link>

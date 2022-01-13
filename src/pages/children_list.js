@@ -3,6 +3,8 @@ import { GraphQLClient } from "graphql-request";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import ReactPaginate from "react-paginate";
+import Router, { withRouter } from "next/router";
 import Childrenfeed from "../components/Childrenfeed";
 
 function ChildrenList({ waitingLists }) {

@@ -66,7 +66,7 @@ function YouthEntreprenuershipClub() {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>Career & Profession Twinning</title>
+        <title>Youth Empowerment Program</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

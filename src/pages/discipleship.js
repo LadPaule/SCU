@@ -75,19 +75,20 @@ function discipleship() {
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
-            <h1 className=" top-2 right-2 text-blue-600 font-black text-2xl">
-              Pastors&apos Dicipleship Fellowship (PDF) & Pastors&apos Wives&apos
+            <h1 className=" top-2 right-2 text-blue-600 font-black text-xl">
+              Pastors' Dicipleship Fellowship (PDF) & Pastors' Wives'
               Discipleship Fellowship (PWDF)
             </h1>
             <p>
-              A holistic child developement approach where an able person picks
-              on a child in need of a helping hand to start or keep up with
-              essential education.
+              We have a growing Fellowship of pastors (now 16) and their wives
+              who meet fortnightly on Thursdays every month at the smile House.
+              Together we grow physically (through aerobics and in the breaking
+              of bread) and also Spiritually through sharing the word.
             </p>
-            <Link href="/education/child_sponsorship" passHref>
+            <Link href="/discipleship/pdf" passHref>
               <button
-                href="/education/child_sponsorship"
-                className="mr-5 mt-4 button hover:animate-bounce"
+                href="/discipleship/pdf"
+                className="mr-56 mt-4 w-200 button hover:animate-bounce"
               >
                 learn more
               </button>
@@ -102,14 +103,14 @@ function discipleship() {
               Children Bible Clubs (CBC)
             </h1>
             <p>
-              An exciting and fulfilling career developement program where a
-              serving professional gives a hand to an upcoming young person up
-              the steps to the same.
+              We have children attending church and in need of a child-forcused
+              class similar to a Sunday school that is not yet well developed in
+              in these churches. <br /> Smile charity Uganda through our
+              experienced christian child developement workers reach out to the
+              children while empowering and equiping the church ministers.
             </p>
-            <Link href="/participate" passHref>
-              <button className="mr-5 mt-4 button hover:animate-bounce">
-                learn how
-              </button>
+            <Link href="/discipleship/children_bible_clubs" passHref>
+              <button className="mr-56 mt-4 button w-200">learn how</button>
             </Link>
           </div>
 
@@ -117,13 +118,22 @@ function discipleship() {
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
-            <h1 className="font-black text-blue-600 text-2xl">
+            <h1 className="font-black text-blue-600 text-xl">
               Youth Discipleship Fellowship (YDF)
             </h1>
             <p>
-              Ever since our start up, we have collaborated with supporters and
-              friends to give support to Ugandan young people through education.
+              Working together with our growing Church partners, We continue to
+              take young people through a consistent long term dicsipleship
+              program geared for their spiritual growth
             </p>
+            <Link href="/discipleship/ydf" passHref>
+              <button
+                href="/discipleship/ydf"
+                className="mr-56 mt-4 button w-200"
+              >
+                learn how
+              </button>
+            </Link>
           </div>
         </div>
       </main>

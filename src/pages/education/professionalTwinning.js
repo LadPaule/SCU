@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/solid";
-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 

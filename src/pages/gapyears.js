@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
@@ -131,32 +130,15 @@ function Gapyears() {
 
           <div className="bg-white shadow-md">
             <h1 className="text-blue-500 text-3xl font-black ml-4">
-              Child Sponsorship Program
+              Gap Year / Stepout Trips
             </h1>
             <p className="mx-4 whitespace-normal text-md">
-              SCU provides educational support to children through the generous
-              support from sponsors. A sponsored child is availed with fees,
-              basic health and feeding to ensure holistic growth and well-being
-              of child while at school. Children also exchange written letters
-              to their sponsors to express their gratitude and to know their
-              sponsors on personal level. <br />
-              <br />
-              Building Schools. Step out teams bless and get involved with
-              communities in SCU through building schools. Many of these schools
-              are poorly structured and very unconducive for learning but
-              through the kindness and selfless gratitude of the step out teams;
-              We get on ground and build better structures thereby ensuring that
-              children study in enriched learning environments.
+              With nine years’ experience in hosting Gap Year Students from the
+              UK and the US, Smile Charity Uganda is your choice destination for
+              a three to nine month’s active service in relation to our
+              programs. We ensure safety without compromising on the local
+              experience.
             </p>
-            <Link href="/children_list" passHref>
-              <button
-                href="/children_list"
-                type="button"
-                className="ml-4 mt-8 button animate-pulse"
-              >
-                support a child
-              </button>
-            </Link>
           </div>
         </div>
         <div className="flex-col px-2 mt-2 bg-gray-200">

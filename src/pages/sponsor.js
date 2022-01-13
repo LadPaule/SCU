@@ -47,7 +47,7 @@ export default function ChildForm() {
       }
     });
   };
-  console.log(email, fullName, modeOfSupport);
+
 
   return (
     <div className="h-screen">

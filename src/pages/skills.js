@@ -78,14 +78,15 @@ function skilling() {
               Women Empowerment
             </h1>
             <p>
-              A holistic child developement approach where an able person picks
-              on a child in need of a helping hand to start or keep up with
-              essential education.
+              There is a big number of young girls who have dropped out of
+              school before a useful career as well as a big number of single
+              mothers, widows who are in a great need for sustainable
+              livelihood. We reach out to these by equiping themwith skills
             </p>
             <Link href="/skilling/womenEmpowerment" passHref>
               <button
-                href="/education/child_sponsorship"
-                className="mr-5 mt-4 button hover:animate-bounce"
+                href="/skilling/womenEmpowerment"
+                className="mr-56 w-200 mt-4 button hover:animate-bounce"
               >
                 learn more
               </button>
@@ -100,12 +101,13 @@ function skilling() {
               Youth Entreprenuership Club
             </h1>
             <p>
-              An exciting and fulfilling career developement program where a
-              serving professional gives a hand to an upcoming young person up
-              the steps to the same.
+              With a growing community at Kabulengwa (our close locale), we
+              found it necessary to establish a youth hubfor young people. Our
+              focus is to empower them with cognitive and vital life skills so
+              as to raise useful and responsible citzens
             </p>
             <Link href="/skilling/yec">
-              <button className="mr-5 mt-4 button hover:animate-bounce">
+              <button className="mr-56 w-200 mt-4 button hover:animate-bounce">
                 learn how
               </button>
             </Link>
@@ -115,11 +117,19 @@ function skilling() {
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
-            <h1 className="font-black text-blue-600 text-2xl">Testmonials</h1>
+            <h1 className="font-black text-blue-600 text-2xl">
+              How to get involved
+            </h1>
             <p>
-              Ever since our start up, we have collaborated with supporters and
-              friends to give support to Ugandan young people through education.
+              You are at the core of our work to support our Skilling Domain.
+              You can participate through supporting the program facilitators,
+              visiting our work or provide necessary equipements for the work.
             </p>
+            <Link href="/participate" passHref>
+              <button href="/participate" className="mr-56 w-200 mt-4 button hover:animate-bounce">
+                learn how
+              </button>
+            </Link>
           </div>
         </div>
 

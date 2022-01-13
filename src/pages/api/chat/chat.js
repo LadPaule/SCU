@@ -7,9 +7,9 @@ const PORT = process.env.PORT || 5000;
 require("dotenv").config();
 app.options(
   "*",
-  cors({ origin: "http://localhost:3000", optionsSuccessStatus: 200 })
+  cors({ origin: "https://scu.vercel.app/" || "http://localhost:3000/", optionsSuccessStatus: 200 })
 );
-app.use(cors({ origin: "http://localhost:3000", optionsSuccessStatus: 200 }));
+app.use(cors({ origin: "https://scu.vercel.app/" || "http://localhost:3000/", optionsSuccessStatus: 200 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

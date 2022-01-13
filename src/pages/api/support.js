@@ -31,7 +31,8 @@ export default (req, res) => {
       console.log(err);
     } else {
       console.log("mail sent!");
+
     }
   });
-  res.send("success");
+  res.redirect(200, "/http://localhost:3000/");
 };
