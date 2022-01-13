@@ -2,8 +2,13 @@ import Head from "next/head";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
+import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/solid";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useState } from "react";
+import Image from "next/image";
 
-function womenEmpowerment() {
+function WomenEmpowerment() {
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
     if (clicked === index) {
@@ -204,4 +209,4 @@ function womenEmpowerment() {
   );
 }
 
-export default womenEmpowerment;
+export default WomenEmpowerment;

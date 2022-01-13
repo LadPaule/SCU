@@ -76,7 +76,7 @@ function discipleship() {
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
             <h1 className=" top-2 right-2 text-blue-600 font-black text-xl">
-              Pastors' Dicipleship Fellowship (PDF) & Pastors' Wives'
+              Pastors&apos; Dicipleship Fellowship (PDF) & Pastors&apos; Wives&apos;
               Discipleship Fellowship (PWDF)
             </h1>
             <p>

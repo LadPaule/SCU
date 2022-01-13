@@ -2,10 +2,13 @@ import Head from "next/head";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
+import Image from "next/image";
+import { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
+import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-function ydf() {
+function Ydf() {
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
     if (clicked === index) {
@@ -205,4 +208,4 @@ function ydf() {
   );
 }
 
-export default ydf
+export default Ydf
