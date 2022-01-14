@@ -7,18 +7,18 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 .hero{
   position: absolute;
   width: 100%;
-  height: 143px;
+  height: 69px;
   bottom: 0;
   left: 0;
   opacity: 1;
-  background: url(wave.png);
+  background: url(wav.png);
   animation: animate 10s linear infinite;
 }
+
 
 @keyframes animate{
   0%{

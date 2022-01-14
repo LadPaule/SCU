@@ -3,7 +3,7 @@ import Link from "next/link";
 function LandingPage() {
   return (
     <div>
-      <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-auto md:-mt-6">
+      <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-auto -mt-6">
         <div
           className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
