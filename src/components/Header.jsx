@@ -8,13 +8,16 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 flex bg-scu_blue-light flex-col sm:flex-row justify-between items-center  h-auto">
       <div className="m-4">
+        <Link href="/">
         <Image
+        href="/"
           className="object-contain"
           src="/sculogo.svg"
           alt="logo"
           width={180}
           height={70}
         />
+        </Link>
       </div>
 
       <div className="flex flex-grow justify-evenly last:ml-2 max-w-md space-x-4 items-center">
