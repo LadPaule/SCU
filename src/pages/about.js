@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 
 function about() {
   return (
-    <div className="bg-gray-500">
+    <div className="bg-gray-300">
       <Head>
         <title>About - Smile Charity Uganda (SCU)</title>
         <link

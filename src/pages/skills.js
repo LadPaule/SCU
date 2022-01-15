@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function skilling() {
   return (
-    <div className="bg-gray-400">
+    <div className="bg-gray-300">
       <Head>
         <title>Skills Developement</title>
         <link

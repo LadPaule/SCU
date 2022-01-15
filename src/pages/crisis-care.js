@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function crisisCare() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-300">
       <Head>
         <title>Crisis Care & Management</title>
         <link

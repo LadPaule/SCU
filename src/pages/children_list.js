@@ -9,7 +9,7 @@ import Childrenfeed from "../components/Childrenfeed";
 
 function ChildrenList({ waitingLists }) {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-300">
       <Head>
         <title>Sponsor a Child</title>
         <link

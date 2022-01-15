@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function discipleship() {
   return (
-    <div className="bg-gray-500">
+    <div className="bg-gray-300">
       <Head>
         <title>Discipleship & Evangelism</title>
         <link

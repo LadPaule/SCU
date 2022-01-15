@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function Education() {
   return (
-    <div className="bg-gray-400">
+    <div className="bg-gray-300">
       <Head>
         <title>Education Support</title>
         <link
@@ -50,7 +50,7 @@ function Education() {
         {/* banner */}
         <div className="relative">
           <Image
-            className="w-full mix-blend-overlay h-full"
+            className="w-full  h-full"
             src="/education/education.webp"
             width={1440}
             height={560}
@@ -58,7 +58,7 @@ function Education() {
             loading="eager"
             alt="education"
           />
-          <div className="absolute -mt-44 px-10">
+          <div className="sm:hidden md:block absolute -mt-44 px-10 md:mb-0 bg-gray-300">
             <h1 className="font-black text-3xl md:text-6xl whitespace-nowrap text-scu_blue-light mb-2">
               Education Support
             </h1>
