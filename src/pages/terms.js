@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 
 function PrivacyPolicy() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-300">
       <Head>
         <title>SCU Terms of Service</title>
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />

@@ -63,7 +63,7 @@ function Gapyears() {
     },
   ];
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-300">
       <Head>
         <title>Gap Year / Stepout Trips</title>
         <link

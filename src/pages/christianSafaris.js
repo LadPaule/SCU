@@ -65,7 +65,7 @@ function ChristianSafaris() {
   ];
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-300">
       <Head>
         <title>Christian Safaris</title>
         <link
