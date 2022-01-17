@@ -1,17 +1,11 @@
 import Head from "next/head";
 import { GraphQLClient } from "graphql-request";
-import { gql } from "graphql-request";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Childrenfeed from "../components/Childrenfeed";
 
-const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
-const limit = 1;
-
 function ChildrenList({ waitingLists }) {
-
-  // console.log(currentPageNumber, hasNextPage, hasPreviousPage);
   return (
     <div className="bg-gray-300">
       <Head>
