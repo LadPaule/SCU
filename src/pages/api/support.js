@@ -4,18 +4,18 @@ const nodemailer = require("nodemailer");
 export default (req, res) => {
   const { email, fullName, country, postalAddress, modeOfSupport } = req.body;
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: "smtp.smilecharityuganda.org",
     port: 465,
-    service: "gmail",
+    service: "webmail",
     auth: {
       user: process.env.NEXT_EMAIL,
       pass: process.env.NEXT_EMAIL_PASSWORD,
     },
-    secure: true
+    secure: false
   });
 
   const mailOptions = {
-    from: "smilecharityuganda@gmail.com",
+    from: "info@smilecharityuganda.org",
     to: `${email}, ssozipaule@gmail.com`,
     subject: `Thank you ${fullName} for considering child Education Support through Smile Charity Uganda`,
     html: `<h1>Dear ${fullName}, Thank you for supporting child education with us</h1> \n
@@ -35,4 +35,10 @@ export default (req, res) => {
     }
   });
   res.redirect(200, "/http://localhost:3000/");
+
+  if(res.statusCode === 200) {
+    res.send("Thank you for your support");
+  }else {
+    res.send("Sorry, something went wrong");
+  }
 };

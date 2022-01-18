@@ -159,8 +159,11 @@ export default function ChildForm() {
                 <option value="select mode of support">
                   Select Mode of Support
                 </option>
-                <option value="Monthly support">Monthly support</option>
-                <option value="one time support">one time support</option>
+                <option value="Monthly support">Monthly</option>
+                <option value="one time support">Quaterly</option>
+                <option value="one time support">Once in six months</option>
+                <option value="one time support">Annually</option>
+                <option value="one time support">once in 5 years</option>
               </select>
             </div>
 
