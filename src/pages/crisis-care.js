@@ -8,7 +8,7 @@ import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-function crisisCare() {
+function CrisisCare() {
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
     if (clicked === index) {
@@ -224,4 +224,4 @@ function crisisCare() {
   );
 }
 
-export default crisisCare;
+export default CrisisCare;

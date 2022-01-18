@@ -3,9 +3,8 @@ import React, { useState, useEffect } from "react";
 import Pagination from "./pagination";
 
 function Childrenfeed({ waitingLists }) {
-
-  const [children, setChildren] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [children, setChildren] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(8);
 
@@ -14,7 +13,7 @@ function Childrenfeed({ waitingLists }) {
     setChildren(waitingLists);
     setLoading(false);
   }),
-    [];
+    [waitingLists];
 
   // todo: getIndexOfLastPost
   const indexOfLastPost = currentPage * postsPerPage;

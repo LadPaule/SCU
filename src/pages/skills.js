@@ -106,7 +106,7 @@ function skilling() {
               focus is to empower them with cognitive and vital life skills so
               as to raise useful and responsible citzens
             </p>
-            <Link href="/skilling/yec">
+            <Link href="/skilling/yec" passHref>
               <button className="mr-56 w-200 mt-4 button hover:animate-bounce">
                 learn how
               </button>
@@ -126,7 +126,10 @@ function skilling() {
               visiting our work or provide necessary equipements for the work.
             </p>
             <Link href="/participate" passHref>
-              <button href="/participate" className="mr-56 w-200 mt-4 button hover:animate-bounce">
+              <button
+                href="/participate"
+                className="mr-56 w-200 mt-4 button hover:animate-bounce"
+              >
                 learn how
               </button>
             </Link>
