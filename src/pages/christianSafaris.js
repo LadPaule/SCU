@@ -132,7 +132,7 @@ function ChristianSafaris() {
 
           <div className="bg-white shadow-md">
             <h1 className="text-blue-500 text-3xl font-black ml-4">
-              Child Sponsorship Program
+              Christian Safaris
             </h1>
             <p className="mx-4 whitespace-normal text-md">
               SCU provides educational support to children through the generous

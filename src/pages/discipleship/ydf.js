@@ -109,7 +109,7 @@ function Ydf() {
 
           <div className="bg-white shadow-md">
             <h1 className="text-blue-500 text-3xl font-black ml-4">
-              Child Sponsorship Program
+              Youth Discipleship Fellowship
             </h1>
             <p className="mx-4 whitespace-normal text-md">
               As the biggest population, the youths need to be trained to work

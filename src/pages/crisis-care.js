@@ -50,8 +50,7 @@ function CrisisCare() {
     },
     {
       question: "How to Help?",
-      answer:
-        "Click Participate to join the see how you can help",
+      answer: "Click Participate to join the see how you can help",
     },
   ];
   return (
@@ -143,7 +142,7 @@ function CrisisCare() {
 
             <div className="bg-white shadow-md">
               <h1 className="text-blue-500 text-3xl font-sans font-black ml-4">
-                Children Bible Clubs
+                Crisis Care & Management
               </h1>
               <p className="mx-4 whitespace-normal text-md">
                 Caring in crisis for individuals going through a moment of
