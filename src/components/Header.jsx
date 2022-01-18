@@ -6,7 +6,7 @@ import Link from "next/link";
 import { sidebarData } from "../helperdata";
 function Header() {
   return (
-    <header className="sticky top-0 z-50 flex bg-scu_blue-light flex-col sm:flex-row justify-between items-center  h-auto">
+    <header className="sticky cursor-pointer top-0 z-50 flex bg-scu_blue-light flex-col sm:flex-row justify-between items-center  h-auto">
       <div className="m-4">
         <Link href="/">
         <Image

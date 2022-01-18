@@ -19,34 +19,13 @@ function Ydf() {
   };
   const faq = [
     {
-      question: "What sort of children are sponsored?",
+      question: "How can a young man be part of YDF?",
       answer:
-        "Children who are impoverished coming from either orphaned or disadvantaged families, We also sponsor children that have been referred to us by our implementing partners like schools and churches.",
+        "A young person has to be from any local church however those looking for a local church will be guided and alocated one.",
     },
     {
-      question: "How do we select the children for sponsorship?",
-      answer:
-        "Through door to door research in slum areas and recommendations from implementing partners",
-    },
-    {
-      question: "How much does it cost to sponsor a child?",
-      answer:
-        "It only costs 150000 Ugandan shillings which is equivalent to £30 or $40 per month.",
-    },
-    {
-      question: "What does the sponsorship provide to the beneficiary?",
-      answer:
-        "We provide stationery , school fees, uniforms, basic health and feeding while at school.",
-    },
-    {
-      question: "How long does the sponsorship last?",
-      answer:
-        "The sponsorship runs till the 18th birthday except for those who started school later due to different unavailable circumstances.",
-    },
-    {
-      question: "How does the sponsor link with his/ her sponsored child?",
-      answer:
-        "Smile charity Uganda has a set system through which a sponsor and a child are able to exchange letters and video chats.",
+      question: "How can I help YDF go forward?",
+      answer: "You can help in various ways. See them here",
     },
   ];
 
@@ -133,17 +112,16 @@ function Ydf() {
               Child Sponsorship Program
             </h1>
             <p className="mx-4 whitespace-normal text-md">
-              Working together with our growing Church partners, we continue to
-              take young people through a consistent long term discipleship
-              program geared for their spiritual growth as they eventually
-              become leaders in their own Church and/or communities. Most of
-              them are in school so we meet during their holidays. <br />
-              <br />
-              We are never tiring in our endeavor and calling to always reach
-              out to both new and old grounds as the Lord draws hearts to
-              Himself through us. With the help of our sisters and brothers who
-              continuously support us and where the Lord allows, some keep
-              coming over for a boots-on-the-ground experience.
+              As the biggest population, the youths need to be trained to work
+              with the way of the Lord for the asks and replies it&apos;s self
+              in Psalms 119:9 “How shall a young man live his way pure? By
+              living and obeying Your Word and following it&apos;s rules”. Youth
+              Discipleship Fellowship is always towards evangelising and
+              discipling the young people as well as teaching and metoring them
+              in life skills, sharing in recreation activities. As a Christ
+              centered organization, we work towards developing a Christ
+              acknowledging society and generation through youth guidance and
+              mentorship under the Discipleship and Evagelism domain.
             </p>
           </div>
         </div>
@@ -208,4 +186,4 @@ function Ydf() {
   );
 }
 
-export default Ydf
+export default Ydf;

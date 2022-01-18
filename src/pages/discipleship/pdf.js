@@ -19,34 +19,13 @@ function Pdf() {
   };
   const faq = [
     {
-      question: "What sort of children are sponsored?",
+      question: "What qualifications do I need to be part of PDF?",
       answer:
-        "Children who are impoverished coming from either orphaned or disadvantaged families, We also sponsor children that have been referred to us by our implementing partners like schools and churches.",
+        "You have to be a local pastor however, supporters and friends are also welcome",
     },
     {
-      question: "How do we select the children for sponsorship?",
-      answer:
-        "Through door to door research in slum areas and recommendations from implementing partners",
-    },
-    {
-      question: "How much does it cost to sponsor a child?",
-      answer:
-        "It only costs 150000 Ugandan shillings which is equivalent to £30 or $40 per month.",
-    },
-    {
-      question: "What does the sponsorship provide to the beneficiary?",
-      answer:
-        "We provide stationery , school fees, uniforms, basic health and feeding while at school.",
-    },
-    {
-      question: "How long does the sponsorship last?",
-      answer:
-        "The sponsorship runs till the 18th birthday except for those who started school later due to different unavailable circumstances.",
-    },
-    {
-      question: "How does the sponsor link with his/ her sponsored child?",
-      answer:
-        "Smile charity Uganda has a set system through which a sponsor and a child are able to exchange letters and video chats.",
+      question: "How can I help PDF?",
+      answer: "Click Participate to join the see how you can help",
     },
   ];
 
@@ -130,20 +109,15 @@ function Pdf() {
 
           <div className="bg-white shadow-md">
             <h1 className="text-blue-500 text-3xl font-black ml-4">
-              Child Sponsorship Program
+              Pastors&apos; Discipleship Fellowship
             </h1>
             <p className="mx-4 whitespace-normal text-md">
-              Working together with our growing Church partners, we continue to
-              take young people through a consistent long term discipleship
-              program geared for their spiritual growth as they eventually
-              become leaders in their own Church and/or communities. Most of
-              them are in school so we meet during their holidays. <br />
-              <br />
-              We are never tiring in our endeavor and calling to always reach
-              out to both new and old grounds as the Lord draws hearts to
-              Himself through us. With the help of our sisters and brothers who
-              continuously support us and where the Lord allows, some keep
-              coming over for a boots-on-the-ground experience.
+              Every fortnight on Thursdays, member pastors meet at the Smile
+              House for Fellowship, Bible study, and aerobics workout classes.
+              The day begins with a prayer at 7:00am in the morning and followed
+              by breakfast after a refrehing break.
+              <br /> Then Bible studyand discussions about church and family
+              leadership as well as couselling proceed before closing at 1:00 pm
             </p>
           </div>
         </div>

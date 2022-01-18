@@ -1,11 +1,59 @@
 import Head from "next/head";
+import { useState } from "react";
+import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import Link from "next/link";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function crisisCare() {
+  const [clicked, setClicked] = useState(false);
+  const toggle = (index) => {
+    if (clicked === index) {
+      // Todo: if clicked faq is clicked again, close it.
+      setClicked(null);
+    }
+    setClicked(index);
+  };
+  const slideImages = [
+    {
+      url: "/banners/gapers.webp",
+      caption: "Gap year Students",
+      mainCaption: "With more than 10 years ",
+    },
+    {
+      url: "/banners/womenEmpowerment.webp",
+      caption: "Women Empowerment ",
+      mainCaption: "The program attempts handcrafts",
+    },
+  ];
+
+  const faq = [
+    {
+      question: "Who we support?",
+      answer:
+        "This program supports a widely range of individuals /Victims including: Sexually/physically assaulted, Homeless young people, Divorced Mothers, Accident Victims, Deported Fellows, Single & Neglected Parents.",
+    },
+    {
+      question: "Why We support?",
+      answer:
+        "In Uganda we have no established welfare system and because of this: an alarming number of Ugandans suffer to death as no support is availed to their plight. At SCU; We work to alleviate these situations and merge this gap in the best way that we can.",
+    },
+    {
+      question: "How we support?",
+      answer: `Jesus' love guides our hearts to sacrificially give our time and resources as we relate with depressed people that are struggling to appreciate the purpose of life.
+        We avail daily discipleship classes to make Jesus piece and part of the renewed lives
+        To counter depression and anxiety we avail counselling to rebuild the broken and wounded.
+        We still go an extra mile to avail monthly medical checkups and skilling classes to ensure that all our beneficiaries of the program exit SCU after holistic transformation in Faith, Family, & Finance.`,
+    },
+    {
+      question: "How to Help?",
+      answer:
+        "Click Participate to join the see how you can help",
+    },
+  ];
   return (
     <div className="bg-gray-300">
       <Head>
@@ -58,89 +106,113 @@ function crisisCare() {
             loading="eager"
             alt="crisis care banner"
           />
-         <div className="hidden md:block absolute -mt-28 px-10 md:mb-0 bg-gray-300/50">
+          <div className="hidden md:block absolute -mt-28 px-10 md:mb-0 bg-gray-300/50">
             <h1 className="font-black font-sans text-2xl md:text-4xl whitespace-nowrap text-scu_blue-light mb-2">
               Crisis care & Management
             </h1>
             <p className="hidden lg:block text-scu_blue-light text-xl text-left px-2 pb-1 font-bold">
-              Caring in crisis for individuals going through a moment of disaster or unforeseen emergencies 
-              in order to save their lives by providing them with food, medication and small 
-              essentials as hope is restored.
+              Caring in crisis for individuals going through a moment of
+              disaster or unforeseen emergencies in order to save their lives by
+              providing them with food, medication and small essentials as hope
+              is restored.
             </p>
+          </div>
+          <div className="flex-col lg:grid lg:grid-cols-2 h-auto">
+            <Carousel
+              autoPlay
+              infiniteLoop
+              showStatus={false}
+              showIndicators={false}
+              showThumbs={false}
+              interval={5000}
+            >
+              {slideImages.map((slide) => (
+                <div key={slide.caption}>
+                  <Image
+                    src={slide.url}
+                    alt={slide.caption}
+                    width={780}
+                    height={440}
+                    objectFit="contain"
+                    loading="lazy"
+                    className="object-fit"
+                  />
+                </div>
+              ))}
+            </Carousel>
+
+            <div className="bg-white shadow-md">
+              <h1 className="text-blue-500 text-3xl font-sans font-black ml-4">
+                Children Bible Clubs
+              </h1>
+              <p className="mx-4 whitespace-normal text-md">
+                Caring in crisis for individuals going through a moment of
+                disaster or unforeseen emergencies in order to save their lives
+                by providing them with food, medication and small essentials as
+                hope is restored.
+                <br />
+                Adullam Caverna (Cave of Adullam 1 Samuel 22) is our shelter
+                where people faced with temporary homelessness or escaping
+                domestic violence are provided with a home for relief as we
+                restore hope. Managing crisis and natural calamities when they
+                occur in order to save lives, restore hope and rebuild family
+                cohesion. Our team of volunteers are always readily equipped to
+                face and reach out to those in crisis. We give a hand up not a
+                hand out to all those in crisis plight.
+              </p>
+            </div>
           </div>
         </div>
-        <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-auto md:-mt-4">
-          <div
-            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
-        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
-          >
-            <h1 className=" top-2 right-2 text-blue-600 font-black text-2xl">
-              Who we are?
-            </h1>
-            <p>
-              Smile charity Uganda we are a helping hand to those in need. We
-              are a hand up not a hand hand out. We envision holistically
-              empowered and transformed lives through our working mechanism DESC
-              which stands for Discipleship and Evangelism, Education Support,
-              Skilling and Crisis management.
-            </p>
-            <Link href="/about" passHref>
-              <button className="mr-56 mt-4 button w-200 hover:animate-bounce">
-                learn more
-              </button>
-            </Link>
-          </div>
+        <div className="flex-col px-2 mt-2 bg-gray-200">
+          <h1 className="whitespace-nowrap text-blue-600 text-xl font-black ">
+            Frequently Asked questions
+          </h1>
+          <div className="accordion accordion-flush" id="accordionFlush">
+            {faq.map((qtn, index) => (
+              <div
+                className="accordion-item border-t-0 border-l-0 border-r-0 rounded-sm bg-blue-300 border border-blue-400"
+                key={index}
+              >
+                <h1
+                  onClick={() => toggle(index)}
+                  className="flex mb-0"
+                  id="flush-headingOne"
+                >
+                  <button
+                    className="accordion-button relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-blue-200 border-0 rounded-none 
+                    transition focus:outline-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    {qtn.question}
+                  </button>
 
-          <div
-            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
-        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
-          >
-            <h1 className="font-black text-blue-600 text-2xl ">What we do.</h1>
-            <p>
-              We reach out to those in need of a helping hand through our
-              different programs including;
-            </p>
-            <ul className="m-4 mr-8">
-              <Link href="/discipleship" passHref>
-                <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
-                  Discipleship & Evangelism
-                </li>
-              </Link>
-              <Link href="/education" passHref>
-                <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
-                  Education Support
-                </li>
-              </Link>
-              <Link href="/skills" passHref>
-                <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
-                  Skilling
-                </li>
-              </Link>
-              <Link href="/crisis-care" passHref>
-                <li className="font-bold text-xl text-blue-600 hover:text-scu_blue-light hover:underline">
-                  Crisis care & Management
-                </li>
-              </Link>
-            </ul>
-          </div>
-
-          <div
-            className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
-        duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
-          >
-            <h1 className="font-black text-blue-600 text-2xl">
-              How to get involved?
-            </h1>
-            <p>
-              You too can be part of this work through praying with us, Visiting
-              us, or donating to us.
-            </p>
-
-            <Link href="/participate" passHref>
-              <button className="mr-56 mt-4 button hover:animate-bounce">
-                learn how
-              </button>
-            </Link>
+                  <span>
+                    {clicked === index ? (
+                      <ChevronDownIcon className="h-6 font-bold text-white" />
+                    ) : (
+                      <ChevronUpIcon className="h-6 font-bold text-scu_blue-light" />
+                    )}
+                  </span>
+                </h1>
+                {clicked === index ? (
+                  <div
+                    className="accordion-collapse border-0"
+                    id="flush-collapseOne"
+                    aria-labelledby="flush-headingOne"
+                    aria-controls="flush-collpseOne"
+                    data-bs-parent="accordionFlush"
+                  >
+                    <p className="text-sm text-scu_blue-light font-bold py-4 px-5">
+                      {qtn.answer}
+                    </p>
+                  </div>
+                ) : null}
+              </div>
+            ))}
           </div>
         </div>
 
