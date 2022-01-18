@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Childrenfeed from "../components/Childrenfeed";
 
 function ChildrenList({ waitingLists }) {
+
   return (
     <div className="bg-gray-300">
       <Head>
