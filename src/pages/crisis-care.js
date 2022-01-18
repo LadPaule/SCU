@@ -19,14 +19,19 @@ function CrisisCare() {
   };
   const slideImages = [
     {
-      url: "/banners/gapers.webp",
-      caption: "Gap year Students",
-      mainCaption: "With more than 10 years ",
+      url: "/crisis/crisis1.webp",
+      caption: "crisis management",
+      mainCaption: "Responding to the needs of the community",
     },
     {
-      url: "/banners/womenEmpowerment.webp",
-      caption: "Women Empowerment ",
-      mainCaption: "The program attempts handcrafts",
+      url: "/crisis/crisis2.webp",
+      caption: "crisis management ",
+      mainCaption: "Responding to the needs of the community",
+    },
+    {
+      url: "/crisis/crisis3.webp",
+      caption: "crisis management ",
+      mainCaption: "Responding to the needs of the community",
     },
   ];
 
@@ -98,7 +103,7 @@ function CrisisCare() {
         <div className="relative">
           <Image
             className="w-full  h-full"
-            src="/education/education.webp"
+            src="/crisis/crisis.webp"
             width={1440}
             height={560}
             objectFit="contain"
