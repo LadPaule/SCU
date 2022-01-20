@@ -31,12 +31,32 @@ function Pdf() {
 
   const slideImages = [
     {
-      url: "/banners/gapers.webp",
+      url: "/discipleship/party.webp",
       caption: "Gap year Students",
       mainCaption: "With more than 10 years ",
     },
     {
-      url: "/banners/womenEmpowerment.webp",
+      url: "/discipleship/image02.webp",
+      caption: "Women Empowerment ",
+      mainCaption: "The program attempts handcrafts",
+    },
+    {
+      url: "/discipleship/image03.webp",
+      caption: "Women Empowerment ",
+      mainCaption: "The program attempts handcrafts",
+    },
+    {
+      url: "/discipleship/party.webp",
+      caption: "Women Empowerment ",
+      mainCaption: "The program attempts handcrafts",
+    },
+    {
+      url: "/discipleship/pdf1.webp",
+      caption: "Women Empowerment ",
+      mainCaption: "The program attempts handcrafts",
+    },
+    {
+      url: "/discipleship/pdf2.webp",
       caption: "Women Empowerment ",
       mainCaption: "The program attempts handcrafts",
     },

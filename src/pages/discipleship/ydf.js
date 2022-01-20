@@ -31,14 +31,19 @@ function Ydf() {
 
   const slideImages = [
     {
-      url: "/banners/gapers.webp",
-      caption: "Gap year Students",
-      mainCaption: "With more than 10 years ",
+      url: "/discipleship/ydf1.webp",
+      caption: "YDF",
+      mainCaption: "Youth Discipleship Fellowship",
     },
     {
-      url: "/banners/womenEmpowerment.webp",
-      caption: "Women Empowerment ",
-      mainCaption: "The program attempts handcrafts",
+      url: "/discipleship/ydf2.webp",
+      caption: "YDF",
+      mainCaption: "Youth Discipleship Fellowship",
+    },
+    {
+      url: "/discipleship/ydf3.webp",
+      caption: "YDF",
+      mainCaption: "Youth Discipleship Fellowship",
     },
   ];
   return (

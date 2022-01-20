@@ -9,14 +9,24 @@ import Image from "next/image";
 function ChildrenBibleClubs() {
   const slideImages = [
     {
-      url: "/banners/gapers.webp",
-      caption: "Gap year Students",
-      mainCaption: "With more than 10 years ",
+      url: "/discipleship/cbc2.webp",
+      caption: "Children's Bible Clubs",
+      mainCaption: "Children's Bible Clubs",
     },
     {
-      url: "/banners/womenEmpowerment.webp",
-      caption: "Women Empowerment ",
-      mainCaption: "The program attempts handcrafts",
+      url: "/discipleship/cbc1.webp",
+      caption: "Children's Bible Clubs",
+      mainCaption: "Children's Bible Clubs",
+    },
+    {
+      url: "/discipleship/cbc3.webp",
+      caption: "Children's Bible Clubs",
+      mainCaption: "Children's Bible Clubs",
+    },
+    {
+      url: "/discipleship/cbc4.webp",
+      caption: "Children's Bible Clubs",
+      mainCaption: "Children's Bible Clubs",
     },
   ];
   return (
