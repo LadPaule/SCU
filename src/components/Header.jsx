@@ -9,16 +9,14 @@ function Header() {
     <header className="sticky cursor-pointer top-0 z-50 flex bg-scu_blue-light flex-col sm:flex-row justify-between items-center  h-auto">
       <div className="m-4">
         <Link href="/" passHref>
-          <a href="/">
-        <Image
-        href="/"
-          className="object-contain"
-          src="/sculogo.svg"
-          alt="logo"
-          width={180}
-          height={70}
-        />
-        </a>
+          <Image
+            href="/"
+            className="object-contain"
+            src="/sculogo.svg"
+            alt="logo"
+            width={180}
+            height={70}
+          />
         </Link>
       </div>
 
