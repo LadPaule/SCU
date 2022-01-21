@@ -9,7 +9,7 @@ function news({ articles }) {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>The Latest News from SCU</title>
+        <title>The Latest News from Smile Charity Uganda</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

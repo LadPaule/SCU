@@ -2,6 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ArticlesFeed({ articles }) {
+  const months = ["January", "February", "March", 
+    "April", "May", "June", "July", "August", 
+    "September", "October", "November", "December"
+  ];
+
+  const d = new Date();
+  let name = months[d.getMonth()];
+  console.log(name);
   return (
     <div className="flex flex-wrap">
       {articles.map((article) => (
@@ -33,6 +41,11 @@ export default function ArticlesFeed({ articles }) {
           </div>
         </div>
       ))}
+      <div className="">
+        <Link href={`#`} passHref>
+        <h1>see ${name}&apos;s Prayer Calendar</h1>
+        </Link>
+      </div>
     </div>
   );
 }
