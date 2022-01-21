@@ -2,14 +2,12 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import ArticlesFeed from "../components/ArticlesFeed";
-import { GraphQLClient } from "graphql-request";
 
-function News({ articles }) {
+function MonthlyPublication() {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>The Latest News from Smile Charity Uganda</title>
+        <title>The Latest Publications from Smile charity Uganda</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -42,17 +40,11 @@ function News({ articles }) {
           content="Smile Charity, Smile Charity Uganda, SCU, Charity, NGO, Uganda, Christian Charity, Kampala charity, Sponsor a child"
         />
       </Head>
-
       {/* header */}
       <Header />
       <Navbar />
-
       <main className="max-w-screen-2xl mx-auto">
-        {/* banner */}
-
-        <ArticlesFeed articles={articles} />
-
-        {/* feed */}
+        <h1 className="text-blue-600 text-2xl font-black">Monthly Newsletters</h1>
       </main>
       {/* footer */}
       <Footer />
@@ -60,29 +52,4 @@ function News({ articles }) {
   );
 }
 
-export default News;
-export async function getStaticProps() {
-  const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
-  const { articles } = await graphcms.request(
-    `
-    {
-      articles{
-        id
-        title
-        slug
-        images{
-          url
-          height
-          width
-         }
-        articleBody
-     }
-  }
-  `
-  );
-  return {
-    props: {
-      articles,
-    },
-  };
-}
+export default MonthlyPublication;
