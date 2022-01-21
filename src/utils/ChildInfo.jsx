@@ -115,7 +115,7 @@ function ChildInfo({ child }) {
                   <p>{child.childStory}</p>
                   <p className="mt-4 text-scu_blue-light font-bold text-lg">
                     You can support {child.name} with a monthly sponsorship of
-                    £.30 equivalent to $. 40 or locally ugx.150000
+                    £.35 equivalent to $.50 equivalent to €40 or locally ugx.165000
                   </p>
                 </div>
                 <div className="mt-4 flex justify-between">
