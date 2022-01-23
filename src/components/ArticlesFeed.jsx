@@ -69,18 +69,17 @@ export default function ArticlesFeed({ articles }) {
         <div className="bg-gray-300/10 text-2xl w-800 shadow-sm rounded-md">
           <Link href={`/monthlyPublication`} passHref>
             <a href={`/monthlyPublication`}>
-              <h1 className="whitespace-normal">
-                See {name}&apos;s Newsletter
+              <h1 className="whitespace-normal hover:text-scu_blue-light decoration-slice">
+                See {getPreviousMonth()}&apos;s Newsletter
               </h1>
             </a>
           </Link>
         </div>
-
         <div className="bg-gray-300/10 text-2xl w-800 shadow-sm rounded-md">
           <Link href={`/prayer-calendar`} passHref>
             <a href={`/prayer-calendar`}>
-              <h1 className="whitespace-normal">
-                See {getPreviousMonth()}&apos;s Prayer Calendar
+              <h1 className="whitespace-normal hover:text-scu_blue-light decoration-slice">
+                See {name}&apos;s Prayer calendar
               </h1>
             </a>
           </Link>
