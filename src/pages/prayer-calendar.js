@@ -2,8 +2,50 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import { useEffect, useRef } from "react";
+import { GraphQLClient } from "graphql-request";
 
-function PrayerCalendar({ articles }) {
+
+export function CalendarDetails({ publication }) {
+  const viewer = useRef(null);
+  const fileUrl = publication.asset.url;
+  useEffect(() => {
+    import("@pdftron/webviewer").then(() => {
+      WebViewer(
+        {
+          path: "/lib",
+          initialDoc:fileUrl,
+        },
+        viewer.current
+      ).then((instance) => {
+        const { docViewer } = instance;
+        // docViewer.getDocument(fileUrl)
+      });
+    });
+  }, []);
+
+  return (
+    <div className="">
+
+      <div className="w-full h-screen" ref={viewer} />
+    </div>
+  )
+
+}
+
+export function Calendar({ publications }) {
+  return (
+    <div className="">
+      {publications.map((publication) => (
+        <div className="" key={publication.id}>
+          <CalendarDetails publication={publication} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function PrayerCalendar({ publications }) {
   return (
     <div className="bg-gray-100">
       <Head>
@@ -45,7 +87,7 @@ function PrayerCalendar({ articles }) {
       <Navbar />
       <main className="max-w-screen-2xl mx-auto">
         {/* banner */}
-        <h1 className="text-blue-600 text-2xl font-black">Prayer Calendar</h1>
+        <Calendar publications={publications} />
         {/* feed */}
       </main>
       {/* footer */}
@@ -55,3 +97,25 @@ function PrayerCalendar({ articles }) {
 }
 
 export default PrayerCalendar;
+
+export async function getStaticProps() {
+  const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
+  const { publications } = await graphcms.request(
+    `
+    {
+      publications{
+        id
+        name
+        asset{
+          url
+          }
+     }
+  }
+  `
+  );
+  return {
+    props: {
+      publications,
+    },
+  };
+}

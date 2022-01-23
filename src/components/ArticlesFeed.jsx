@@ -70,7 +70,7 @@ export default function ArticlesFeed({ articles }) {
           <Link href={`/monthlyPublication`} passHref>
             <a href={`/monthlyPublication`}>
               <h1 className="whitespace-normal">
-                See {name}&apos;s Prayer Calendar
+                See {name}&apos;s Newsletter
               </h1>
             </a>
           </Link>

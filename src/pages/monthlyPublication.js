@@ -2,12 +2,54 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import { useEffect, useRef } from "react";
+import { GraphQLClient } from "graphql-request";
 
-function MonthlyPublication() {
+
+export function CalendarDetails({ newsletter }) {
+  const viewer = useRef(null);
+  const fileUrl = newsletter.file.url;
+  useEffect(() => {
+    import("@pdftron/webviewer").then(() => {
+      WebViewer(
+        {
+          path: "/lib",
+          initialDoc:fileUrl,
+        },
+        viewer.current
+      ).then((instance) => {
+        const { docViewer } = instance;
+        // docViewer.getDocument(fileUrl)
+      });
+    });
+  }, []);
+
+  return (
+    <div className="">
+
+      <div className="w-full h-screen" ref={viewer} />
+    </div>
+  )
+
+}
+
+export function Calendar({ newsletters }) {
+  return (
+    <div className="">
+      {newsletters.map((newsletter) => (
+        <div className="" key={newsletter.id}>
+          <CalendarDetails newsletter={newsletter} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Newsletter({ newsletters }) {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>The Latest Publications from Smile charity Uganda</title>
+        <title>The Latest News From Smile Charity Uganda</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -44,7 +86,9 @@ function MonthlyPublication() {
       <Header />
       <Navbar />
       <main className="max-w-screen-2xl mx-auto">
-        <h1 className="text-blue-600 text-2xl font-black">Monthly Newsletters</h1>
+        {/* banner */}
+        <Calendar newsletters={newsletters} />
+        {/* feed */}
       </main>
       {/* footer */}
       <Footer />
@@ -52,4 +96,26 @@ function MonthlyPublication() {
   );
 }
 
-export default MonthlyPublication;
+export default Newsletter;
+
+export async function getStaticProps() {
+  const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
+  const { newsletters } = await graphcms.request(
+    `
+    {
+      newsletters{
+        id
+        period
+        file{
+          url
+          }
+     }
+  }
+  `
+  );
+  return {
+    props: {
+      newsletters,
+    },
+  };
+}
