@@ -7,7 +7,7 @@ function PrivacyPolicy() {
   return (
     <div className="bg-gray-300">
       <Head>
-        <title>SCU Privacy policy</title>
+        <title>Smile Charity Uganda, (SCU) Privacy policy</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
