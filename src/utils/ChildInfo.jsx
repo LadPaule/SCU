@@ -34,7 +34,8 @@ function ChildInfo({ child }) {
           />
         )}
         <h1 className="cursor-pointer ">{child.name}</h1>
-        <p className="cursor-pointer">Child date of Birth</p>
+        <p className="cursor-pointer">{child.dateOfBirth}</p>
+        <p className="cursor-pointer">{child.gender}</p>
         <p className="line-clamp-2 my-2 text-sm">{child.childStory}</p>
 
         <button
@@ -105,7 +106,8 @@ function ChildInfo({ child }) {
                     />
                   )}
                   <div className="space-y-8">
-                    <p className="text-black font-bold">child date of birth</p>
+                    <p className="text-black font-bold">Date of birth: {child.dateOfBirth}</p>
+                     <p className="text-black font-bold">Date of birth: {child.gender}</p>
                     <p className="text-black font-bold">
                       Stays at: {child.areaOfResidence}
                     </p>

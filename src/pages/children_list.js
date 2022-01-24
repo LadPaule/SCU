@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 import Childrenfeed from "../components/Childrenfeed";
 
 function ChildrenList({ waitingLists }) {
-
   return (
     <div className="bg-gray-300">
       <Head>
@@ -69,6 +68,8 @@ export async function getStaticProps() {
     waitingLists{
       id
       name
+      gender
+      dateOfBirth
       photograph{
         url
         height

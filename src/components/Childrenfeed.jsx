@@ -8,9 +8,11 @@ function Childrenfeed({ waitingLists }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(8);
 
+  const shuffledChildrenList = waitingLists.sort(() => 0.5 - Math.random());
+  console.log(shuffledChildrenList);
   useEffect(() => {
     setLoading(true);
-    setChildren(waitingLists);
+    setChildren(shuffledChildrenList);
     setLoading(false);
   }),
     [waitingLists];
@@ -18,7 +20,7 @@ function Childrenfeed({ waitingLists }) {
   // todo: getIndexOfLastPost
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = children.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = shuffledChildrenList.slice(indexOfFirstPost, indexOfLastPost);
 
   // Todo: handle pagination functionality
   const paginate = (pageNumber) => setCurrentPage(pageNumber);

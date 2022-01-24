@@ -46,7 +46,7 @@ function PrivacyPolicy() {
 
       <main className="max-w-screen-xl mx-auto">
         {/* banner */}
-        <div className="mb-4 mt-2">
+        <div className="ml-4 mb-4 mt-2">
           <h1 className="text-blue-600 font-sans font-bold text-2xl">
             SMILE CHARITY UGANDA TERMS OF SERVICE
           </h1>
