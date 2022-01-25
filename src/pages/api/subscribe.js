@@ -15,7 +15,7 @@ export default function subscribe(res, req){
     subject: 'Thank you for subscribing to our Newsletter',
     html: `<h1>Thank you for subscribing to our Newsletter</h1> \n
     <p>We will keep you updated with our latest news and updates</p>`,
-    
+
   };
 
   transporter.sendMail(mailOptions, function(error){
