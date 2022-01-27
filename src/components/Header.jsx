@@ -4,6 +4,7 @@ import { Fragment, Fragmet, useEffect, useRef, useState } from "react";
 import { MenuIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import { sidebarData } from "../helperdata";
+import { signIn, signOut } from "next-auth/react";
 function Header() {
   return (
     <header className="sticky cursor-pointer top-0 z-50 flex bg-scu_blue-light flex-col sm:flex-row justify-between items-center  h-auto">
@@ -112,7 +113,7 @@ function Header() {
         </Link>
 
         <Link href="/chat/forum" passHref>
-          <span
+          <span onClick={signIn}
             className="text-md font-semibold text-scu_yellow 
           hover:text-white hover:scale-105 cursor-pointer"
           >

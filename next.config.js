@@ -8,6 +8,6 @@ module.exports = {
     STREAM_API_SECRET: process.env.NEXT_STREAM_API_SECRET,
     STREAM_APP_ID: process.env.NEXT_STREAM_APP_ID,
     NEXT_EMAIL_PASSWORD: process.env.NEXT_EMAIL_PASSWORD,
-    NEXT_EMAIL: process.env.NEXT_EMAIL
+    NEXT_EMAIL: process.env.NEXT_EMAIL,
   },
 };

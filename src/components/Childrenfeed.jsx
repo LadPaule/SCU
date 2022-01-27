@@ -9,7 +9,6 @@ function Childrenfeed({ waitingLists }) {
   const [postsPerPage] = useState(8);
 
   const shuffledChildrenList = waitingLists.sort(() => 0.5 - Math.random());
-  console.log(shuffledChildrenList);
   useEffect(() => {
     setLoading(true);
     setChildren(shuffledChildrenList);
