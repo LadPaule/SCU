@@ -20,8 +20,7 @@ import { GraphQLClient } from "graphql-request";
 //   ZoomIn,
 // } from "react-scroll-motion";
 
-function about({ ScuVolunteers }) {
-  console.log(ScuVolunteers);
+function about({ scuVolunteers }) {
   return (
     <div className="">
       <Head>
@@ -128,14 +127,8 @@ function about({ ScuVolunteers }) {
                     tabindex="0"
                     class="focus:outline-none uppercase text-sm text-center text-gray-600 leading-4"
                   >
-                    in few easy steps
+                    our organisation strategy
                   </p>
-                  <hh1
-                    tabindex="0"
-                    class="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4"
-                  >
-                    Create Beautiful Landing Pages & Web Apps in a Jiffy
-                  </hh1>
                 </div>
                 <div
                   tabindex="0"
@@ -161,15 +154,16 @@ function about({ ScuVolunteers }) {
                         tabindex="0"
                         class="focus:outline-none text-lg font-bold leading-tight text-gray-800"
                       >
-                        Ready to use components
+                        Our Vision
                       </h2>
                       <p
                         tabindex="0"
                         class="focus:outline-none text-base text-gray-600 leading-normal pt-2"
                       >
-                        It provides a very simple start, no need to write a lot
-                        of code, you just import it and start the primitive
-                        components and create the ones you need.
+                        Smile Charity Uganda (SCU) envisions holistically
+                        empowered and transformed lives through education,
+                        practical evangelism initiatives and community outreach
+                        programs in Uganda.
                       </p>
                     </div>
                   </div>
@@ -192,15 +186,15 @@ function about({ ScuVolunteers }) {
                         tabindex="0"
                         class="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
                       >
-                        Hight Quality UI you can reply on
+                        Mission
                       </h2>
                       <p
                         tabindex="0"
                         class="focus:outline-none text-base text-gray-600 leading-normal pt-2"
                       >
-                        Modify the visual appearance of your site – including
-                        colors, fonts, margins and other style-related
-                        properties – with a sophisticated style.
+                        we aim for a long term rebuilding of lives through our
+                        domains namely Discipleshiop & Evangelism, Education
+                        Support, Skilling and Crisis care & management.
                       </p>
                     </div>
                   </div>
@@ -223,15 +217,16 @@ function about({ ScuVolunteers }) {
                         tabindex="0"
                         class="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
                       >
-                        Coded by Developers for Developers
+                        Major Mbjective
                       </h2>
                       <p
                         tabindex="0"
                         class="focus:outline-none text-base text-gray-600 leading-normal pt-2"
                       >
-                        Instead of just giving you the tools to create your own
-                        site, they offer you a list of themes you can choose
-                        from. Thus a handy product.
+                        our major objective is to promote and advance the
+                        Christian faith through practical community initiatives
+                        as a means to improve on the quality of life within
+                        communities of Uganda
                       </p>
                     </div>
                   </div>
@@ -254,15 +249,13 @@ function about({ ScuVolunteers }) {
                         tabindex="0"
                         class="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
                       >
-                        The Last UI kit you&apos;ll ever need
+                        Values
                       </h2>
                       <p
                         tabindex="0"
                         class="focus:outline-none text-base text-gray-600 leading-normal pt-2"
                       >
-                        We have chosen the bright color palettes that arouse the
-                        only positive emotions. The kit that simply assures to
-                        be loved by everyone.
+                        christ Centered, Integrirt, Excellence
                       </p>
                     </div>
                   </div>
@@ -301,57 +294,55 @@ function about({ ScuVolunteers }) {
                 class="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around"
               >
                 {/* Card begins here */}
-                <div
-                  role="listitem"
-                  class="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
-                >
-                  <div class="rounded overflow-hidden shadow-md bg-white">
-                    <div class="absolute -mt-20 w-full flex justify-center">
-                      <div class="h-32 w-32">
-                        <img
-                          src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif"
-                          alt="Display Picture of Andres Berlin"
-                          role="img"
-                          class="rounded-full object-cover h-full w-full shadow-md"
-                        />
+                {scuVolunteers.map((volunteer) => (
+                  <div
+                    key={volunteer.id}
+                    role="listitem"
+                    className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
+                  >
+                    <div className="rounded overflow-hidden shadow-md bg-white">
+                      <div className="absolute -mt-20 w-full flex justify-center">
+                        <div className="w-48 h-48">
+                          {volunteer.image.length > 0 && (
+                            <Image
+                              src={volunteer.image[0].url}
+                              alt={volunteer.fullName}
+                              role="img"
+                              objectFit="contain"
+                              loading="lazy"
+                              className="rounded-full object-cover h-full w-full shadow-md"
+                            />
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    <div class="px-6 mt-16">
-                      <h1 class="font-bold text-3xl text-center mb-1">
-                        Alex Gift Ngabonziza
-                      </h1>
-                      <p class="text-gray-800 text-sm text-center">
-                        Chief Executive Officer
-                      </p>
-                      <p class="text-center text-gray-600 text-base pt-3 font-normal">
-                        The CEO's role in raising a company's corporate IQ is to
-                        establish an atmosphere that promotes knowledge sharing
-                        and collaboration.
-                      </p>
-                      <div class="w-full flex justify-center pt-5 pb-5">
-                        <a href="javascript:void(0)" class="mx-5">
-                          <div aria-label="Github" role="img">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="#718096"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              class="feather feather-github"
-                            >
-                              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                          </div>
-                        </a>
-                        <a href="javascript:void(0)" class="mx-5"></a>
+                      <div className="px-6 mt-16">
+                        <h1 className="font-bold text-3xl text-center mb-1">
+                          {volunteer.fullName}
+                        </h1>
+                        <p className="text-gray-800 text-sm text-center">
+                          {volunteer.designation}
+                        </p>
+                        <p className="text-center text-gray-600 text-base pt-3 font-normal">
+                          {volunteer.story}
+                        </p>
+                        <div className="w-full flex justify-center pt-5 pb-5">
+                          <a href={volunteer.url} className="mx-5">
+                            <div aria-label="LinkedIn" role="img">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                              </svg>
+                            </div>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                ))}
 
                 {/* card ends here */}
               </div>
@@ -372,12 +363,13 @@ export async function getStaticProps() {
   const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
   const { scuVolunteers } = await graphcms.request(
     `
-   query ScuVolunteer()
+   query ScuVolunteers()
   {
     scuVolunteers{
     id
     fullName
     story
+    designation
     image{
       url
       width
@@ -395,4 +387,3 @@ export async function getStaticProps() {
     },
   };
 }
-
