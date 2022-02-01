@@ -10,6 +10,7 @@ import {
   Auth,
 } from "../../components/chat";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 
 
 
@@ -37,6 +38,8 @@ function Forum() {
   const [isCreating, setIsCreating] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
+  const [session] = useSession();
+  
   if (!authToken) return <Auth />;
   return (
     <div className="bg-gray-100">
