@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Banners from "../components/Banners";
 import LandingPage from "../utils/LandingPage";
 
+
 export default function Home({}) {
   return (
     <div className="bg-gray-300">
