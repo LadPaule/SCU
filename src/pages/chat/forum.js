@@ -38,7 +38,7 @@ function Forum() {
   const [isCreating, setIsCreating] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
-  const [session] = useSession();
+  // const [session] = useSession();
   
   if (!authToken) return <Auth />;
   return (
