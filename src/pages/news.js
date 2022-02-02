@@ -86,3 +86,31 @@ export async function getStaticProps() {
     },
   };
 }
+// export async function getStaticProps() {
+  // const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
+  // const { scuVolunteers } = await graphcms.request(
+    // `
+  //  query ScuVolunteers()
+  // {
+    // scuVolunteers{
+    // id
+    // fullName
+    // story
+    // designation
+    // fotograph{
+      // url
+      // width
+      // height
+    // }
+    // url
+    // 
+  // }
+  // }
+  // `
+  // );
+  // return {
+    // props: {
+      // scuVolunteers,
+    // },
+  // };
+// }

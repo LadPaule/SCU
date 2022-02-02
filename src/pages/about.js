@@ -4,6 +4,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import GraphImg from "graphcms-image";
 import { GraphQLClient } from "graphql-request";
 // import {
 //   Animator,
@@ -119,46 +120,49 @@ function about({ scuVolunteers }) {
           </div>
         </div>
         <div>
-          <>
-            <section class="max-w-8xl mx-auto container bg-white pt-16">
+          <div>
+            <section className="max-w-8xl mx-auto container bg-white pt-16">
               <div>
-                <div role="contentinfo" class="flex items-center flex-col px-4">
+                <div
+                  role="contentinfo"
+                  className="flex items-center flex-col px-4"
+                >
                   <p
-                    tabindex="0"
-                    class="focus:outline-none uppercase text-sm text-center text-gray-600 leading-4"
+                    tabIndex="0"
+                    className="focus:outline-none uppercase text-sm text-center text-gray-600 leading-4"
                   >
                     our organisation strategy
                   </p>
                 </div>
                 <div
-                  tabindex="0"
+                  tabIndex="0"
                   aria-label="group of cards"
-                  class="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4"
+                  className="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4"
                 >
                   <div
-                    tabindex="0"
+                    tabIndex="0"
                     aria-label="card 1"
-                    class="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
+                    className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
                   >
-                    <div class="w-20 h-20 relative mr-5">
-                      <div class="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
-                      <div class="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
+                    <div className="w-20 h-20 relative mr-5">
+                      {/* <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div> */}
+                      <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
                         <img
                           src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG1.svg"
                           alt="drawer"
                         />
                       </div>
                     </div>
-                    <div class="w-10/12">
+                    <div className="w-10/12">
                       <h2
-                        tabindex="0"
-                        class="focus:outline-none text-lg font-bold leading-tight text-gray-800"
+                        tabIndex="0"
+                        className="focus:outline-none text-lg font-bold leading-tight text-gray-800"
                       >
                         Our Vision
                       </h2>
                       <p
-                        tabindex="0"
-                        class="focus:outline-none text-base text-gray-600 leading-normal pt-2"
+                        tabIndex="0"
+                        className="focus:outline-none text-base text-gray-600 leading-normal pt-2"
                       >
                         Smile Charity Uganda (SCU) envisions holistically
                         empowered and transformed lives through education,
@@ -168,29 +172,29 @@ function about({ scuVolunteers }) {
                     </div>
                   </div>
                   <div
-                    tabindex="0"
+                    tabIndex="0"
                     aria-label="card 2"
-                    class="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
+                    className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
                   >
-                    <div class="w-20 h-20 relative mr-5">
-                      <div class="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
-                      <div class="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
+                    <div className="w-20 h-20 relative mr-5">
+                      <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
+                      <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
                         <img
                           src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG2.svg"
                           alt="check"
                         />
                       </div>
                     </div>
-                    <div class="w-10/12">
+                    <div className="w-10/12">
                       <h2
-                        tabindex="0"
-                        class="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
+                        tabIndex="0"
+                        className="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
                       >
                         Mission
                       </h2>
                       <p
-                        tabindex="0"
-                        class="focus:outline-none text-base text-gray-600 leading-normal pt-2"
+                        tabIndex="0"
+                        className="focus:outline-none text-base text-gray-600 leading-normal pt-2"
                       >
                         we aim for a long term rebuilding of lives through our
                         domains namely Discipleshiop & Evangelism, Education
@@ -199,29 +203,29 @@ function about({ scuVolunteers }) {
                     </div>
                   </div>
                   <div
-                    tabindex="0"
+                    tabIndex="0"
                     aria-label="card 3"
-                    class="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
+                    className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
                   >
-                    <div class="w-20 h-20 relative mr-5">
-                      <div class="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
-                      <div class="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
+                    <div className="w-20 h-20 relative mr-5">
+                      <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
+                      <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
                         <img
                           src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG3.svg"
                           alt="html tag"
                         />
                       </div>
                     </div>
-                    <div class="w-10/12">
+                    <div className="w-10/12">
                       <h2
-                        tabindex="0"
-                        class="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
+                        tabIndex="0"
+                        className="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
                       >
                         Major Mbjective
                       </h2>
                       <p
-                        tabindex="0"
-                        class="focus:outline-none text-base text-gray-600 leading-normal pt-2"
+                        tabIndex="0"
+                        className="focus:outline-none text-base text-gray-600 leading-normal pt-2"
                       >
                         our major objective is to promote and advance the
                         Christian faith through practical community initiatives
@@ -231,29 +235,29 @@ function about({ scuVolunteers }) {
                     </div>
                   </div>
                   <div
-                    tabindex="0"
+                    tabIndex="0"
                     aria-label="card 4"
-                    class="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
+                    className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
                   >
-                    <div class="w-20 h-20 relative mr-5">
-                      <div class="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
-                      <div class="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
+                    <div className="w-20 h-20 relative mr-5">
+                      <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
+                      <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
                         <img
                           src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG4.svg"
                           alt="monitor"
                         />
                       </div>
                     </div>
-                    <div class="w-10/12">
+                    <div className="w-10/12">
                       <h2
-                        tabindex="0"
-                        class="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
+                        tabIndex="0"
+                        className="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
                       >
                         Values
                       </h2>
                       <p
-                        tabindex="0"
-                        class="focus:outline-none text-base text-gray-600 leading-normal pt-2"
+                        tabIndex="0"
+                        className="focus:outline-none text-base text-gray-600 leading-normal pt-2"
                       >
                         christ Centered, Integrirt, Excellence
                       </p>
@@ -262,8 +266,9 @@ function about({ scuVolunteers }) {
                 </div>
               </div>
             </section>
-          </>
+          </div>
         </div>
+
         {/* Inception */}
 
         {/* Organisation mission */}
@@ -275,23 +280,23 @@ function about({ scuVolunteers }) {
 
         {/* feed */}
         <div>
-          <div class="container flex justify-center mx-auto pt-16">
+          <div className="container flex justify-center mx-auto pt-16">
             <div data-aos="fade-up">
-              <p class="text-gray-500 text-lg text-center font-normal pb-3">
+              <p className="text-gray-500 text-lg text-center font-normal pb-3">
                 Meet the Team
               </p>
-              <h1 class="xl:text-4xl text-3xl text-center text-blue-600 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
+              <h1 className="xl:text-4xl text-3xl text-center text-blue-600 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
                 The Talented People Behind the Scenes of the Organization
               </h1>
             </div>
           </div>
-          <div class="w-full bg-gray-100 px-10 pt-10">
+          <div className="w-full bg-gray-100 px-10 pt-10">
             {/* Will do edits here  */}
-            <div class="container mx-auto">
+            <div className="container mx-auto">
               <div
                 role="list"
                 aria-label="Behind the scenes People "
-                class="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around"
+                className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around"
               >
                 {/* Card begins here */}
                 {scuVolunteers.map((volunteer) => (
@@ -303,13 +308,13 @@ function about({ scuVolunteers }) {
                     <div className="rounded overflow-hidden shadow-md bg-white">
                       <div className="absolute -mt-20 w-full flex justify-center">
                         <div className="w-48 h-48">
-                          {volunteer.image.length > 0 && (
-                            <Image
-                              src={volunteer.image[0].url}
+                          {volunteer.fotograph.length > 0 && (
+                            <GraphImg
+                              baseURI={volunteer.fotograph[0].url}
                               alt={volunteer.fullName}
-                              role="img"
-                              objectFit="contain"
-                              loading="lazy"
+                              fit="scale"
+                              width={200}
+                              height={200}
                               className="rounded-full object-cover h-full w-full shadow-md"
                             />
                           )}
@@ -363,21 +368,18 @@ export async function getStaticProps() {
   const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
   const { scuVolunteers } = await graphcms.request(
     `
-   query ScuVolunteers()
-  {
-    scuVolunteers{
-    id
-    fullName
-    story
-    designation
-    image{
-      url
-      width
-      height
-    }
-    url
-    
-  }
+    {
+      scuVolunteers{
+        id
+        fullName
+        story
+        fotograph{
+          url
+          height
+          width
+         }
+        designation
+     }
   }
   `
   );
