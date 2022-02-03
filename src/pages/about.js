@@ -4,7 +4,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import GraphImg from "graphcms-image";
+import { vols } from "../components/Vols";
 import { GraphQLClient } from "graphql-request";
 // import {
 //   Animator,
@@ -21,7 +21,7 @@ import { GraphQLClient } from "graphql-request";
 //   ZoomIn,
 // } from "react-scroll-motion";
 
-function about({ scuVolunteers }) {
+function about({ volunteers }) {
   return (
     <div className="">
       <Head>
@@ -299,30 +299,30 @@ function about({ scuVolunteers }) {
                 className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around"
               >
                 {/* Card begins here */}
-                {scuVolunteers.map((volunteer) => (
+                {vols.map((volunteer) => (
                   <div
-                    key={volunteer.id}
+                    key={volunteer.url}
                     role="listitem"
                     className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
                   >
                     <div className="rounded overflow-hidden shadow-md bg-white">
-                      <div className="absolute -mt-20 w-full flex justify-center">
+                      <div className="absolute -mt-32 w-full flex justify-center">
                         <div className="w-48 h-48">
-                          {volunteer.fotograph.length > 0 && (
-                            <GraphImg
-                              baseURI={volunteer.fotograph[0].url}
-                              alt={volunteer.fullName}
+                           
+                            <Image
+                              src={volunteer.photo}
+                              alt={volunteer.name}
                               fit="scale"
                               width={200}
                               height={200}
                               className="rounded-full object-cover h-full w-full shadow-md"
                             />
-                          )}
+                          
                         </div>
                       </div>
                       <div className="px-6 mt-16">
                         <h1 className="font-bold text-3xl text-center mb-1">
-                          {volunteer.fullName}
+                          {volunteer.name}
                         </h1>
                         <p className="text-gray-800 text-sm text-center">
                           {volunteer.designation}
@@ -331,7 +331,7 @@ function about({ scuVolunteers }) {
                           {volunteer.story}
                         </p>
                         <div className="w-full flex justify-center pt-5 pb-5">
-                          <a href={volunteer.url} className="mx-5">
+                          <a href={volunteer.linkedIn} className="mx-5 hover:cursor-pointer">
                             <div aria-label="LinkedIn" role="img">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -364,28 +364,3 @@ function about({ scuVolunteers }) {
 
 export default about;
 
-export async function getStaticProps() {
-  const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
-  const { scuVolunteers } = await graphcms.request(
-    `
-    {
-      scuVolunteers{
-        id
-        fullName
-        story
-        fotograph{
-          url
-          height
-          width
-         }
-        designation
-     }
-  }
-  `
-  );
-  return {
-    props: {
-      scuVolunteers,
-    },
-  };
-}
