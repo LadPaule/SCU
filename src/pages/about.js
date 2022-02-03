@@ -64,7 +64,7 @@ function about({ volunteers }) {
 
       <div className="m-0 p-0">
         {/* banner */}
-        <div className="relative mix-blend-overlay">
+        <div className="relative">
           <Image
             className="w-full h-full"
             src="/about/main.webp"
@@ -74,29 +74,26 @@ function about({ volunteers }) {
             loading="eager"
             alt="about"
           />
-          <div className="absolute -mt-44 px-10">
-            <h1 className="font-black text-xl md:text-2xl whitespace-nowrap text-yellow-400 mb-2">
-              About Smile charity Uganda
+          <div className="hidden md:block absolute -mt-28 px-10 md:mb-0 bg-gray-300/50">
+            <h1 className="font-black font-sans text-2xl md:text-4xl whitespace-nowrap text-scu_blue-light mb-2">
+              About Smile Charity Uganda
             </h1>
-            <p className="hidden lg:block text-scu_blue-light font-serif text-xl text-left px-2 font-bold">
-              Smile Charity Uganda is based on plot 700 Munyonyo road, Naluvule,
-              Wakiso District in Uganda and operates mainly in Kampala and
-              Wakiso districts. Our great impact has so far been realised in the
-              city slums of Nabulagala in Kampala and the impoverished
-              communities of Nansana in Wakiso district.
+            <p className="hidden lg:block text-scu_blue-light text-md text-left px-2 pb-1 font-bold">
+              We are a Christian based non profit located on plot 700 Akright Estate Kabulengwa hill, Naluvule Wakiso district.
+              Our greatest impact has so far been realised in the city slums of Nabulagala in Kampala and the the impoverished communities of Nansana in Wakiso district
             </p>
           </div>
         </div>
         <div className="flex-col lg:grid lg:grid-cols-2 h-auto bg-white -mt-2">
-          <div className="lg:grid lg:grid-cols-1 h-auto m-0">
+          <div className="lg:grid lg:grid-cols-1 p-2 h-auto m-0">
             <Image
               src="/about/vision2.webp"
               alt="main"
-              width={600}
-              height={460}
+              width={780}
+              height={540}
               objectFit="contain"
               loading="lazy"
-              className=""
+              className="self-center m-0 p-0"
             />
           </div>
 
@@ -147,10 +144,7 @@ function about({ volunteers }) {
                     <div className="w-20 h-20 relative mr-5">
                       {/* <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div> */}
                       <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                        <img
-                          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG1.svg"
-                          alt="drawer"
-                        />
+                      <img src="https://img.icons8.com/ios-filled/50/000000/eyebrow.png" alt="vision"/>
                       </div>
                     </div>
                     <div className="w-10/12">
@@ -179,10 +173,8 @@ function about({ volunteers }) {
                     <div className="w-20 h-20 relative mr-5">
                       <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
                       <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                        <img
-                          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG2.svg"
-                          alt="check"
-                        />
+                     <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-achievement-achievements-and-badges-flatart-icons-outline-flatarticons-1.png"
+                      alt="mission"/>
                       </div>
                     </div>
                     <div className="w-10/12">
@@ -191,7 +183,7 @@ function about({ volunteers }) {
                         className="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
                       >
                         Mission
-                      </h2>
+                      </h2>           
                       <p
                         tabIndex="0"
                         className="focus:outline-none text-base text-gray-600 leading-normal pt-2"
@@ -210,10 +202,8 @@ function about({ volunteers }) {
                     <div className="w-20 h-20 relative mr-5">
                       <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
                       <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                        <img
-                          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG3.svg"
-                          alt="html tag"
-                        />
+                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-target-marketing-flatart-icons-outline-flatarticons-1.png"
+                        alt="onjective"/>
                       </div>
                     </div>
                     <div className="w-10/12">
@@ -221,7 +211,7 @@ function about({ volunteers }) {
                         tabIndex="0"
                         className="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
                       >
-                        Major Mbjective
+                        Major Objective
                       </h2>
                       <p
                         tabIndex="0"
@@ -242,10 +232,8 @@ function about({ volunteers }) {
                     <div className="w-20 h-20 relative mr-5">
                       <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
                       <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                        <img
-                          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG4.svg"
-                          alt="monitor"
-                        />
+                        <img src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/000000/external-value-ads-icongeek26-glyph-icongeek26.png"
+                        alt="values"/>
                       </div>
                     </div>
                     <div className="w-10/12">
@@ -259,7 +247,7 @@ function about({ volunteers }) {
                         tabIndex="0"
                         className="focus:outline-none text-base text-gray-600 leading-normal pt-2"
                       >
-                        christ Centered, Integrirt, Excellence
+                        Christ Centricity, Integrity, Excellence, Servant Heart
                       </p>
                     </div>
                   </div>
@@ -280,7 +268,7 @@ function about({ volunteers }) {
 
         {/* feed */}
         <div>
-          <div className="container flex justify-center mx-auto pt-16">
+          <div className="container flex justify-center mx-auto pt-16 mb-4">
             <div data-aos="fade-up">
               <p className="text-gray-500 text-lg text-center font-normal pb-3">
                 Meet the Team
@@ -324,18 +312,19 @@ function about({ volunteers }) {
                         <h1 className="font-bold text-3xl text-center mb-1">
                           {volunteer.name}
                         </h1>
-                        <p className="text-gray-800 text-sm text-center">
+                        <p className="text-blue-500 text-sm text-center">
                           {volunteer.designation}
                         </p>
                         <p className="text-center text-gray-600 text-base pt-3 font-normal">
                           {volunteer.story}
                         </p>
                         <div className="w-full flex justify-center pt-5 pb-5">
-                          <a href={volunteer.linkedIn} className="mx-5 hover:cursor-pointer">
+                          <a href={volunteer.url} className="mx-5 hover:cursor-pointer">
                             <div aria-label="LinkedIn" role="img">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
+                                className="text-blue-500"
                                 height="24"
                                 viewBox="0 0 24 24"
                               >
