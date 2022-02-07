@@ -80,6 +80,7 @@ function CrisisCare() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
+        <meta name="theme-color" content="#ffffff"/>
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 

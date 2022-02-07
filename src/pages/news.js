@@ -27,6 +27,7 @@ function News({ articles }) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
+        <meta name="theme-color" content="#ffffff"/>
         <link rel="manifest" href="/site.webmanifest"></link>
         <meta
           name="description"

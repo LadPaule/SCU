@@ -32,6 +32,7 @@ function PrivacyPolicy() {
           are a Hand up, not a hand out. SCU operates on a defined Working Mechanism, DESC that is, Discipleship and Evangelism,
           Education Support, Skilling and Crisis care and Management"
         />
+        <meta name="theme-color" content="#ffffff"/>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta author="Smile Charity Uganda Media department" />

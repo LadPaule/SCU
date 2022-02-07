@@ -27,6 +27,7 @@ function participate() {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
+        <meta name="theme-color" content="#ffffff"/>
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 

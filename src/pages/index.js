@@ -37,6 +37,7 @@ export default function Home({}) {
           Education Support, Skilling and Crisis care and Management"
         />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#ffffff"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta author="Smile Charity Uganda Media department" />
         <meta
