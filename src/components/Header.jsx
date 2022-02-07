@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
-import { Fragment, Fragmet, useEffect, useRef, useState } from "react";
+import { Fragment } from "react";
 import { MenuIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import { sidebarData } from "../helperdata";
@@ -46,7 +46,7 @@ function Header() {
                   {({ active }) =>
                     sidebarData.map((item) => (
                       <button
-                        aria-label="menu"
+                        aria-label="action button"
                         key={item.path}
                         className="flex text-white rounded-md last:mb-2 items-center space-y-1 w-full p-4 hover:text-lg hover:font-bold hover:text-scu_yellow hover:bg-scu_blue"
                       >
@@ -69,6 +69,7 @@ function Header() {
             href="https://www.instagram.com/p/CV4wzcEMgKV/?utm_medium=copy_link"
             target="_blank"
             rel="noreferrer"
+            aria-label="takes you to instagram profile"
           >
             <svg
               className="fill-current cursor-pointer text-scu_yellow  hover:scale-105 hover:animate-bounce"
@@ -90,6 +91,7 @@ function Header() {
             href="https://www.facebook.com/smilecharityuganda"
             target="_blank"
             rel="noreferrer"
+            aria-label="takes you to facebook profile"
           >
             <svg
               className="fill-current cursor-pointer text-scu_yellow  hover:scale-105 hover:animate-bounce"
@@ -130,6 +132,7 @@ function Header() {
             rel="noreferrer"
           >
             <button
+            aria-label="support us financially"
               href="https://www.stewardship.org.uk/partners/20217424"
               className="button text-black 
           font-semibold animate-pulse"

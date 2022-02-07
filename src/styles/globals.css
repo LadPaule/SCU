@@ -12,6 +12,10 @@
       rounded-sm focus:outline-none 
       hover:text-gray-900 hover:font-black hover:font-serif;
   }
+  .but {
+    @apply p-2 text-xs text-white md:text-sm bg-blue-700 border-blue-300 
+      rounded-sm focus:outline-none hover:text-gray-900 hover:font-black hover:font-sans;
+  }
   .donate_button {
     @apply p-1 text-md md:text-sm bg-red-500 border-none text-white
         rounded-sm focus:outline-none focus:ring-1 focus:ring-white active:from-red-500

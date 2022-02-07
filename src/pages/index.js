@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 import Banners from "../components/Banners";
 import LandingPage from "../utils/LandingPage";
 
-
 export default function Home({}) {
   return (
     <div className="bg-gray-300">
@@ -16,19 +15,19 @@ export default function Home({}) {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.webp"
+          href="/apple-touch-icon.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.webp"
+          href="/favicon-32x32.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.webp"
+          href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
         <meta

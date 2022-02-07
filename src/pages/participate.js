@@ -13,21 +13,20 @@ function participate() {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.webp"
+          href="/apple-touch-icon.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.webp"
+          href="/favicon-32x32.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.webp"
+          href="/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest"></link>
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
@@ -46,7 +45,12 @@ function participate() {
       <Header />
       <Navbar />
 
-      <main className="m-0 p-0 bg-gray-200">
+      <main className="relative m-0 p-0 bg-gray-200">
+        <div className="z-50 fixed flex float-right flex-col space-y-2">
+          <button className="but my-2 ml-4 "><Link href={"/prayer-calendar"} passHref>Pray</Link></button>
+          <button className="but my-2 ml-4 "><Link href={"https://www.stewardship.org.uk/partners/20217424"} passHref>Give</Link></button>
+          <button className="but my-2 ml-4 "><Link href={"/about"} passHref>Visit</Link></button>
+        </div>
         {/* banner */}
         <div className="relative ">
           <Image
