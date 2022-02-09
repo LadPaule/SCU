@@ -13,20 +13,21 @@ function News({ articles }) {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.webp"
+          href="/apple-touch-icon.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.webp"
+          href="/favicon-32x32.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.webp"
+          href="/favicon-16x16.png"
         />
+        <meta name="theme-color" content="#ffffff"/>
         <link rel="manifest" href="/site.webmanifest"></link>
         <meta
           name="description"

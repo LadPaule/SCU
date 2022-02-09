@@ -11,19 +11,19 @@ function PrivacyPolicy() {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.webp"
+          href="/apple-touch-icon.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.webp"
+          href="/favicon-32x32.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.webp"
+          href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
         <meta
@@ -32,6 +32,7 @@ function PrivacyPolicy() {
           are a Hand up, not a hand out. SCU operates on a defined Working Mechanism, DESC that is, Discipleship and Evangelism,
           Education Support, Skilling and Crisis care and Management"
         />
+        <meta name="theme-color" content="#ffffff"/>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta author="Smile Charity Uganda Media department" />

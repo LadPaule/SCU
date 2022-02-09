@@ -70,22 +70,22 @@ function WomenEmpowerment() {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.webp"
+          href="/apple-touch-icon.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.webp"
+          href="/favicon-32x32.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.webp"
+          href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <meta
+        <meta name="theme-color" content="#ffffff"/><meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
         are a Hand up, not a hand out. SCU operates on a defined Working Mechanism, DESC that is, Discipleship and Evangelism,

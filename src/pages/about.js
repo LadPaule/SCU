@@ -29,21 +29,22 @@ function about({ volunteers }) {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.webp"
+          href="/apple-touch-icon.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.webp"
+          href="/favicon-32x32.png"
         />
         <link
           rel="icon"
-          type="image/webp"
+          type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.webp"
+          href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
+        <meta name="theme-color" content="#ffffff"/>
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
@@ -319,7 +320,7 @@ function about({ volunteers }) {
                           {volunteer.story}
                         </p>
                         <div className="w-full flex justify-center pt-5 pb-5">
-                          <a href={volunteer.url} className="mx-5 hover:cursor-pointer">
+                          <a target="_blank" href={volunteer.url} className="mx-5 hover:cursor-pointer">
                             <div aria-label="LinkedIn" role="img">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
