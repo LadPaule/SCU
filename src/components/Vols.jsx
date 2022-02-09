@@ -35,7 +35,7 @@ export const vols = [
     name: "Mukiibi Gabiti Joseph",
     designation: "Sponsorship Co-ordinator",
     story:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "I am a Christian believer and I affirm my faith in the Lord Jesus Christ believing that God's word is authoritative in my daily conduct. One of my distinguishing characteristics is the interest to working with children and young people. I am always willing to learn, unlearn and re-learn. I am teachable, open minded, analytical and compliant. I am always challenged to create a significant program(s) that can influence young people to love God and desire to serve Him.",
     photo: "/team/gabit.webp",
     url: "https://www.linkedin.com/in/gabiti-joseph-mukiibi-395550230/",
   },
@@ -67,7 +67,7 @@ export const vols = [
     name: "Ssozi Paul",
     designation: "ICT & Media Head",
     story:
-      "I am self-willed and enthusiastic individual with a deep desire to know and learn every single day. When I am not designing and learning about current and upcoming tech trends, I like to do more tech.  I desire to grow closer to God knowing that Christ is Lord. I ascribe dignity, respect and love in all that I do allowing room for reproof, correction and training. ",
+      "I am self-willed and open-minded individual with a deep desire to know and learn every single day. When I am not designing and learning about current and upcoming tech trends, I like to do more tech.  I desire to grow closer to God knowing that Christ is Lord. I ascribe dignity, respect and love in all that I do allowing room for reproof, correction and training. ",
     photo: "/team/me.webp",
     url: "https://www.linkedin.com/in/paul-ssozi-7b4b2116a",
   }, 
