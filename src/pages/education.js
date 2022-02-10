@@ -4,8 +4,13 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function Education() {
+    useEffect(() => {
+      Aos.init({ duration: 2000 });
+    }, []);
   return (
     <div className="bg-gray-300">
       <Head>
@@ -28,7 +33,7 @@ function Education() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <meta name="theme-color" content="#ffffff"/>
+        <meta name="theme-color" content="#ffffff" />
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
@@ -51,6 +56,7 @@ function Education() {
         {/* banner */}
         <div className="relative">
           <Image
+            data-aos="fade-up"
             className="w-full  h-full"
             src="/education/education.webp"
             width={1440}
@@ -59,7 +65,10 @@ function Education() {
             loading="eager"
             alt="education"
           />
-            <div className="hidden md:block absolute -mt-28 px-10 md:mb-0 bg-gray-300/50">
+          <div
+            data-aos="slide-up"
+            className="hidden md:block absolute -mt-28 px-10 md:mb-0 bg-gray-300/50"
+          >
             <h1 className="font-black font-sans text-2xl md:text-4xl whitespace-nowrap text-scu_blue-light mb-2">
               Education Support
             </h1>
@@ -72,6 +81,7 @@ function Education() {
         </div>
         <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-2 md:-mt-5">
           <div
+            data-aos="slide-up"
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
@@ -84,13 +94,17 @@ function Education() {
               essential education.
             </p>
             <Link href="/education/child_sponsorship" passHref>
-              <button href="/education/child_sponsorship" className="mr-56 w-200 mt-4 button hover:animate-bounce">
+              <button
+                href="/education/child_sponsorship"
+                className="mr-56 w-200 mt-4 button hover:animate-bounce"
+              >
                 learn more
               </button>
             </Link>
           </div>
 
           <div
+            data-aos="slide-up"
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
@@ -110,6 +124,7 @@ function Education() {
           </div>
 
           <div
+            data-aos="slide-up"
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >

@@ -4,8 +4,13 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function participate() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div className="bg-gray-300">
       <Head>
@@ -27,7 +32,7 @@ function participate() {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <meta name="theme-color" content="#ffffff"/>
+        <meta name="theme-color" content="#ffffff" />
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
@@ -48,9 +53,24 @@ function participate() {
 
       <main className="relative m-0 p-0 bg-gray-200">
         <div className="z-50 fixed flex float-right flex-col space-y-2">
-          <button className="but my-2 ml-4 "><Link href={"/prayer-calendar"} passHref>Pray</Link></button>
-          <button className="but my-2 ml-4 "><Link href={"https://www.stewardship.org.uk/partners/20217424"} passHref>Give</Link></button>
-          <button className="but my-2 ml-4 "><Link href={"/about"} passHref>Visit</Link></button>
+          <button className="but my-2 ml-4 ">
+            <Link href={"/prayer-calendar"} passHref>
+              Pray
+            </Link>
+          </button>
+          <button className="but my-2 ml-4 ">
+            <Link
+              href={"https://www.stewardship.org.uk/partners/20217424"}
+              passHref
+            >
+              Give
+            </Link>
+          </button>
+          <button className="but my-2 ml-4 ">
+            <Link href={"/about"} passHref>
+              Visit
+            </Link>
+          </button>
         </div>
         {/* banner */}
         <div className="relative ">
@@ -87,7 +107,7 @@ function participate() {
         </div>
         <div className="lg:px-20 md:px-6 px-4 md:py-12 py-8">
           <div className="lg:flex items-center justify-between">
-            <div className="lg:w-1/3">
+            <div data-aos="fade-down" className="lg:w-1/3">
               <h1 className="text-4xl text-blue-500 font-sans font-bold dark:text-white">
                 Take a safari trip
               </h1>
@@ -106,11 +126,13 @@ function participate() {
             <div className="lg:w-7/12 lg:mt-0 mt-8">
               <div className="w-full h-full bg-red-200">
                 <img
+                  data-aos="slide-left"
                   src="/participate/toursMain.webp"
                   alt="apartment design"
                   className="w-full sm:block hidden"
                 />
                 <img
+                  data-aos="slide-left"
                   src="/participate/gapyear.webp"
                   alt="apartment design"
                   className="sm:hidden block w-full"
@@ -118,6 +140,7 @@ function participate() {
               </div>
               <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:gap-8 gap-6 lg:mt-8 md:mt-6 mt-4">
                 <img
+                  data-aos="slide-left"
                   src="/participate/tour2.webp"
                   className="w-full"
                   alt="kitchen"
@@ -125,6 +148,7 @@ function participate() {
                 <img
                   src="/participate/twot.webp"
                   className="w-full"
+                  data-aos="slide-left"
                   alt="sitting room"
                 />
               </div>
@@ -134,7 +158,7 @@ function participate() {
         <section className="pt-4 pb-2 items-center lg:pb-4 bg-[#F3F4F6]">
           <div className="container content-center ">
             <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 space-x-8 items-center justify-evenly">
-              <div className="ml-2">
+              <div className="ml-2" data-aos="flip-right">
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src="/participate/mission.webp"
@@ -157,7 +181,7 @@ function participate() {
                   </div>
                 </div>
               </div>
-              <div className="ml-2">
+              <div className="ml-2" data-aos="flip-right">
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src="/participate/help.webp"
@@ -180,7 +204,7 @@ function participate() {
                   </div>
                 </div>
               </div>
-              <div className="ml-2">
+              <div className="ml-2" data-aos="flip-right">
                 <div className="bg-white rounded-lg overflow-hidden mb-10">
                   <img
                     src="/participate/gapyear.webp"

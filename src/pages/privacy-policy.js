@@ -2,8 +2,13 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function PrivacyPolicy() {
+      useEffect(() => {
+        Aos.init({ duration: 2000 });
+      }, []);
   return (
     <div className="bg-gray-300">
       <Head>
@@ -25,7 +30,7 @@ function PrivacyPolicy() {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <meta name="theme-color" content="#ffffff"/>
+        <meta name="theme-color" content="#ffffff" />
         <link rel="manifest" href="/site.webmanifest"></link>
         <meta
           name="description"
@@ -45,10 +50,13 @@ function PrivacyPolicy() {
       <Header />
       <Navbar />
 
-      <main className="max-w-screen-xl mx-auto">
+      <main data-aos="fade-up" className="max-w-screen-xl mx-auto">
         {/* banner */}
         <div className="ml-4 mb-4 mt-2">
-          <h1 className="text-blue-600 font-sans font-bold text-2xl">
+          <h1
+            data-aos="fade-up"
+            className="text-blue-600 font-sans font-bold text-2xl"
+          >
             Privacy Policy for Smile Charity Uganda
           </h1>
           <p className="text-md font-medium ">

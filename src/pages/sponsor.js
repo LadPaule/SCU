@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 import { useState } from "react";
+import { useEffect } from "react";
+import AOS from 'aos'
 
 export default function ChildForm() {
   const getInitialState = () => {
@@ -47,7 +49,9 @@ export default function ChildForm() {
       }
     });
   };
-
+   useEffect(() => {
+     Aos.init({ duration: 2000 });
+   }, []);
 
   return (
     <div className="h-screen">
@@ -73,7 +77,7 @@ export default function ChildForm() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <meta name="theme-color" content="#ffffff"/>
+        <meta name="theme-color" content="#ffffff" />
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
@@ -93,12 +97,18 @@ export default function ChildForm() {
       <Navbar />
 
       <div className="flex flec-col max-hscreen">
-        <div className="flex-1 flex-col content-center justify-items-center p-8">
+        <div
+          data-aos="fade-up"
+          className="flex-1 flex-col content-center justify-items-center p-8"
+        >
           <h1>
             Please fill this form to proceed, we will contact you shortly!
           </h1>
           <form onSubmit={handleSubmit} action="submit">
-            <div className="auth__form-container_fields-content_input">
+            <div
+              data-aos="zoom-in"
+              className="auth__form-container_fields-content_input"
+            >
               <label htmlFor="fullName">Full Name</label>
               <input
                 name="fullName"
@@ -110,7 +120,10 @@ export default function ChildForm() {
                 required
               />
             </div>
-            <div className="auth__form-container_fields-content_input">
+            <div
+              data-aos="zoom-in"
+              className="auth__form-container_fields-content_input"
+            >
               <label htmlFor="emailAddress">Email Address</label>
               <input
                 name="emailAddress"
@@ -123,7 +136,10 @@ export default function ChildForm() {
               />
             </div>
 
-            <div className="auth__form-container_fields-content_input">
+            <div
+              data-aos="zoom-in"
+              className="auth__form-container_fields-content_input"
+            >
               <label htmlFor="Country">Country</label>
               <input
                 name="Country"
@@ -135,7 +151,10 @@ export default function ChildForm() {
                 required
               />
             </div>
-            <div className="auth__form-container_fields-content_input">
+            <div
+              data-aos="zoom-in"
+              className="auth__form-container_fields-content_input"
+            >
               <label htmlFor="PostalAddress">Postal Address</label>
               <input
                 onChange={(e) => {
@@ -147,7 +166,10 @@ export default function ChildForm() {
                 required
               />
             </div>
-            <div className="auth__form-container_fields-content_input">
+            <div
+              data-aos="zoom-in"
+              className="auth__form-container_fields-content_input"
+            >
               <label htmlFor="modeOfSupport">Mode of Support</label>
               <select
                 onChange={(e) => {
@@ -168,7 +190,7 @@ export default function ChildForm() {
               </select>
             </div>
 
-            <div className=" space-x-80 mt-4 flex">
+            <div data-aos="zoom-in" className=" space-x-80 mt-4 flex">
               <Link href="/children_list" passHref>
                 <button
                   type="button"
@@ -179,6 +201,7 @@ export default function ChildForm() {
               </Link>
               <Link href="/" passHref>
                 <button
+                  data-aos="zoom-in"
                   onClick={(e) => {
                     handleSubmit(e);
                   }}

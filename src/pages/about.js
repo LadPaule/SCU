@@ -5,23 +5,13 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import { vols } from "../components/Vols";
-import { GraphQLClient } from "graphql-request";
-// import {
-//   Animator,
-//   ScrollContainer,
-//   ScrollPage,
-//   batch,
-//   Fade,
-//   FadeIn,
-//   Move,
-//   MoveIn,
-//   MoveOut,
-//   Sticky,
-//   StickyIn,
-//   ZoomIn,
-// } from "react-scroll-motion";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function about({ volunteers }) {
+         useEffect(() => {
+           Aos.init({ duration: 2000 });
+         }, []);
   return (
     <div className="">
       <Head>
@@ -44,7 +34,7 @@ function about({ volunteers }) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <meta name="theme-color" content="#ffffff"/>
+        <meta name="theme-color" content="#ffffff" />
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
@@ -80,14 +70,18 @@ function about({ volunteers }) {
               About Smile Charity Uganda
             </h1>
             <p className="hidden lg:block text-scu_blue-light text-md text-left px-2 pb-1 font-bold">
-              We are a Christian based non profit located on plot 700 Akright Estate Kabulengwa hill, Naluvule Wakiso district.
-              Our greatest impact has so far been realised in the city slums of Nabulagala in Kampala and the the impoverished communities of Nansana in Wakiso district
+              We are a Christian based non profit located on plot 700 Akright
+              Estate Kabulengwa hill, Naluvule Wakiso district. Our greatest
+              impact has so far been realised in the city slums of Nabulagala in
+              Kampala and the the impoverished communities of Nansana in Wakiso
+              district
             </p>
           </div>
         </div>
         <div className="flex-col lg:grid lg:grid-cols-2 h-auto bg-white -mt-2">
           <div className="lg:grid lg:grid-cols-1 p-2 h-auto m-0">
             <Image
+              data-aos="slide-right"
               src="/about/vision2.webp"
               alt="main"
               width={780}
@@ -98,7 +92,7 @@ function about({ volunteers }) {
             />
           </div>
 
-          <div className="bg-white shadow-md">
+          <div data-aos="slide-left" className="bg-white shadow-md">
             <h1 className="text-blue-500 text-xl font-black ml-4 lg:text-3xl">
               EXTENDING A HELPING HAND TO THOSE IN NEED
             </h1>
@@ -138,6 +132,7 @@ function about({ volunteers }) {
                   className="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4"
                 >
                   <div
+                    data-aos="slide-up"
                     tabIndex="0"
                     aria-label="card 1"
                     className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
@@ -145,7 +140,10 @@ function about({ volunteers }) {
                     <div className="w-20 h-20 relative mr-5">
                       {/* <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div> */}
                       <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                      <img src="https://img.icons8.com/ios-filled/50/000000/eyebrow.png" alt="vision"/>
+                        <img
+                          src="https://img.icons8.com/ios-filled/50/000000/eyebrow.png"
+                          alt="vision"
+                        />
                       </div>
                     </div>
                     <div className="w-10/12">
@@ -167,6 +165,7 @@ function about({ volunteers }) {
                     </div>
                   </div>
                   <div
+                    data-aos="slide-up"
                     tabIndex="0"
                     aria-label="card 2"
                     className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
@@ -174,8 +173,10 @@ function about({ volunteers }) {
                     <div className="w-20 h-20 relative mr-5">
                       <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
                       <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                     <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-achievement-achievements-and-badges-flatart-icons-outline-flatarticons-1.png"
-                      alt="mission"/>
+                        <img
+                          src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-achievement-achievements-and-badges-flatart-icons-outline-flatarticons-1.png"
+                          alt="mission"
+                        />
                       </div>
                     </div>
                     <div className="w-10/12">
@@ -184,7 +185,7 @@ function about({ volunteers }) {
                         className="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
                       >
                         Mission
-                      </h2>           
+                      </h2>
                       <p
                         tabIndex="0"
                         className="focus:outline-none text-base text-gray-600 leading-normal pt-2"
@@ -196,6 +197,7 @@ function about({ volunteers }) {
                     </div>
                   </div>
                   <div
+                    data-aos="slide-up"
                     tabIndex="0"
                     aria-label="card 3"
                     className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
@@ -203,8 +205,10 @@ function about({ volunteers }) {
                     <div className="w-20 h-20 relative mr-5">
                       <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
                       <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-target-marketing-flatart-icons-outline-flatarticons-1.png"
-                        alt="onjective"/>
+                        <img
+                          src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-target-marketing-flatart-icons-outline-flatarticons-1.png"
+                          alt="onjective"
+                        />
                       </div>
                     </div>
                     <div className="w-10/12">
@@ -226,6 +230,7 @@ function about({ volunteers }) {
                     </div>
                   </div>
                   <div
+                    data-aos="slide-up"
                     tabIndex="0"
                     aria-label="card 4"
                     className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
@@ -233,8 +238,10 @@ function about({ volunteers }) {
                     <div className="w-20 h-20 relative mr-5">
                       <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1"></div>
                       <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                        <img src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/000000/external-value-ads-icongeek26-glyph-icongeek26.png"
-                        alt="values"/>
+                        <img
+                          src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/000000/external-value-ads-icongeek26-glyph-icongeek26.png"
+                          alt="values"
+                        />
                       </div>
                     </div>
                     <div className="w-10/12">
@@ -283,13 +290,14 @@ function about({ volunteers }) {
             {/* Will do edits here  */}
             <div className="container mx-auto">
               <div
+                data-aos="fade-up"
                 role="list"
                 aria-label="Behind the scenes People "
                 className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around"
               >
                 {/* Card begins here */}
                 {vols.map((volunteer) => (
-                  <div
+                  <div data-aos="flip-left"
                     key={volunteer.url}
                     role="listitem"
                     className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
@@ -297,16 +305,14 @@ function about({ volunteers }) {
                     <div className="rounded overflow-hidden shadow-md bg-white">
                       <div className="absolute -mt-32 w-full flex justify-center">
                         <div className="w-48 h-48">
-                           
-                            <Image
-                              src={volunteer.photo}
-                              alt={volunteer.name}
-                              fit="scale"
-                              width={200}
-                              height={200}
-                              className="rounded-full object-cover h-full w-full shadow-md"
-                            />
-                          
+                          <Image
+                            src={volunteer.photo}
+                            alt={volunteer.name}
+                            fit="scale"
+                            width={200}
+                            height={200}
+                            className="rounded-full object-cover h-full w-full shadow-md"
+                          />
                         </div>
                       </div>
                       <div className="px-6 mt-16">
@@ -320,7 +326,11 @@ function about({ volunteers }) {
                           {volunteer.story}
                         </p>
                         <div className="w-full flex justify-center pt-5 pb-5">
-                          <a target="_blank" href={volunteer.url} className="mx-5 hover:cursor-pointer">
+                          <a
+                            target="_blank"
+                            href={volunteer.url}
+                            className="mx-5 hover:cursor-pointer"
+                          >
                             <div aria-label="LinkedIn" role="img">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"

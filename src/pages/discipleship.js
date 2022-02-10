@@ -4,8 +4,13 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function discipleship() {
+     useEffect(() => {
+       Aos.init({ duration: 2000 });
+     }, []);
   return (
     <div className="bg-gray-300">
       <Head>
@@ -28,7 +33,7 @@ function discipleship() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <meta name="theme-color" content="#ffffff"/>
+        <meta name="theme-color" content="#ffffff" />
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
@@ -51,6 +56,7 @@ function discipleship() {
         {/* banner */}
         <div className="relative">
           <Image
+            data-aos="fade-right"
             className="w-full  h-full"
             src="/discipleship/1.webp"
             width={1440}
@@ -59,7 +65,10 @@ function discipleship() {
             objectFit="contain"
             loading="eager"
           />
-          <div className="hidden md:block absolute -mt-28 px-10 md:mb-0 bg-gray-300/50">
+          <div
+            data-aos="fade-down"
+            className="hidden md:block absolute -mt-28 px-10 md:mb-0 bg-gray-300/50"
+          >
             <h1 className="font-black font-sans text-2xl md:text-4xl whitespace-nowrap text-scu_blue-light mb-2">
               Discipleship & Evangelism
             </h1>
@@ -73,12 +82,13 @@ function discipleship() {
 
         <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-2 md:-mt-5">
           <div
+            data-aos="slide-up"
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
             <h1 className=" top-2 right-2 text-blue-600 font-black text-xl">
-              Pastors&apos; Dicipleship Fellowship (PDF) & Pastors&apos; Wives&apos;
-              Discipleship Fellowship (PWDF)
+              Pastors&apos; Dicipleship Fellowship (PDF) & Pastors&apos;
+              Wives&apos; Discipleship Fellowship (PWDF)
             </h1>
             <p>
               We have a growing Fellowship of pastors (now 16) and their wives
@@ -97,6 +107,7 @@ function discipleship() {
           </div>
 
           <div
+            data-aos="slide-up"
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
@@ -116,6 +127,7 @@ function discipleship() {
           </div>
 
           <div
+            data-aos="slide-up"
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >

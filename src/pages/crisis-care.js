@@ -7,8 +7,13 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function CrisisCare() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
     if (clicked === index) {
@@ -80,7 +85,7 @@ function CrisisCare() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <meta name="theme-color" content="#ffffff"/>
+        <meta name="theme-color" content="#ffffff" />
         <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
@@ -122,7 +127,10 @@ function CrisisCare() {
               is restored.
             </p>
           </div>
-          <div className="flex-col lg:grid lg:grid-cols-2 h-auto">
+          <div
+            data-aos="slide-right"
+            className="flex-col lg:grid lg:grid-cols-2 h-auto"
+          >
             <Carousel
               autoPlay
               infiniteLoop
@@ -146,7 +154,7 @@ function CrisisCare() {
               ))}
             </Carousel>
 
-            <div className="bg-white shadow-md">
+            <div data-aos="slide-left" className="bg-white shadow-md">
               <h1 className="text-blue-500 text-3xl font-sans font-black ml-4">
                 Crisis Care & Management
               </h1>

@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import Aos from "aos";
+import { useEffect } from "react";
 
 export default function ArticlesFeed({ articles }) {
+       useEffect(() => {
+         Aos.init({ duration: 2000 });
+       }, []);
   const months = [
     "January",
     "February",
@@ -34,7 +39,7 @@ export default function ArticlesFeed({ articles }) {
     <div className="">
       <div className="flex flex-wrap">
         {articles.map((article) => (
-          <div className="w-full md:w-1/2 lg:w-1/3 px-3" key={article.id}>
+          <div data-aos="flip-right" className="w-full md:w-1/2 lg:w-1/3 px-3" key={article.id}>
             <div className="bg-white shadow-md rounded-lg overflow-hidden">
               <div className="px-0 py-0">
                 <Image

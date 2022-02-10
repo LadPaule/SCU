@@ -4,8 +4,13 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import ArticlesFeed from "../components/ArticlesFeed";
 import { GraphQLClient } from "graphql-request";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function News({ articles }) {
+       useEffect(() => {
+         Aos.init({ duration: 2000 });
+       }, []);
   return (
     <div className="bg-gray-100">
       <Head>

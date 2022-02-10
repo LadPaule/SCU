@@ -1,9 +1,12 @@
 import { helperdata } from "../helperdata";
 import Link from "next/link";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function Navbar() {
+
   return (
-      <nav className="bg-scu_blue hidden lg:flex">
+      <nav  className="bg-scu_blue hidden lg:flex">
         <div className="justify-evenly flex-grow">
           <ul className="flex whitespace-nowrap ml-4 items-center justify-evenly flex-grow">
             {

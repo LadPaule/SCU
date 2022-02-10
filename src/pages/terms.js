@@ -2,8 +2,13 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function PrivacyPolicy() {
+    useEffect(() => {
+      Aos.init({ duration: 2000 });
+    }, []);
   return (
     <div className="bg-gray-300">
       <Head>
@@ -32,7 +37,7 @@ function PrivacyPolicy() {
           are a Hand up, not a hand out. SCU operates on a defined Working Mechanism, DESC that is, Discipleship and Evangelism,
           Education Support, Skilling and Crisis care and Management"
         />
-        <meta name="theme-color" content="#ffffff"/>
+        <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta author="Smile Charity Uganda Media department" />
@@ -47,15 +52,21 @@ function PrivacyPolicy() {
 
       <main className="max-w-screen-xl mx-auto">
         {/* banner */}
-        <div className="ml-4 mb-4 mt-2">
-          <h1 className="text-blue-600 font-sans font-bold text-2xl">
+        <div className="ml-4 mb-4 mt-2" data-aos="slide-up">
+          <h1
+            className="text-blue-600 font-sans font-bold text-2xl"
+            data-aos="fade-up"
+          >
             SMILE CHARITY UGANDA TERMS OF SERVICE
           </h1>
           <br />
-          <h2 className="text-blue-500 font-sans font-bold text-3xl">
+          <h2
+            className="text-blue-500 font-sans font-bold text-3xl"
+            data-aos="slide-up"
+          >
             OVERVIEW
           </h2>
-          <p>
+          <p data-aos="slide-up">
             This website is operated by Smile Charity Uganda. Throughout the
             site, the terms “we”, “us” and “our” refer to Smile Charity Uganda.
             Smile Charity Uganda offers this website, including all information,
@@ -64,7 +75,7 @@ function PrivacyPolicy() {
             and notices stated here.
           </p>
           <br />
-          <p>
+          <p data-aos="slide-up">
             By visiting our site and/ or purchasing something from us, you
             engage in our “Service” and agree to be bound by the following terms
             and conditions (“Terms of Service”, “Terms”), including those
@@ -75,7 +86,7 @@ function PrivacyPolicy() {
             content.
           </p>
           <br />
-          <p>
+          <p data-aos="slide-up">
             Please read these Terms of Service carefully before accessing or
             using our website. By accessing or using any part of the site, you
             agree to be bound by these Terms of Service. If you do not agree to
@@ -85,7 +96,7 @@ function PrivacyPolicy() {
             Terms of Service.
           </p>
           <br />
-          <p>
+          <p data-aos="slide-up">
             Any new features or tools which are added to the current store shall
             also be subject to the Terms of Service. You can review the most
             current version of the Terms of Service at any time on this page. We
@@ -96,7 +107,10 @@ function PrivacyPolicy() {
             the posting of any changes constitutes acceptance of those changes.
           </p>{" "}
           <br />
-          <h2 className="text-blue-500 font-sans font-bold text-3xl">
+          <h2
+            data-aos="slide-up"
+            className="text-blue-500 font-sans font-bold text-3xl"
+          >
             Section 1: Smile Charity Uganda Website Terms
           </h2>
           <p>
@@ -113,7 +127,10 @@ function PrivacyPolicy() {
             jurisdiction (including but not limited to copyright laws).
           </p>{" "}
           <br />
-          <h2 className="text-blue-500 font-sans font-bold text-2xl">
+          <h2
+            data-aos="slide-up"
+            className="text-blue-500 font-sans font-bold text-2xl"
+          >
             Section 2: General Conditions
           </h2>
           <p>
@@ -130,12 +147,15 @@ function PrivacyPolicy() {
             other information you may choose to provide.
           </p>
           <br />
-          <p>
+          <p data-aos="slide-up">
             The headings used in this agreement are included for convenience
             only and will not limit or otherwise affect these Terms.
           </p>
           <br />
-          <h2 className="text-blue-500 font-sans font-bold text-2xl">
+          <h2
+            data-aos="slide-up"
+            className="text-blue-500 font-sans font-bold text-2xl"
+          >
             Section 3: Accuracy, Completeness and Timeliness of Information
           </h2>
           <p>
@@ -147,7 +167,7 @@ function PrivacyPolicy() {
             more timely sources of information
           </p>
           <br />
-          <p>
+          <p data-aos="slide-up">
             This site may contain certain historical information. Historical
             information, necessarily, is not current and is provided for your
             reference only. We reserve the right to modify the contents of this
@@ -159,7 +179,7 @@ function PrivacyPolicy() {
           <h2 className="text-blue-500 font-sans font-bold text-2xl">
             Section 12 : Prohibited Uses
           </h2>
-          <p className="ml-2">
+          <p data-aos="slide-up" className="ml-2">
             In addition to other prohibitions as set forth in the Terms of
             Service, you are prohibited from using the site or its content:{" "}
             <br /> (a) for any unlawful purpose; <br />

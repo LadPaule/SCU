@@ -1,10 +1,15 @@
 import Link from "next/link";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function LandingPage() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  },[]);
   return (
     <div>
-      <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-auto -mt-6">
-        <div
+      <div data-aos="fade-up" className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-auto -mt-6">
+        <div data-aos="flip-left"
           className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
         >
@@ -25,7 +30,7 @@ function LandingPage() {
           </Link>
         </div>
 
-        <div
+        <div data-aos="flip-left"
           className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
         >
@@ -58,7 +63,7 @@ function LandingPage() {
           </ul>
         </div>
 
-        <div
+        <div data-aos="flip-left"
           className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
         >

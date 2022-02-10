@@ -2,6 +2,8 @@ import Image from "next/image";
 import { useState, Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Link from "next/link";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function ChildInfo({ child }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -13,11 +15,15 @@ function ChildInfo({ child }) {
 
   function closeModal() {
     setIsOpen(false);
-  }
+  };
+    useEffect(() => {
+    Aos.init({ duration: 2000 });
+  },[]);
 
   return (
+   
     <>
-      <div
+      <div data-aos="flip-left" 
         className="relative flex-col m-5 bg-white z-20 p-10
       transition duration-500 ease-in-out transform hover:-translate-y-1"
       >
@@ -50,7 +56,7 @@ function ChildInfo({ child }) {
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
-          as="div"
+          as="div" data-aos="fade-up-right"
           className="fixed inset-0 z-50 overflow-y-auto"
           onClose={closeModal}
           initialFocus={completeButton}

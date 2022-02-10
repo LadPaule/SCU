@@ -3,9 +3,14 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
+import Aos from "aos";
+import { useEffect } from "react";
 import Link from "next/link";
 
 function skilling() {
+     useEffect(() => {
+       Aos.init({ duration: 2000 });
+     }, []);
   return (
     <div className="bg-gray-300">
       <Head>
@@ -27,7 +32,7 @@ function skilling() {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <meta name="theme-color" content="#ffffff"/>
+        <meta name="theme-color" content="#ffffff" />
         <link rel="manifest" href="/site.webmanifest"></link>
         <meta
           name="description"
@@ -51,6 +56,7 @@ function skilling() {
         {/* banner */}
         <div className="relative">
           <Image
+            data-aos="slide-right"
             className="w-full h-full"
             src="/skilling/skill.webp"
             width={1440}
@@ -59,7 +65,10 @@ function skilling() {
             loading="eager"
             alt="Smile Charity Uganda"
           />
-          <div className="hidden md:block absolute -mt-28 px-10 md:mb-0 bg-gray-300/50">
+          <div
+            data-aos="fade-up"
+            className="hidden md:block absolute -mt-28 px-10 md:mb-0 bg-gray-300/50"
+          >
             <h1 className="font-black font-sans text-2xl md:text-4xl whitespace-nowrap text-scu_blue-light mb-2">
               Skills Development
             </h1>
@@ -72,6 +81,7 @@ function skilling() {
         </div>
         <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 mx-2 md:-mt-5">
           <div
+            data-aos="flip-up"
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
@@ -95,6 +105,7 @@ function skilling() {
           </div>
 
           <div
+            data-aos="flip-up"
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
@@ -115,6 +126,7 @@ function skilling() {
           </div>
 
           <div
+            data-aos="flip-up"
             className="group bg-white cursor-pointer flex flex-col m-5 z-30 p-5 transition
         duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
           >
