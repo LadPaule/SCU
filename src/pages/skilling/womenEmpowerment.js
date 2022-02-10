@@ -7,6 +7,8 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState } from "react";
 import Image from "next/image";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function WomenEmpowerment() {
   const [clicked, setClicked] = useState(false);
@@ -148,7 +150,7 @@ function WomenEmpowerment() {
             </p>
           </div>
         </div>
-        <div className="flex-col px-2 mt-2 bg-gray-200">
+        <div data-aos="fade-up" className="flex-col px-2 mt-2 bg-gray-200">
           <h1 className="whitespace-nowrap text-blue-600 text-xl font-black ">
             Frequently Asked questions
           </h1>

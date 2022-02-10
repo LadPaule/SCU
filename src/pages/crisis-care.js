@@ -176,7 +176,7 @@ function CrisisCare() {
             </div>
           </div>
         </div>
-        <div className="flex-col px-2 mt-2 bg-gray-200">
+        <div data-aos="slide-up" className="flex-col px-2 mt-2 bg-gray-200">
           <h1 className="whitespace-nowrap text-blue-600 text-xl font-black ">
             Frequently Asked questions
           </h1>

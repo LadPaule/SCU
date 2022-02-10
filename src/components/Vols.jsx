@@ -3,7 +3,7 @@ export const vols = [
     name: "Alex Gift Ngabonziza",
     designation: "Chief Executive Officer",
     story:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "I am a Christian faith believer. Jesus Christ is my Lord and savior. I am a professing and active born-again believer as well revealed, examined and explained in the holy scriptures. I dream big but work to achieve one day at a time. I allow room for emotions but act objectively to solve problems. I believe in the true word of God, family, Prayer, Fellowship and Sharing God’s goodness in my life",
     photo: "/team/alex.webp",
     url: "https://www.linkedin.com/in/ngabonziza-gift-alex-42509385/",
   },

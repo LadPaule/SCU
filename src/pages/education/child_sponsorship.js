@@ -8,8 +8,13 @@ import Navbar from "../../components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function Education() {
+    useEffect(() => {
+      Aos.init({ duration: 2000 });
+    }, []);
   const [clicked, setClicked] = useState(false);
   const toggle = (index) => {
     if (clicked === index) {
@@ -85,7 +90,8 @@ function Education() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <meta name="theme-color" content="#ffffff"/> <meta
+        <meta name="theme-color" content="#ffffff" />{" "}
+        <meta
           name="description"
           content="Smile Charity uganda (SCU) is a christian non profit oganisation. We 
           are a Hand up, not a hand out. SCU operates on a defined Working Mechanism, DESC that is, Discipleship and Evangelism,
@@ -107,6 +113,7 @@ function Education() {
         {/* banner */}
         <div className="flex-col lg:grid lg:grid-cols-2 h-auto">
           <Carousel
+            data-aos="slide-left"
             autoPlay
             infiniteLoop
             showStatus={false}
@@ -129,7 +136,7 @@ function Education() {
             ))}
           </Carousel>
 
-          <div className="bg-white shadow-md">
+          <div data-aos="slide-right" className="bg-white shadow-md">
             <h1 className="text-blue-500 text-3xl font-black ml-4">
               Child Sponsorship Program
             </h1>
@@ -159,7 +166,7 @@ function Education() {
             </Link>
           </div>
         </div>
-        <div className="flex-col px-2 mt-2 bg-gray-200">
+        <div data-aos="slide-up" className="flex-col px-2 mt-2 bg-gray-200">
           <h1 className="whitespace-nowrap text-blue-600 text-xl font-black ">
             Frequently Asked questions
           </h1>
