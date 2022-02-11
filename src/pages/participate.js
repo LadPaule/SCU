@@ -126,13 +126,13 @@ function participate() {
             <div className="lg:w-7/12 lg:mt-0 mt-8">
               <div className="w-full h-full bg-red-200">
                 <img
-                  data-aos="slide-left"
+                  data-aos="fade-down"
                   src="/participate/toursMain.webp"
                   alt="apartment design"
                   className="w-full sm:block hidden"
                 />
                 <img
-                  data-aos="slide-left"
+                  data-aos="fade-up"
                   src="/participate/gapyear.webp"
                   alt="apartment design"
                   className="sm:hidden block w-full"
@@ -140,7 +140,7 @@ function participate() {
               </div>
               <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:gap-8 gap-6 lg:mt-8 md:mt-6 mt-4">
                 <img
-                  data-aos="slide-left"
+                  data-aos="fade-down"
                   src="/participate/tour2.webp"
                   className="w-full"
                   alt="kitchen"
@@ -148,7 +148,7 @@ function participate() {
                 <img
                   src="/participate/twot.webp"
                   className="w-full"
-                  data-aos="slide-left"
+                  data-aos="fade-up"
                   alt="sitting room"
                 />
               </div>

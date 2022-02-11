@@ -56,7 +56,7 @@ function skilling() {
         {/* banner */}
         <div className="relative">
           <Image
-            data-aos="slide-right"
+            data-aos="slide-up"
             className="w-full h-full"
             src="/skilling/skill.webp"
             width={1440}

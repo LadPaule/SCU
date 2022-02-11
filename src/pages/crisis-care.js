@@ -128,7 +128,7 @@ function CrisisCare() {
             </p>
           </div>
           <div
-            data-aos="slide-right"
+            data-aos="slide-up"
             className="flex-col lg:grid lg:grid-cols-2 h-auto"
           >
             <Carousel
@@ -154,7 +154,7 @@ function CrisisCare() {
               ))}
             </Carousel>
 
-            <div data-aos="slide-left" className="bg-white shadow-md">
+            <div data-aos="slide-down" className="bg-white shadow-md">
               <h1 className="text-blue-500 text-3xl font-sans font-black ml-4">
                 Crisis Care & Management
               </h1>
@@ -176,7 +176,7 @@ function CrisisCare() {
             </div>
           </div>
         </div>
-        <div data-aos="slide-up" className="flex-col px-2 mt-2 bg-gray-200">
+        <div data-aos="fade-up" className="flex-col px-2 mt-2 bg-gray-200">
           <h1 className="whitespace-nowrap text-blue-600 text-xl font-black ">
             Frequently Asked questions
           </h1>
