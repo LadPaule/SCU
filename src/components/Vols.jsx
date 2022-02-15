@@ -51,7 +51,7 @@ export const vols = [
     name: "Nakayiza Moreen",
     designation: "Caretaker",
     story:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "I gave my life to Jesus Christ and am proud to let the whole world know am a child of God.I also hold a strong passion in Mistry cooking and serving different people. I hold perfection at heart hence enjoy living in a clean and presentable environment (house Management) l enjoy working with young youth mainly leading them and directing them in to doing the right things in life.",
     photo: "/team/moreen.webp",
     url: "https://www.linkedin.com/in/nakayiza-moreen-8b0708230",
   },
