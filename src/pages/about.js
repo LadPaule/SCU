@@ -81,7 +81,7 @@ function about({ volunteers }) {
         <div className="flex-col lg:grid lg:grid-cols-2 h-auto bg-white -mt-2">
           <div className="lg:grid lg:grid-cols-1 p-2 h-auto m-0">
             <Image
-              data-aos="slide-right"
+              data-aos="fade-up"
               src="/about/vision2.webp"
               alt="main"
               width={780}
@@ -92,7 +92,7 @@ function about({ volunteers }) {
             />
           </div>
 
-          <div data-aos="slide-left" className="bg-white shadow-md">
+          <div data-aos="fade-down" className="bg-white shadow-md">
             <h1 className="text-blue-500 text-xl font-black ml-4 lg:text-3xl">
               EXTENDING A HELPING HAND TO THOSE IN NEED
             </h1>

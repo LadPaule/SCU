@@ -50,7 +50,7 @@ export default function ChildForm() {
     });
   };
    useEffect(() => {
-     Aos.init({ duration: 2000 });
+     AOS.init({ duration: 2000 });
    }, []);
 
   return (
@@ -106,7 +106,7 @@ export default function ChildForm() {
           </h1>
           <form onSubmit={handleSubmit} action="submit">
             <div
-              data-aos="zoom-in"
+              data-aos="zoom-in-up"
               className="auth__form-container_fields-content_input"
             >
               <label htmlFor="fullName">Full Name</label>
@@ -121,7 +121,7 @@ export default function ChildForm() {
               />
             </div>
             <div
-              data-aos="zoom-in"
+              data-aos="zoom-in-down"
               className="auth__form-container_fields-content_input"
             >
               <label htmlFor="emailAddress">Email Address</label>
@@ -137,7 +137,7 @@ export default function ChildForm() {
             </div>
 
             <div
-              data-aos="zoom-in"
+              data-aos="zoom-in-up"
               className="auth__form-container_fields-content_input"
             >
               <label htmlFor="Country">Country</label>
@@ -152,7 +152,7 @@ export default function ChildForm() {
               />
             </div>
             <div
-              data-aos="zoom-in"
+              data-aos="zoom-in-down"
               className="auth__form-container_fields-content_input"
             >
               <label htmlFor="PostalAddress">Postal Address</label>
@@ -167,7 +167,7 @@ export default function ChildForm() {
               />
             </div>
             <div
-              data-aos="zoom-in"
+              data-aos="zoom-in-down"
               className="auth__form-container_fields-content_input"
             >
               <label htmlFor="modeOfSupport">Mode of Support</label>
@@ -190,7 +190,7 @@ export default function ChildForm() {
               </select>
             </div>
 
-            <div data-aos="zoom-in" className=" space-x-80 mt-4 flex">
+            <div  className=" space-x-80 mt-4 flex">
               <Link href="/children_list" passHref>
                 <button
                   type="button"
@@ -201,7 +201,7 @@ export default function ChildForm() {
               </Link>
               <Link href="/" passHref>
                 <button
-                  data-aos="zoom-in"
+                  
                   onClick={(e) => {
                     handleSubmit(e);
                   }}
