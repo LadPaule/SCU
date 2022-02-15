@@ -129,8 +129,7 @@ function Footer() {
             <div className="mb-5">
               <h1 className="pb-4 text-xl">Join Our Newsletter</h1>
               <p className="text-gray-400 pb-2">
-                Join many other people and never miss out on any new tips,
-                tutorials and more
+               sign up to join many other people and never miss our Newsletters and other Publications
               </p>
               <form className="flex flex-row flex-wrap" action="">
                 <input
