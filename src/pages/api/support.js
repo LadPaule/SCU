@@ -11,7 +11,10 @@ export default (req, res) => {
       user: process.env.NEXT_EMAIL,
       pass: process.env.NEXT_EMAIL_PASSWORD,
     },
-    secure: false
+    secure: false,
+    tls: {
+      rejectUnauthorized: false,
+    }
   });
 
   const mailOptions = {

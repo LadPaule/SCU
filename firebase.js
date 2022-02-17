@@ -1,17 +1,16 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB4eL95ti8veB_HzetaTaVxvzFtJ4dX6Jc",
-  authDomain: "smile-charity-uganda-website.firebaseapp.com",
-  projectId: "smile-charity-uganda-website",
-  storageBucket: "smile-charity-uganda-website.appspot.com",
-  messagingSenderId: "335294594128",
-  appId: "1:335294594128:web:08c342fda2d641ff97a555"
+  apiKey: "AIzaSyB4clqATznaqZd6Cz7XlmLf4_d3st8aGoU",
+  authDomain: "scu-web.firebaseapp.com",
+  projectId: "scu-web",
+  storageBucket: "scu-web.appspot.com",
+  messagingSenderId: "1043371750889",
+  appId: "1:1043371750889:web:fdfc4a717cd088ca75c778",
 };
-// facebook redirect https://smile-charity-uganda-website.firebaseapp.com/__/auth/handler
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
